@@ -1,7 +1,7 @@
 /**
  * ====================================================================
  * AI先生キャリア LINE Messaging API × OpenAI 24時間AI相談BOT
- * 【最新版：合言葉連動ドリップ特典・GitHubメディアURL完全紐付け・自動配信エンジン内蔵】
+ * 【最新版 v4.0：コンバージョン特化型 1タップQuickReply・表記ゆれ完全吸収・全自動ファネル】
  * アカウント: AI先生キャリア (@227lwvnm)
  * ====================================================================
  */
@@ -17,12 +17,388 @@ const URLS = {
   IT: 'https://qoo22.github.io/career-portal/it-reskilling.html',
   SECURITIES: 'https://qoo22.github.io/career-portal/securities-guide.html',
   FIRE: 'https://qoo22.github.io/career-portal/fire/',
+  BENEFITS: 'https://qoo22.github.io/career-portal/benefits/',
   MA_AGENT: 'https://qoo22.github.io/career-portal/articles/01-ma-agents.html',
   CONSULT_AGENT: 'https://qoo22.github.io/career-portal/articles/02-consulting-agents.html',
   IT_AGENT: 'https://qoo22.github.io/career-portal/articles/03-it-engineer-agents.html',
   REMOTE_AGENT: 'https://qoo22.github.io/career-portal/articles/04-dx-pmo-agents.html',
   HR_AGENT: 'https://qoo22.github.io/career-portal/articles/05-recruiting-hr-agents.html'
 };
+
+/**
+ * ユーザー入力文字列の高度な正規化（全角・丸数字・カタカナ・丁寧語サフィックスを完全吸収）
+ */
+function normalizeText(text) {
+  if (!text) return '';
+  let str = text.trim();
+  // 全角英数字を半角に変換
+  str = str.replace(/[Ａ-Ｚａ-ｚ０-９]/g, function(s) {
+    return String.fromCharCode(s.charCodeAt(0) - 0xFEE0);
+  });
+  // 丸数字・ローマ数字を半角数字に変換
+  const circles = {'①':'1', '②':'2', '③':'3', '④':'4', '⑤':'5', '⑥':'6', '⑦':'7', '⑧':'8', '⑨':'9', '⑩':'10'};
+  str = str.replace(/[①-⑩]/g, function(m) { return circles[m] || m; });
+  // カタカナ・ひらがなの表記ゆれ統一
+  str = str.replace(/ニーサ/g, 'nisa');
+  str = str.replace(/プレゼント/g, '特典1');
+  // 小文字化・全角/半角スペース除去
+  str = str.toLowerCase().replace(/[\s\u3000]+/g, '');
+  // 末尾の依頼・丁寧語（ください、お願いします、希望、みたい、ほしい等）を除去してマッチング精度を飛躍的に向上
+  str = str.replace(/(ください|お願いします|お願い|希望|みたい|見たい|ちょうだい|ほしい|欲しい|送って|おねがい|願います)$/g, '');
+  return str;
+}
+
+/**
+ * LINE QuickReplyアイテム配列生成
+ */
+function makeQuickReply(items) {
+  if (!items || items.length === 0) return null;
+  return {
+    items: items.slice(0, 13).map(function(it) {
+      const label = it.label.length > 20 ? it.label.substring(0, 20) : it.label;
+      return {
+        type: 'action',
+        action: {
+          type: 'message',
+          label: label,
+          text: it.text
+        }
+      };
+    })
+  };
+}
+
+/**
+ * ユーザー状態・合言葉に応じた最適な1タップQuickReplyボタンセットを自動判定
+ */
+function getQuickReplyForNorm(norm) {
+  if (!norm) return null;
+
+  // 特典1
+  if (norm.includes('特典1') || norm === '特典' || norm.includes('10大特典')) {
+    return [
+      { label: '🎁 特典2を受け取る', text: '特典2' },
+      { label: '💼 転職特典へ', text: '転職1' },
+      { label: '🌍 英語特典へ', text: '英語1' },
+      { label: '💻 IT特典へ', text: 'IT1' },
+      { label: '📈 NISA特典へ', text: 'NISA1' },
+      { label: '⚡ 副業特典へ', text: '副業1' },
+      { label: '🎯 30秒AI適性診断', text: 'ai適性診断' }
+    ];
+  }
+
+  // 特典2
+  if (norm.includes('特典2')) {
+    return [
+      { label: '🎁 特典3を受け取る', text: '特典3' },
+      { label: '🌍 英語特典②へ', text: '英語2' },
+      { label: '🎯 30秒AI適性診断', text: 'ai適性診断' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+
+  // 特典3
+  if (norm.includes('特典3')) {
+    return [
+      { label: '🎁 特典4を受け取る', text: '特典4' },
+      { label: '💻 IT特典②へ', text: 'IT2' },
+      { label: '🏠 フルリモート求人', text: 'フルリモートit求人' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+
+  // 特典4
+  if (norm.includes('特典4')) {
+    return [
+      { label: '🎁 特典5を受け取る', text: '特典5' },
+      { label: '📈 NISA特典②へ', text: 'NISA2' },
+      { label: '💰 サイドFIREポータル', text: 'サイドFIRE' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+
+  // 特典5
+  if (norm.includes('特典5')) {
+    return [
+      { label: '🎉 登録完了した', text: '登録完了' },
+      { label: '🏆 面談完了した', text: '面談完了' },
+      { label: '🎯 30秒AI適性診断', text: 'ai適性診断' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+
+  // 特典一覧
+  if (norm.includes('特典一覧')) {
+    return [
+      { label: '💼 転職特典①', text: '転職1' },
+      { label: '🌍 英語特典①', text: '英語1' },
+      { label: '💻 IT特典①', text: 'IT1' },
+      { label: '📈 NISA特典①', text: 'NISA1' },
+      { label: '⚡ 副業特典①', text: '副業1' },
+      { label: '🎯 30秒AI適性診断', text: 'ai適性診断' }
+    ];
+  }
+
+  // 転職シリーズ
+  if (norm === '転職1' || norm === '特典転職' || norm === '転職特典') {
+    return [
+      { label: '💼 転職特典②へ', text: '転職2' },
+      { label: '📚 25大特典一覧', text: '特典一覧' },
+      { label: '🎯 30秒AI適性診断', text: 'ai適性診断' }
+    ];
+  }
+  if (norm === '転職2') {
+    return [
+      { label: '💼 転職特典③へ', text: '転職3' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+  if (norm === '転職3') {
+    return [
+      { label: '💼 転職特典④へ', text: '転職4' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+  if (norm === '転職4') {
+    return [
+      { label: '💼 転職特典⑤へ', text: '転職5' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+  if (norm === '転職5') {
+    return [
+      { label: '🎉 登録完了した', text: '登録完了' },
+      { label: '🏆 面談完了した', text: '面談完了' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+
+  // 英語シリーズ
+  if (norm === '英語1' || norm === '特典英語' || norm === '英語特典') {
+    return [
+      { label: '🌍 英語特典②へ', text: '英語2' },
+      { label: '📚 25大特典一覧', text: '特典一覧' },
+      { label: '🎯 30秒AI適性診断', text: 'ai適性診断' }
+    ];
+  }
+  if (norm === '英語2') {
+    return [
+      { label: '🌍 英語特典③へ', text: '英語3' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+  if (norm === '英語3') {
+    return [
+      { label: '🌍 英語特典④へ', text: '英語4' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+  if (norm === '英語4') {
+    return [
+      { label: '🌍 英語特典⑤へ', text: '英語5' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+  if (norm === '英語5') {
+    return [
+      { label: '🌍 英語特典①へ戻る', text: '英語1' },
+      { label: '📚 25大特典一覧', text: '特典一覧' },
+      { label: '🎯 30秒AI適性診断', text: 'ai適性診断' }
+    ];
+  }
+
+  // ITシリーズ
+  if (norm === 'it1' || norm === '特典it' || norm === 'it特典') {
+    return [
+      { label: '💻 IT特典②へ', text: 'IT2' },
+      { label: '🏠 フルリモート求人', text: 'フルリモートit求人' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+  if (norm === 'it2') {
+    return [
+      { label: '💻 IT特典③へ', text: 'IT3' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+  if (norm === 'it3') {
+    return [
+      { label: '💻 IT特典④へ', text: 'IT4' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+  if (norm === 'it4') {
+    return [
+      { label: '💻 IT特典⑤へ', text: 'IT5' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+  if (norm === 'it5') {
+    return [
+      { label: '🏠 フルリモート求人', text: 'フルリモートit求人' },
+      { label: '📚 25大特典一覧', text: '特典一覧' },
+      { label: '🎯 30秒AI適性診断', text: 'ai適性診断' }
+    ];
+  }
+
+  // NISAシリーズ
+  if (norm === 'nisa1' || norm === '特典nisa' || norm === 'nisa特典') {
+    return [
+      { label: '📈 NISA特典②へ', text: 'NISA2' },
+      { label: '📚 25大特典一覧', text: '特典一覧' },
+      { label: '🎯 30秒AI適性診断', text: 'ai適性診断' }
+    ];
+  }
+  if (norm === 'nisa2') {
+    return [
+      { label: '📈 NISA特典③へ', text: 'NISA3' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+  if (norm === 'nisa3') {
+    return [
+      { label: '📈 NISA特典④へ', text: 'NISA4' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+  if (norm === 'nisa4') {
+    return [
+      { label: '📈 NISA特典⑤へ', text: 'NISA5' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+  if (norm === 'nisa5') {
+    return [
+      { label: '📈 NISA特典①へ戻る', text: 'NISA1' },
+      { label: '📚 25大特典一覧', text: '特典一覧' },
+      { label: '🎯 30秒AI適性診断', text: 'ai適性診断' }
+    ];
+  }
+
+  // 副業シリーズ
+  if (norm === '副業1' || norm === '特典副業' || norm === '副業特典') {
+    return [
+      { label: '⚡ 副業特典②へ', text: '副業2' },
+      { label: '📚 25大特典一覧', text: '特典一覧' },
+      { label: '🎯 30秒AI適性診断', text: 'ai適性診断' }
+    ];
+  }
+  if (norm === '副業2') {
+    return [
+      { label: '⚡ 副業特典③へ', text: '副業3' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+  if (norm === '副業3') {
+    return [
+      { label: '⚡ 副業特典④へ', text: '副業4' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+  if (norm === '副業4') {
+    return [
+      { label: '⚡ 副業特典⑤へ', text: '副業5' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+  if (norm === '副業5') {
+    return [
+      { label: '⚡ 副業特典①へ戻る', text: '副業1' },
+      { label: '📚 25大特典一覧', text: '特典一覧' },
+      { label: '🎯 30秒AI適性診断', text: 'ai適性診断' }
+    ];
+  }
+
+  // 成果確定インセンティブ
+  if (norm.includes('登録完了') || norm.includes('登録した') || norm.includes('登録済') || norm === '登録') {
+    return [
+      { label: '🏆 面談完了した', text: '面談完了' },
+      { label: '📄 職務経歴書プロンプト', text: '職務経歴書プロンプト' },
+      { label: '💎 非公開求人一覧', text: '非公開求人一覧' },
+      { label: '🎯 30秒AI適性診断', text: 'ai適性診断' }
+    ];
+  }
+
+  if (norm.includes('面談完了') || norm.includes('面談終わ') || norm.includes('面談終了') || norm === '面談') {
+    return [
+      { label: '📄 職務経歴書プロンプト', text: '職務経歴書プロンプト' },
+      { label: '💎 非公開求人一覧', text: '非公開求人一覧' },
+      { label: '💼 コンサルM&A攻略', text: 'コンサルm&a攻略' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+
+  // AI診断 Q1
+  if (norm.includes('診断') || norm === 'ai適性診断スタート' || norm === 'ai適性診断') {
+    return [
+      { label: '1: 〜499万円', text: '1' },
+      { label: '2: 500〜799万円', text: '2' },
+      { label: '3: 800〜1199万円', text: '3' },
+      { label: '4: 1200万円〜', text: '4' }
+    ];
+  }
+
+  // AI診断 Q2
+  if (norm === '1' || norm === '2' || norm === '3' || norm === '4') {
+    return [
+      { label: 'a: 年収を最優先', text: 'a' },
+      { label: 'b: 在宅・自由時間', text: 'b' },
+      { label: 'c: 英語・外資', text: 'c' },
+      { label: 'd: 資産運用・FIRE', text: 'd' }
+    ];
+  }
+
+  // AI診断 Q3 / 結果
+  if (norm === 'a' || norm === 'b' || norm === 'c' || norm === 'd' || norm === 'e') {
+    return [
+      { label: '🎉 登録完了した', text: '登録完了' },
+      { label: '💎 非公開求人一覧', text: '非公開求人一覧' },
+      { label: '🎁 特典1を受け取る', text: '特典1' },
+      { label: '📚 25大特典一覧', text: '特典一覧' }
+    ];
+  }
+
+  // リッチメニューボタン
+  if (norm === '職務経歴書プロンプト') {
+    return [
+      { label: '💎 非公開求人一覧', text: '非公開求人一覧' },
+      { label: '🎯 30秒AI適性診断', text: 'ai適性診断' },
+      { label: '🎁 特典1を受け取る', text: '特典1' }
+    ];
+  }
+
+  if (norm === '非公開求人一覧') {
+    return [
+      { label: '📄 職務経歴書プロンプト', text: '職務経歴書プロンプト' },
+      { label: '💼 コンサルM&A攻略', text: 'コンサルm&a攻略' },
+      { label: '🏠 フルリモート求人', text: 'フルリモートit求人' }
+    ];
+  }
+
+  if (norm === 'コンサルm&a攻略') {
+    return [
+      { label: '💎 非公開求人一覧', text: '非公開求人一覧' },
+      { label: '📄 職務経歴書プロンプト', text: '職務経歴書プロンプト' },
+      { label: '🎯 30秒AI適性診断', text: 'ai適性診断' }
+    ];
+  }
+
+  if (norm === 'フルリモートit求人') {
+    return [
+      { label: '💻 IT特典①へ', text: 'IT1' },
+      { label: '💎 非公開求人一覧', text: '非公開求人一覧' },
+      { label: '🎯 30秒AI適性診断', text: 'ai適性診断' }
+    ];
+  }
+
+  // デフォルト
+  return [
+    { label: '🎯 30秒AI適性診断', text: 'ai適性診断' },
+    { label: '🎁 特典1を受け取る', text: '特典1' },
+    { label: '💎 非公開求人一覧', text: '非公開求人一覧' },
+    { label: '📚 25大特典一覧', text: '特典一覧' }
+  ];
+}
 
 function doPost(e) {
   try {
@@ -35,21 +411,57 @@ function doPost(e) {
     
     for (let i = 0; i < events.length; i++) {
       const event = events[i];
-      if (event.type === 'message' && event.message.type === 'text') {
-        const userMessage = event.message.text.trim();
-        const replyToken = event.replyToken;
-        
-        // 1. 合言葉・診断・リッチメニューの完全即時応答処理
-        const fixedReply = getFixedMenuResponse(userMessage);
-        if (fixedReply) {
-          sendLineReply(replyToken, fixedReply);
-          continue;
-        }
-        
-        // 2. 読者の自由なキャリア・転職相談に対してAI先生が個別アドバイス生成（GitHubメディアURL付与）
-        const aiReply = generateAICareerAdvice(userMessage);
-        sendLineReply(replyToken, aiReply);
+      const replyToken = event.replyToken;
+      
+      // 友だち追加・ブロック解除イベントへの即時対応
+      if (event.type === 'follow') {
+        const welcomeText = `🎉【AI先生キャリア】へようこそ！
+
+当アカウントでは、公的統計と独自取材に基づき「年収を最大化するキャリア戦略」と「可処分所得を増やす財テク・新NISA」の極秘情報を24時間お届けします。
+
+━━━━━━━━━━━━
+🎁【初回限定】今すぐ手に入るプレゼント
+━━━━━━━━━━━━
+まずは下のボタンをタップして【第1弾 特典：生涯可処分所得最大化バイブル】をお受け取りください👇`;
+        const welcomeQR = [
+          { label: '🎁 特典1を受け取る', text: '特典1' },
+          { label: '🎯 30秒AI適性診断', text: 'ai適性診断' },
+          { label: '💎 非公開求人一覧', text: '非公開求人一覧' },
+          { label: '📚 25大特典一覧', text: '特典一覧' }
+        ];
+        sendLineReply(replyToken, welcomeText, welcomeQR);
+        continue;
       }
+      
+      // メッセージ（テキスト）またはポストバックの処理
+      let rawText = '';
+      if (event.type === 'message' && event.message.type === 'text') {
+        rawText = event.message.text;
+      } else if (event.type === 'postback' && event.postback.data) {
+        rawText = event.postback.data;
+      }
+      
+      if (!rawText) continue;
+      
+      const norm = normalizeText(rawText);
+      
+      // 1. 合言葉・診断・リッチメニューの完全即時応答処理
+      const fixedReply = getFixedMenuResponse(norm);
+      if (fixedReply) {
+        const qr = getQuickReplyForNorm(norm);
+        sendLineReply(replyToken, fixedReply, qr);
+        continue;
+      }
+      
+      // 2. 読者の自由なキャリア・転職相談に対してAI先生が個別アドバイス生成（GitHubメディアURL付与）
+      const aiReply = generateAICareerAdvice(rawText);
+      const generalQR = [
+        { label: '🎯 30秒AI適性診断', text: 'ai適性診断' },
+        { label: '🎁 特典1を受け取る', text: '特典1' },
+        { label: '💎 非公開求人一覧', text: '非公開求人一覧' },
+        { label: '📄 職務経歴書プロンプト', text: '職務経歴書プロンプト' }
+      ];
+      sendLineReply(replyToken, aiReply, generalQR);
     }
     
     return ContentService.createTextOutput(JSON.stringify({ status: 'success' })).setMimeType(ContentService.MimeType.JSON);
@@ -59,11 +471,7 @@ function doPost(e) {
   }
 }
 
-/**
- * リッチメニュー、合言葉連動ドリップ、および診断番号に対する完全即時応答
- */
-function getFixedMenuResponse(msg) {
-  const norm = msg.toLowerCase().replace(/\s+/g, '');
+function getFixedMenuResponse(norm) {
 
   // ====================================================================
   // 【超重要：合言葉連動ドリップ式特典システム（第1弾〜第5弾 順次解放）】
@@ -1078,6 +1486,7 @@ ${URLS.GUIDE}#sec5`;
  * 自由なキャリア・転職相談に対してOpenAI API（gpt-4o-mini）で個別回答生成
  * （GitHubオウンドメディアのURLを必ず紐付けて返信）
  */
+
 function generateAICareerAdvice(userQuestion) {
   const url = 'https://api.openai.com/v1/chat/completions';
   
@@ -1140,16 +1549,40 @@ LINEで読者から寄せられたキャリア・転職の悩み相談に対し�
   }
 }
 
-function sendLineReply(replyToken, replyText) {
+
+function sendLineReply(replyToken, messages, quickReplyItems) {
   const url = 'https://api.line.me/v2/bot/message/reply';
+  
+  let msgArray = [];
+  if (typeof messages === 'string') {
+    // スマホ画面で文字が多すぎる場合は読みやすく2分割（1,300文字超かつ区切りがある場合）
+    if (messages.length > 1300 && messages.includes('━━━━━━━━━━━━\n🛠【再現性')) {
+      const parts = messages.split('━━━━━━━━━━━━\n🛠【再現性');
+      msgArray.push({ type: 'text', text: parts[0].trim() });
+      msgArray.push({ type: 'text', text: '🛠【再現性' + parts[1].trim() });
+    } else {
+      msgArray.push({ type: 'text', text: messages });
+    }
+  } else if (Array.isArray(messages)) {
+    msgArray = messages;
+  } else if (typeof messages === 'object' && messages !== null) {
+    msgArray = [messages];
+  }
+  
+  if (msgArray.length === 0) return;
+  if (msgArray.length > 5) msgArray = msgArray.slice(0, 5);
+  
+  // 最後のメッセージにQuickReplyボタンを付与
+  if (quickReplyItems && quickReplyItems.length > 0) {
+    const lastIdx = msgArray.length - 1;
+    if (msgArray[lastIdx].type === 'text') {
+      msgArray[lastIdx].quickReply = makeQuickReply(quickReplyItems);
+    }
+  }
+  
   const payload = {
     replyToken: replyToken,
-    messages: [
-      {
-        type: 'text',
-        text: replyText
-      }
-    ]
+    messages: msgArray
   };
   
   const options = {
