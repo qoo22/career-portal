@@ -3,29 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>20代・30代向け転職エージェント比較 | AI先生キャリア</title>
-  <meta name="description" content="20代・30代に本当におすすめできる転職エージェントを徹底比較。未経験から正社員、IT・エンジニア、ハイクラス、コンサル・M&Aまで、あなたの希望条件に合う相談先がひと目でわかります。登録・相談は完全無料。">
+  <title>ハイクラス・年収最大化 転職エージェント比較ナビ | AI先生キャリア</title>
+  <meta name="description" content="年収800万〜2,000万円を目指すハイクラス・SaaS・コンサル・IT・第二新卒のための転職エージェント比較ナビ。市場価値査定、CXO面接逆質問ジェネレーター、オファー年収交渉AI、厳選非公開求人を徹底比較。">
   <link rel="canonical" href="https://qoo22.github.io/career-portal/agents/tenshoku.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary: #0056b3;
-      --primary-dark: #003d80;
-      --primary-light: #e8f3ff;
+      --primary: #0f172a;
+      --primary-accent: #0284c7;
+      --primary-accent-dark: #0369a1;
+      --accent-gold: #f59e0b;
+      --accent-gold-dark: #d97706;
       --accent-orange: #ff7a00;
       --accent-orange-dark: #e06500;
-      --accent-gold: #f59e0b;
-      --bg-light: #f4f7fa;
+      --bg-dark: #0b0f19;
+      --bg-card: #1e293b;
+      --bg-light: #f8fafc;
       --bg-white: #ffffff;
-      --text-dark: #1a202c;
+      --text-dark: #0f172a;
       --text-body: #334155;
       --text-muted: #64748b;
       --border-color: #e2e8f0;
       --shadow-sm: 0 2px 4px rgba(0,0,0,0.04);
-      --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
-      --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+      --shadow-md: 0 4px 14px rgba(0,0,0,0.08);
+      --shadow-lg: 0 10px 28px rgba(0,0,0,0.12);
       --radius-sm: 6px;
       --radius-md: 10px;
       --radius-lg: 16px;
@@ -41,7 +44,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* PR Header */
+    /* PR Notice Header */
     .pr-header {
       background: #f1f5f9;
       color: var(--text-muted);
@@ -51,9 +54,9 @@
       border-bottom: 1px solid var(--border-color);
     }
 
-    /* Main Header */
+    /* Main Site Header */
     .site-header {
-      background: var(--bg-white);
+      background: #ffffff;
       border-bottom: 1px solid var(--border-color);
       position: sticky;
       top: 0;
@@ -78,11 +81,12 @@
     }
     .header-badge {
       background: #eff6ff;
-      color: var(--primary);
+      color: var(--primary-accent);
       font-size: 11px;
-      font-weight: 700;
-      padding: 3px 8px;
+      font-weight: 800;
+      padding: 3px 10px;
       border-radius: var(--radius-sm);
+      border: 1px solid #bfdbfe;
     }
 
     /* Container */
@@ -92,60 +96,77 @@
       padding: 0 16px;
     }
 
-    /* Hero Section */
+    /* Hero Section (High-Class Deep Navy x Gold x Cyan) */
     .hero-section {
-      background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 50%, #38bdf8 100%);
+      background: radial-gradient(circle at top right, #1e293b 0%, #0f172a 60%, #020617 100%);
       color: #ffffff;
-      padding: 36px 16px 40px;
+      padding: 40px 16px 44px;
       text-align: center;
       border-radius: 0 0 24px 24px;
-      box-shadow: var(--shadow-md);
-      margin-bottom: 24px;
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 28px;
+      position: relative;
+      border-bottom: 1px solid #334155;
     }
     .hero-tag {
-      display: inline-block;
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(4px);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(2, 132, 199, 0.2);
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: #38bdf8;
       padding: 4px 14px;
       border-radius: var(--radius-full);
       font-size: 12px;
-      font-weight: 700;
-      margin-bottom: 12px;
+      font-weight: 800;
+      margin-bottom: 14px;
       letter-spacing: 0.5px;
     }
     .hero-title {
       font-size: 26px;
       font-weight: 900;
       line-height: 1.35;
-      margin-bottom: 20px;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+    .hero-title span.gold {
+      color: #fbbf24;
+      text-shadow: 0 0 20px rgba(251, 191, 36, 0.4);
     }
     @media (min-width: 640px) {
       .hero-title { font-size: 34px; }
+    }
+    .hero-subtitle {
+      font-size: 13.5px;
+      color: #94a3b8;
+      max-width: 640px;
+      margin: 0 auto 24px;
+      line-height: 1.6;
     }
 
     .hero-features {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 8px;
-      max-width: 680px;
-      margin: 0 auto 24px;
+      max-width: 720px;
+      margin: 0 auto 26px;
     }
     .hero-feat-card {
-      background: #ffffff;
-      color: var(--text-dark);
+      background: rgba(30, 41, 59, 0.7);
+      backdrop-filter: blur(8px);
+      border: 1px solid #334155;
+      color: #ffffff;
       padding: 12px 6px;
       border-radius: var(--radius-md);
-      box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 4px;
     }
     .feat-icon { font-size: 20px; }
-    .feat-text { font-size: 11.5px; font-weight: 700; line-height: 1.3; }
+    .feat-text { font-size: 11.5px; font-weight: 800; line-height: 1.3; color: #f1f5f9; }
 
-    /* CTA Button (Orange Gloss) */
+    /* CTA Button (High Contrast Orange Gloss) */
     .btn-orange-hero {
       display: inline-flex;
       align-items: center;
@@ -154,36 +175,265 @@
       color: #ffffff;
       font-size: 17px;
       font-weight: 900;
-      padding: 14px 32px;
+      padding: 15px 32px;
       border-radius: var(--radius-full);
       text-decoration: none;
-      box-shadow: 0 4px 14px rgba(255, 110, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+      box-shadow: 0 4px 18px rgba(255, 110, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.4);
       transition: all 0.2s ease;
       width: 100%;
-      max-width: 420px;
+      max-width: 440px;
     }
     .btn-orange-hero:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(255, 110, 0, 0.5);
+      box-shadow: 0 6px 24px rgba(255, 110, 0, 0.55);
     }
 
     /* Section Heading */
     .sec-header {
       text-align: center;
-      margin: 32px 0 20px;
+      margin: 36px 0 20px;
     }
     .sec-sub {
-      font-size: 12.5px;
-      color: var(--primary);
-      font-weight: 700;
+      font-size: 12px;
+      color: var(--primary-accent);
+      font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 1.5px;
     }
     .sec-title {
       font-size: 21px;
       font-weight: 900;
       color: var(--text-dark);
       margin-top: 4px;
+    }
+
+    /* High-Class AI Tools Section (Swipeable Executive Cards) */
+    .tools-section {
+      background: #ffffff;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-lg);
+      padding: 24px 16px;
+      margin-bottom: 36px;
+      box-shadow: var(--shadow-sm);
+    }
+    .tools-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 16px;
+    }
+    .tools-badge {
+      background: #eff6ff;
+      color: #0284c7;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 4px;
+    }
+    .tools-title {
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--text-dark);
+    }
+    .tools-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+    .tools-swipe-container {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding: 8px 4px 16px;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+    }
+    .tools-swipe-container::-webkit-scrollbar { height: 6px; }
+    .tools-swipe-container::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 3px;
+    }
+    .tool-card {
+      flex: 0 0 250px;
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #ffffff;
+      border-radius: var(--radius-md);
+      padding: 18px 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+      scroll-snap-align: start;
+      position: relative;
+      overflow: hidden;
+      min-height: 230px;
+    }
+    .tool-card:nth-child(even) {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
+    }
+    .tool-card-file {
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 1px;
+      opacity: 0.8;
+      text-transform: uppercase;
+    }
+    .tool-card-time {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(4px);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: var(--radius-full);
+      margin-top: 4px;
+      width: fit-content;
+    }
+    .tool-card-name {
+      font-size: 17px;
+      font-weight: 900;
+      margin: 10px 0 6px;
+      line-height: 1.3;
+    }
+    .tool-card-desc {
+      font-size: 11.5px;
+      opacity: 0.9;
+      line-height: 1.45;
+      margin-bottom: 12px;
+      flex: 1;
+    }
+    .btn-tool-use {
+      background: #ffffff;
+      color: #0369a1;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 8px 14px;
+      border-radius: var(--radius-full);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      border: none;
+      width: 100%;
+    }
+    .tool-card:nth-child(even) .btn-tool-use { color: #0f172a; }
+
+    /* Video Style Article Library */
+    .library-section {
+      background: #0f172a;
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 28px 16px;
+      margin-bottom: 36px;
+      box-shadow: var(--shadow-md);
+    }
+    .lib-badge {
+      background: rgba(255, 255, 255, 0.15);
+      color: #38bdf8;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: var(--radius-full);
+      display: inline-block;
+      margin-bottom: 6px;
+    }
+    .lib-title { font-size: 22px; font-weight: 900; color: #ffffff; }
+    .lib-sub { font-size: 12px; color: #94a3b8; margin-top: 4px; }
+    .lib-tabs {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding: 14px 0 16px;
+      -webkit-overflow-scrolling: touch;
+    }
+    .lib-tabs::-webkit-scrollbar { display: none; }
+    .lib-tab-btn {
+      background: #1e293b;
+      border: 1px solid #334155;
+      color: #cbd5e1;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 6px 12px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .lib-tab-btn.active {
+      background: #0284c7;
+      color: #ffffff;
+      border-color: #0284c7;
+    }
+    .lib-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 16px;
+      margin-top: 8px;
+    }
+    .lib-card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: #ffffff;
+      transition: transform 0.2s ease;
+    }
+    .lib-card:hover { transform: translateY(-2px); border-color: #0284c7; }
+    .lib-thumb {
+      padding: 24px 16px;
+      text-align: center;
+      position: relative;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lib-thumb-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: rgba(0, 0, 0, 0.6);
+      color: #38bdf8;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .lib-thumb-text {
+      font-size: 17px;
+      font-weight: 900;
+      line-height: 1.3;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+    .lib-body {
+      padding: 12px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .lib-card-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: #f1f5f9;
+      line-height: 1.45;
+      margin-bottom: 8px;
+    }
+    .lib-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 11px;
+      color: #64748b;
     }
 
     /* Tab Filters */
@@ -209,10 +459,10 @@
       transition: all 0.15s ease;
     }
     .tab-btn.active {
-      background: var(--primary);
+      background: #0f172a;
       color: #ffffff;
-      border-color: var(--primary);
-      box-shadow: 0 2px 6px rgba(0, 86, 179, 0.3);
+      border-color: #0f172a;
+      box-shadow: 0 2px 6px rgba(15, 23, 42, 0.3);
     }
 
     /* Quick List Cards */
@@ -226,7 +476,7 @@
       background: #ffffff;
       border: 1px solid var(--border-color);
       border-radius: var(--radius-md);
-      padding: 14px 16px;
+      padding: 16px;
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -248,8 +498,8 @@
       margin-bottom: 4px;
     }
     .qc-name {
-      font-size: 16px;
-      font-weight: 800;
+      font-size: 16.5px;
+      font-weight: 900;
       color: var(--text-dark);
     }
     .badge-pr {
@@ -260,6 +510,14 @@
       padding: 1px 6px;
       border-radius: 4px;
       border: 1px solid #cbd5e1;
+    }
+    .badge-salary {
+      background: #fef3c7;
+      color: #b45309;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 4px;
     }
     .qc-catch {
       font-size: 13px;
@@ -284,7 +542,7 @@
       color: #ffffff;
       font-size: 13.5px;
       font-weight: 800;
-      padding: 10px 20px;
+      padding: 10px 22px;
       border-radius: var(--radius-full);
       text-decoration: none;
       text-align: center;
@@ -312,13 +570,13 @@
       width: 100%;
       border-collapse: collapse;
       font-size: 12.5px;
-      min-width: 600px;
+      min-width: 620px;
     }
     .compare-table th {
-      background: #f1f5f9;
-      color: var(--text-dark);
-      padding: 10px 12px;
-      border-bottom: 2px solid var(--border-color);
+      background: #0f172a;
+      color: #ffffff;
+      padding: 12px;
+      border-bottom: 2px solid #334155;
       text-align: left;
       font-weight: 700;
     }
@@ -346,8 +604,8 @@
     }
     .card-rank-badge {
       display: inline-block;
-      background: var(--primary);
-      color: #ffffff;
+      background: #0f172a;
+      color: #fbbf24;
       font-size: 11.5px;
       font-weight: 800;
       padding: 3px 10px;
@@ -365,7 +623,7 @@
     }
     .detail-card-catch {
       font-size: 14.5px;
-      color: var(--primary-dark);
+      color: #0369a1;
       font-weight: 700;
       margin-bottom: 14px;
     }
@@ -373,7 +631,7 @@
     /* Highlights */
     .highlights-box {
       background: #f8fafc;
-      border-left: 4px solid var(--primary);
+      border-left: 4px solid var(--primary-accent);
       padding: 12px 16px;
       border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
       margin-bottom: 16px;
@@ -424,13 +682,8 @@
       column-gap: 8px;
       line-height: 1.5;
     }
-    .spec-dt {
-      color: var(--text-muted);
-      font-weight: 700;
-    }
-    .spec-dd {
-      color: var(--text-dark);
-    }
+    .spec-dt { color: var(--text-muted); font-weight: 700; }
+    .spec-dd { color: var(--text-dark); }
 
     /* Big Action Button */
     .btn-action-cta {
@@ -475,8 +728,8 @@
       position: relative;
     }
     .step-num {
-      background: var(--primary-light);
-      color: var(--primary);
+      background: #eff6ff;
+      color: var(--primary-accent);
       font-size: 11px;
       font-weight: 800;
       padding: 2px 8px;
@@ -514,12 +767,10 @@
     .faq-q::after {
       content: "+";
       font-size: 18px;
-      color: var(--primary);
+      color: var(--primary-accent);
       transition: transform 0.2s;
     }
-    .faq-item.open .faq-q::after {
-      transform: rotate(45deg);
-    }
+    .faq-item.open .faq-q::after { transform: rotate(45deg); }
     .faq-a {
       display: none;
       padding: 0 16px 14px;
@@ -530,13 +781,148 @@
     }
     .faq-item.open .faq-a { display: block; }
 
+    /* Interactive AI Tool Modal */
+    .tool-modal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(15, 23, 42, 0.7);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+    .tool-modal-overlay.active { display: flex; }
+    .tool-modal {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      max-width: 540px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 24px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+    }
+    .modal-close-btn {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      background: #f1f5f9;
+      border: none;
+      font-size: 18px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+    }
+    .modal-title { font-size: 18px; font-weight: 900; color: var(--text-dark); margin-bottom: 6px; }
+    .modal-desc { font-size: 12.5px; color: var(--text-muted); margin-bottom: 16px; }
+    .modal-input-label { font-size: 12px; font-weight: 700; color: var(--text-dark); margin-bottom: 4px; display: block; }
+    .modal-textarea {
+      width: 100%;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 10px;
+      font-size: 13px;
+      font-family: inherit;
+      min-height: 80px;
+      margin-bottom: 12px;
+    }
+    .btn-modal-execute {
+      background: #0f172a;
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 800;
+      padding: 11px;
+      border-radius: var(--radius-sm);
+      border: none;
+      width: 100%;
+      cursor: pointer;
+    }
+    .btn-modal-execute:hover { background: #1e293b; }
+    .modal-result-box {
+      margin-top: 16px;
+      background: #f8fafc;
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius-sm);
+      padding: 14px;
+      font-size: 12.5px;
+      line-height: 1.6;
+      display: none;
+    }
+
+    /* Bottom Floating App Navigation (Mobile Only) */
+    .bottom-app-nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 6px 8px 10px;
+      z-index: 99;
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    }
+    @media (min-width: 768px) {
+      .bottom-app-nav { display: none; }
+    }
+    .app-nav-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 10px;
+      font-weight: 700;
+      flex: 1;
+    }
+    .app-nav-icon { font-size: 18px; }
+    .app-nav-center {
+      position: relative;
+      top: -12px;
+    }
+    .app-nav-center-btn {
+      background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+      color: #ffffff;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.4);
+      border: 2px solid #ffffff;
+    }
+    .app-nav-center-text { font-size: 9px; font-weight: 800; color: #ffffff; margin-top: 1px; }
+
+    /* Spacer for mobile */
+    .mobile-nav-spacer {
+      height: 70px;
+      display: block;
+    }
+    @media (min-width: 768px) {
+      .mobile-nav-spacer { display: none; }
+    }
+
     /* Footer */
     .site-footer {
-      background: #1e293b;
+      background: #0f172a;
       color: #94a3b8;
       padding: 36px 16px 24px;
       font-size: 12px;
-      border-top: 1px solid #334155;
+      border-top: 1px solid #1e293b;
     }
     .footer-inner {
       max-width: 920px;
@@ -559,7 +945,7 @@
 
   <!-- PR Notice -->
   <div class="pr-header">
-    本ページにはプロモーションが含まれます（広告掲載の条件・比較基準はページ下部に記載）
+    本ページにはプロモーションが含まれます（広告掲載の条件・客観的比較基準はページ下部に記載）
   </div>
 
   <!-- Header -->
@@ -568,73 +954,250 @@
       <a href="https://qoo22.github.io/career-portal/" class="site-logo">
         <span>⚡ AI先生キャリア</span>
       </a>
-      <span class="header-badge">2026-2027年 最新比較版</span>
+      <span class="header-badge">ハイクラス＆年収最大化 2026-2027</span>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section class="hero-section">
     <div class="container">
-      <span class="hero-tag">20代・30代のための厳選エージェントナビ</span>
-      <h1 class="hero-title">自分に最も合う<br>転職エージェントを見つける</h1>
+      <span class="hero-tag">💎 年収800万〜2,000万円実現ナビ</span>
+      <h1 class="hero-title">市場価値を解き放ち、<br><span class="gold">年収800万〜2,000万</span>を掴む</h1>
+      <p class="hero-subtitle">外資SaaS・コンサル・M&A・IT・第二新卒からの爆速キャリアアップまで。<br>一般公開されない「厳選非公開独占ルート」を徹底比較・網羅。</p>
       
       <div class="hero-features">
         <div class="hero-feat-card">
-          <span class="feat-icon">👤</span>
-          <span class="feat-text">プロが専任<br>徹底サポート</span>
+          <span class="feat-icon">💎</span>
+          <span class="feat-text">年収800万〜2,000万超<br>厳選非公開求人</span>
         </div>
         <div class="hero-feat-card">
-          <span class="feat-icon">💻</span>
-          <span class="feat-text">完全オンライン<br>土日夜間もOK</span>
+          <span class="feat-icon">📈</span>
+          <span class="feat-text">平均年収UP実績<br>＋150万円</span>
         </div>
         <div class="hero-feat-card">
           <span class="feat-icon">💴</span>
-          <span class="feat-text">登録・相談<br>すべて完全無料</span>
+          <span class="feat-text">登録・相談・求人査定<br>すべて完全無料</span>
         </div>
       </div>
 
       <a href="#agent-list" class="btn-orange-hero">
-        自分に合うエージェントを探す ▼
+        厳選エージェントを比較して探す ▼
       </a>
     </div>
   </section>
 
   <main class="container">
 
-    <!-- Section: Quick Filter -->
+    <!-- Section: High-Class AI Tools (Interactive Swipe Cards) -->
+    <div class="tools-section" id="ai-tools">
+      <div class="tools-header">
+        <div>
+          <span class="tools-badge">ハイクラス実戦特化・登録不要</span>
+          <h2 class="tools-title">🤖 ハイクラス転職 AI実戦ツール＆診断</h2>
+          <p class="tools-sub">年収数百万円単位を左右する「逆質問」「年収交渉」「市場査定」「企業カルテ」を瞬時に生成</p>
+        </div>
+      </div>
+
+      <div class="tools-swipe-container">
+        <!-- Tool 1: 市場価値・想定オファー年収AI査定 -->
+        <div class="tool-card">
+          <div>
+            <span class="tool-card-file">FILE 01</span>
+            <span class="tool-card-time">⏱ 目安 3分</span>
+            <h3 class="tool-card-name">市場価値・オファー年収査定</h3>
+            <p class="tool-card-desc">現職の粗利・実績・マネジメント規模を入力。外資SaaS・M&A・コンサル転身時のBase給＋OTE期待値を即試算。</p>
+          </div>
+          <button class="btn-tool-use" onclick="openToolModal('salary-eval')">
+            <span>使ってみる</span>
+            <span>＞</span>
+          </button>
+        </div>
+
+        <!-- Tool 2: 役員・CXO面接 逆質問AIジェネレーター -->
+        <div class="tool-card">
+          <div>
+            <span class="tool-card-file">FILE 02</span>
+            <span class="tool-card-time">⏱ 目安 5分</span>
+            <h3 class="tool-card-name">CXO・役員面接 逆質問AI</h3>
+            <p class="tool-card-desc">志望企業名やフェーズを入力。NRR、LTV/CAC、資本効率など「経営目線の一目置かれる逆質問」を自動生成。</p>
+          </div>
+          <button class="btn-tool-use" onclick="openToolModal('cxo-questions')">
+            <span>使ってみる</span>
+            <span>＞</span>
+          </button>
+        </div>
+
+        <!-- Tool 3: オファー面談 年収交渉・条件最大化AI -->
+        <div class="tool-card">
+          <div>
+            <span class="tool-card-file">FILE 03</span>
+            <span class="tool-card-time">⏱ 目安 5分</span>
+            <h3 class="tool-card-name">オファー年収交渉スクリプト</h3>
+            <p class="tool-card-desc">内定提示額と希望年収を入力。Base給引き上げ・入社一時金・他社天秤交渉の「角を立てない交渉文面」を生成。</p>
+          </div>
+          <button class="btn-tool-use" onclick="openToolModal('salary-negotiation')">
+            <span>使ってみる</span>
+            <span>＞</span>
+          </button>
+        </div>
+
+        <!-- Tool 4: Executive XYZレジュメ添削AI -->
+        <div class="tool-card">
+          <div>
+            <span class="tool-card-file">FILE 04</span>
+            <span class="tool-card-time">⏱ 目安 10分</span>
+            <h3 class="tool-card-name">Executive XYZレジュメ添削</h3>
+            <p class="tool-card-desc">Google推奨XYZ構文（成果・指標・行動）で、箇条書き実績を外資・大手役員が即決するプロ書類へ昇華。</p>
+          </div>
+          <button class="btn-tool-use" onclick="openToolModal('resume-polisher')">
+            <span>使ってみる</span>
+            <span>＞</span>
+          </button>
+        </div>
+
+        <!-- Tool 5: 企業カルテ・クォータ達成率＆健全性診断 -->
+        <div class="tool-card">
+          <div>
+            <span class="tool-card-file">FILE 05</span>
+            <span class="tool-card-time">⏱ 目安 3分</span>
+            <h3 class="tool-card-name">企業カルテ＆ノルマ健全性診断</h3>
+            <p class="tool-card-desc">入社後に後悔しないために。クォータ達成率・インセンティブ天井・チャーンレートを見抜くチェック指標を診断。</p>
+          </div>
+          <button class="btn-tool-use" onclick="openToolModal('company-health')">
+            <span>使ってみる</span>
+            <span>＞</span>
+          </button>
+        </div>
+
+        <!-- Tool 6: 第二新卒 ポータブルスキル発掘AI -->
+        <div class="tool-card">
+          <div>
+            <span class="tool-card-file">FILE 06</span>
+            <span class="tool-card-time">⏱ 目安 5分</span>
+            <h3 class="tool-card-name">ポータブルスキル軸ズラしAI</h3>
+            <p class="tool-card-desc">20代・第二新卒が有形営業や一般職から「年収1,000万ルート（SaaS/IT）」へ越境するための強みを言語化。</p>
+          </div>
+          <button class="btn-tool-use" onclick="openToolModal('portable-skills')">
+            <span>使ってみる</span>
+            <span>＞</span>
+          </button>
+        </div>
+      </div>
+      <p style="font-size: 11px; color: var(--text-muted); text-align: right; margin-top: 4px;">← 左右にスワイプできます →</p>
+    </div>
+
+    <!-- Section: Video-style Article Library -->
+    <div class="library-section" id="articles-library">
+      <span class="lib-badge">プロの実戦ノウハウ</span>
+      <h2 class="lib-title">🎬 見て分かる！キャリア最大化の実践記事ライブラリ</h2>
+      <p class="lib-sub">トップセールス・外資現役勢・コンサル出身者が明かす、リアルな選考対策と高年収獲得の現場</p>
+
+      <div class="lib-tabs">
+        <button class="lib-tab-btn active" data-lib-cat="all">すべて</button>
+        <button class="lib-tab-btn" data-lib-cat="real">リアル密着・体験談</button>
+        <button class="lib-tab-btn" data-lib-cat="interview">面接・逆質問対策</button>
+        <button class="lib-tab-btn" data-lib-cat="salary">年収交渉術</button>
+        <button class="lib-tab-btn" data-lib-cat="second">第二新卒・逆転ルート</button>
+      </div>
+
+      <div class="lib-grid" id="lib-cards-grid">
+        <!-- Art 1: 密着 -->
+        <div class="lib-card" data-lib-cat="real">
+          <div class="lib-thumb" style="background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);">
+            <span class="lib-thumb-badge">実例密着</span>
+            <div class="lib-thumb-text">有形営業から<br><span style="color: #38bdf8;">外資SaaS年収1,200万</span>へ<br>完全転職ログ</div>
+          </div>
+          <div class="lib-body">
+            <h4 class="lib-card-title">単月達成率396%・累計粗利5億円の現役トップセールスが実践した「職務経歴書リフレーミング」とオファー獲得術</h4>
+            <div class="lib-meta">
+              <span>👁 3,890回閲覧</span>
+              <span>⭐ 142人が保存</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Art 2: 年収交渉 -->
+        <div class="lib-card" data-lib-cat="salary">
+          <div class="lib-thumb" style="background: linear-gradient(135deg, #b45309 0%, #451a03 100%);">
+            <span class="lib-thumb-badge">年収交渉</span>
+            <div class="lib-thumb-text">内定時に<br><span style="color: #fbbf24;">＋150万円</span>を引き出す<br>天秤メール文面</div>
+          </div>
+          <div class="lib-body">
+            <h4 class="lib-card-title">印象を一切悪化させずに提示年収を最大化する「複数社内定・競合オファー交渉」の全ステップと実物テンプレート</h4>
+            <div class="lib-meta">
+              <span>👁 4,210回閲覧</span>
+              <span>⭐ 189人が保存</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Art 3: M&A・コンサル -->
+        <div class="lib-card" data-lib-cat="real">
+          <div class="lib-thumb" style="background: linear-gradient(135deg, #991b1b 0%, #450a0a 100%);">
+            <span class="lib-thumb-badge">高年収の真実</span>
+            <div class="lib-thumb-text">未経験から<br><span style="color: #f87171;">年収2,000万超</span><br>M&A仲介の現場</div>
+          </div>
+          <div class="lib-body">
+            <h4 class="lib-card-title">銀行員・不動産・メーカー営業が参入1〜2年で年収2,000万〜3,500万円を叩き出すインセンティブ構造と現場カルテ</h4>
+            <div class="lib-meta">
+              <span>👁 3,120回閲覧</span>
+              <span>⭐ 98人が保存</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Art 4: 第二新卒・逆転 -->
+        <div class="lib-card" data-lib-cat="second">
+          <div class="lib-thumb" style="background: linear-gradient(135deg, #047857 0%, #022c22 100%);">
+            <span class="lib-thumb-badge">第二新卒逆転</span>
+            <div class="lib-thumb-text">20代前半で<br><span style="color: #34d399;">勝ち組ルートへ</span><br>軸ズラし転職法</div>
+          </div>
+          <div class="lib-body">
+            <h4 class="lib-card-title">「今の会社で埋もれるのは嫌だ」第二新卒から年収700万〜1,000万台を狙える優良SaaS・ITベンチャーへの転職ロードマップ</h4>
+            <div class="lib-meta">
+              <span>👁 2,980回閲覧</span>
+              <span>⭐ 112人が保存</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Category Filter -->
     <div class="sec-header" id="agent-list">
-      <span class="sec-sub">CATEGORY FILTER</span>
-      <h2 class="sec-title">まずは気になる分野から選ぶ</h2>
+      <span class="sec-sub">AGENT CATEGORY FILTER</span>
+      <h2 class="sec-title">志向・年収レンジで絞り込む</h2>
     </div>
 
     <!-- Category Tabs -->
     <div class="tab-filter-wrap">
-      <button class="tab-btn active" data-cat="all">すべて表示</button>
-      <button class="tab-btn" data-cat="general">総合型・第二新卒</button>
-      <button class="tab-btn" data-cat="it">IT・エンジニア</button>
-      <button class="tab-btn" data-cat="highclass">ハイクラス・SaaS</button>
-      <button class="tab-btn" data-cat="consulting">コンサル・M&A</button>
-      <button class="tab-btn" data-cat="office">事務職・未経験</button>
+      <button class="tab-btn active" data-cat="all">すべて表示（9社）</button>
+      <button class="tab-btn" data-cat="highclass">ハイクラス・SaaS（年収800万〜）</button>
+      <button class="tab-btn" data-cat="consulting">コンサル・M&A（年収1000万〜3500万）</button>
+      <button class="tab-btn" data-cat="it">IT・エンジニア（上流・リモート）</button>
+      <button class="tab-btn" data-cat="young">第二新卒・20代キャリアアップ</button>
+      <button class="tab-btn" data-cat="office">事務・専門職</button>
     </div>
 
-    <!-- Quick List (16 Items) -->
+    <!-- Quick Cards List -->
     <div class="quick-list" id="quick-cards-container">
 
-      <!-- 1. DYM就職 -->
-      <div class="quick-card" data-category="general">
+      <!-- 1. ビズリーチ -->
+      <div class="quick-card" data-category="highclass">
         <div class="qc-info">
           <div class="qc-title-row">
-            <span class="qc-name">1. DYM就職</span>
+            <span class="qc-name">1. ビズリーチ（BIZREACH）</span>
             <span class="badge-pr">PR</span>
+            <span class="badge-salary">年収600万〜1,500万円超</span>
           </div>
-          <p class="qc-catch">未経験・第二新卒・フリーターから正社員を目指す20代を徹底支援</p>
+          <p class="qc-catch">優良企業や一流ヘッドハンターから直接スカウトが届く国内最高峰プラットフォーム</p>
           <div class="qc-tags">
-            <span class="qc-tag">未経験OK</span>
-            <span class="qc-tag">既卒・第二新卒</span>
-            <span class="qc-tag">面談無料</span>
+            <span class="qc-tag">外資・大手</span>
+            <span class="qc-tag">SaaS・営業リーダー</span>
+            <span class="qc-tag">プラチナスカウト</span>
           </div>
         </div>
-        <a href="#detail-dym" class="btn-detail-jump">詳細を見る ＞</a>
+        <a href="#detail-bizreach" class="btn-detail-jump">詳細を見る ＞</a>
       </div>
 
       <!-- 2. ギークリー -->
@@ -643,117 +1206,124 @@
           <div class="qc-title-row">
             <span class="qc-name">2. ギークリー（Geekly）</span>
             <span class="badge-pr">PR</span>
+            <span class="badge-salary">年収550万〜1,200万円</span>
           </div>
-          <p class="qc-catch">IT・Web・ゲーム業界専門。年収アップ率75%・スピード内定に強み</p>
+          <p class="qc-catch">IT・Web・ゲーム業界完全特化。年収アップ率75%・スピード内定に圧倒的強み</p>
           <div class="qc-tags">
             <span class="qc-tag">IT・Web特化</span>
-            <span class="qc-tag">エンジニア・開発</span>
-            <span class="qc-tag">年収アップ</span>
+            <span class="qc-tag">自社開発・メガベンチャー</span>
+            <span class="qc-tag">年収査定無料</span>
           </div>
         </div>
         <a href="#detail-geekly" class="btn-detail-jump">詳細を見る ＞</a>
       </div>
 
-      <!-- 3. ビズリーチ -->
-      <div class="quick-card" data-category="highclass">
-        <div class="qc-info">
-          <div class="qc-title-row">
-            <span class="qc-name">3. ビズリーチ（BIZREACH）</span>
-            <span class="badge-pr">PR</span>
-          </div>
-          <p class="qc-catch">優良企業や一流ヘッドハンターから直接スカウトが届く国内最大級ハイクラス</p>
-          <div class="qc-tags">
-            <span class="qc-tag">年収600万〜1500万</span>
-            <span class="qc-tag">スカウト型</span>
-            <span class="qc-tag">外資・大手</span>
-          </div>
-        </div>
-        <a href="#detail-bizreach" class="btn-detail-jump">詳細を見る ＞</a>
-      </div>
-
-      <!-- 4. MyVision -->
+      <!-- 3. MyVision -->
       <div class="quick-card" data-category="consulting">
         <div class="qc-info">
           <div class="qc-title-row">
-            <span class="qc-name">4. MyVision（マイビジョン）</span>
+            <span class="qc-name">3. MyVision（マイビジョン）</span>
             <span class="badge-pr">PR</span>
+            <span class="badge-salary">年収900万〜1,800万円</span>
           </div>
-          <p class="qc-catch">戦略・総合・ITコンサル特化。ケース面接・選考対策で圧倒的内定実績</p>
+          <p class="qc-catch">戦略・総合・ITコンサル特化。元ファーム出身者によるケース面接対策で圧倒的内定実績</p>
           <div class="qc-tags">
-            <span class="qc-tag">コンサル特化</span>
-            <span class="qc-tag">想定年収900万〜1800万</span>
-            <span class="qc-tag">ケース対策</span>
+            <span class="qc-tag">BIG4・戦略ファーム</span>
+            <span class="qc-tag">ケース過去問カルテ</span>
+            <span class="qc-tag">未経験事業会社から参入</span>
           </div>
         </div>
         <a href="#detail-myvision" class="btn-detail-jump">詳細を見る ＞</a>
       </div>
 
-      <!-- 5. NewMA -->
+      <!-- 4. NewMA -->
       <div class="quick-card" data-category="consulting">
         <div class="qc-info">
           <div class="qc-title-row">
-            <span class="qc-name">5. NewMA（ニューエムエー）</span>
+            <span class="qc-name">4. NewMA（ニューエムエー）</span>
             <span class="badge-pr">PR</span>
+            <span class="badge-salary">年収1,500万〜3,500万円超</span>
           </div>
-          <p class="qc-catch">M&A仲介業界特化。トップセールスを年収2,000万超のコンサルタントへ</p>
+          <p class="qc-catch">M&A仲介業界特化。営業猛者を平均年収2,000万超のコンサルタントへ送り込む</p>
           <div class="qc-tags">
             <span class="qc-tag">M&A仲介特化</span>
-            <span class="qc-tag">想定年収1500万〜3500万</span>
             <span class="qc-tag">営業経験者優遇</span>
+            <span class="qc-tag">独占非公開枠多数</span>
           </div>
         </div>
         <a href="#detail-newma" class="btn-detail-jump">詳細を見る ＞</a>
       </div>
 
-      <!-- 6. JAC Recruitment -->
+      <!-- 5. JAC Recruitment -->
       <div class="quick-card" data-category="highclass">
         <div class="qc-info">
           <div class="qc-title-row">
-            <span class="qc-name">6. JAC Recruitment</span>
+            <span class="qc-name">5. JAC Recruitment</span>
             <span class="badge-pr">PR</span>
+            <span class="badge-salary">年収800万〜1,800万円</span>
           </div>
-          <p class="qc-catch">外資系・グローバル・管理職に強み。企業と求職者を同一担当が支援</p>
+          <p class="qc-catch">外資系・グローバル・管理職に強み。企業と求職者を同一担当が支援する両面型</p>
           <div class="qc-tags">
             <span class="qc-tag">外資・グローバル</span>
             <span class="qc-tag">管理職・専門職</span>
-            <span class="qc-tag">両面型サポート</span>
+            <span class="qc-tag">英語力活かす</span>
           </div>
         </div>
         <a href="#detail-jac" class="btn-detail-jump">詳細を見る ＞</a>
       </div>
 
-      <!-- 7. KIMINARA -->
-      <div class="quick-card" data-category="general">
+      <!-- 6. テックゴー -->
+      <div class="quick-card" data-category="it">
         <div class="qc-info">
           <div class="qc-title-row">
-            <span class="qc-name">7. KIMINARA（キミナラ）</span>
+            <span class="qc-name">6. テックゴー（TechGo）</span>
             <span class="badge-pr">PR</span>
+            <span class="badge-salary">平均年収144万UP</span>
           </div>
-          <p class="qc-catch">自己分析・適性診断から、本当に相性の良いエージェントを厳選紹介</p>
+          <p class="qc-catch">ITエンジニア向けハイクラス。上流工程・プライム直請け・フルリモート案件多数</p>
+          <div class="qc-tags">
+            <span class="qc-tag">上流工程・PM</span>
+            <span class="qc-tag">フルリモート多数</span>
+            <span class="qc-tag">高還元率</span>
+          </div>
+        </div>
+        <a href="#detail-techgo" class="btn-detail-jump">詳細を見る ＞</a>
+      </div>
+
+      <!-- 7. DYM就職 -->
+      <div class="quick-card" data-category="young">
+        <div class="qc-info">
+          <div class="qc-title-row">
+            <span class="qc-name">7. DYM就職</span>
+            <span class="badge-pr">PR</span>
+            <span class="badge-salary">年収350万〜550万円</span>
+          </div>
+          <p class="qc-catch">第二新卒・既卒・未経験から大手優良グループ正社員を目指す20代を徹底支援</p>
+          <div class="qc-tags">
+            <span class="qc-tag">第二新卒・未経験OK</span>
+            <span class="qc-tag">書類選考なし面接枠</span>
+            <span class="qc-tag">就職成功率96%</span>
+          </div>
+        </div>
+        <a href="#detail-dym" class="btn-detail-jump">詳細を見る ＞</a>
+      </div>
+
+      <!-- 8. KIMINARA -->
+      <div class="quick-card" data-category="young">
+        <div class="qc-info">
+          <div class="qc-title-row">
+            <span class="qc-name">8. KIMINARA（キミナラ）</span>
+            <span class="badge-pr">PR</span>
+            <span class="badge-salary">20代キャリア形成</span>
+          </div>
+          <p class="qc-catch">自己分析・適性診断から、相性の良いキャリアアドバイザーを厳選紹介</p>
           <div class="qc-tags">
             <span class="qc-tag">相性重視</span>
-            <span class="qc-tag">20代向け</span>
+            <span class="qc-tag">20代特化</span>
             <span class="qc-tag">エージェント紹介</span>
           </div>
         </div>
         <a href="#detail-kiminara" class="btn-detail-jump">詳細を見る ＞</a>
-      </div>
-
-      <!-- 8. テックゴー -->
-      <div class="quick-card" data-category="it">
-        <div class="qc-info">
-          <div class="qc-title-row">
-            <span class="qc-name">8. テックゴー（TechGo）</span>
-            <span class="badge-pr">PR</span>
-          </div>
-          <p class="qc-catch">ITエンジニア向けハイクラス。上流工程・プライム直請け案件多数</p>
-          <div class="qc-tags">
-            <span class="qc-tag">上流工程・PM</span>
-            <span class="qc-tag">平均年収144万UP</span>
-            <span class="qc-tag">フルリモート多数</span>
-          </div>
-        </div>
-        <a href="#detail-techgo" class="btn-detail-jump">詳細を見る ＞</a>
       </div>
 
       <!-- 9. ミラキャリ -->
@@ -762,12 +1332,13 @@
           <div class="qc-title-row">
             <span class="qc-name">9. ミラキャリ</span>
             <span class="badge-pr">PR</span>
+            <span class="badge-salary">年収320万〜480万円</span>
           </div>
           <p class="qc-catch">20代・未経験から事務職・デスクワーク正社員を目指す専門サービス</p>
           <div class="qc-tags">
             <span class="qc-tag">事務職特化</span>
-            <span class="qc-tag">未経験OK</span>
             <span class="qc-tag">土日祝休み求人</span>
+            <span class="qc-tag">未経験OK</span>
           </div>
         </div>
         <a href="#detail-miracarri" class="btn-detail-jump">詳細を見る ＞</a>
@@ -777,8 +1348,8 @@
 
     <!-- Section: Comparison Table -->
     <div class="compare-table-box">
-      <h3 style="font-size: 17px; font-weight: 800; color: var(--text-dark);">📊 代表的サービス 一覧比較表</h3>
-      <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px;">迷ったら、まずは気になる2〜3社に無料相談して比較するのが成功の鉄則です。</p>
+      <h3 style="font-size: 17px; font-weight: 800; color: var(--text-dark);">📊 代表的ハイクラス・キャリアエージェント 一覧比較表</h3>
+      <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px;">迷ったら、まずは2〜3社に無料登録して非公開求人を比較検討するのが鉄則です。</p>
       
       <div class="table-scroll-wrap">
         <table class="compare-table">
@@ -793,39 +1364,39 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>DYM就職</strong> <span class="badge-pr">PR</span></td>
-              <td>既卒・第二新卒・フリーター</td>
-              <td>350万〜550万円</td>
-              <td>書類選考なし求人多数・スピード内定</td>
-              <td><a href="#detail-dym" style="color: var(--primary); font-weight: 700;">詳細・公式 ＞</a></td>
+              <td><strong>ビズリーチ</strong> <span class="badge-pr">PR</span></td>
+              <td>即戦力・SaaS・営業・企画・マネジメント</td>
+              <td><span style="color: #b45309; font-weight: 800;">600万〜1,500万円超</span></td>
+              <td>企業直接スカウト・優良ヘッドハンター</td>
+              <td><a href="#detail-bizreach" style="color: var(--primary-accent); font-weight: 700;">詳細・公式 ＞</a></td>
             </tr>
             <tr>
               <td><strong>ギークリー</strong> <span class="badge-pr">PR</span></td>
               <td>IT・Web・エンジニア・ゲーム</td>
-              <td>550万〜1,200万円</td>
+              <td><span style="color: #b45309; font-weight: 800;">550万〜1,200万円</span></td>
               <td>業界特化アドバイザー・内定スピード</td>
-              <td><a href="#detail-geekly" style="color: var(--primary); font-weight: 700;">詳細・公式 ＞</a></td>
-            </tr>
-            <tr>
-              <td><strong>ビズリーチ</strong> <span class="badge-pr">PR</span></td>
-              <td>即戦力・SaaS・営業・企画・マネジメント</td>
-              <td>600万〜1,500万円超</td>
-              <td>企業直接スカウト・優良ヘッドハンター</td>
-              <td><a href="#detail-bizreach" style="color: var(--primary); font-weight: 700;">詳細・公式 ＞</a></td>
+              <td><a href="#detail-geekly" style="color: var(--primary-accent); font-weight: 700;">詳細・公式 ＞</a></td>
             </tr>
             <tr>
               <td><strong>MyVision</strong> <span class="badge-pr">PR</span></td>
               <td>戦略・総合・ITコンサルタント</td>
-              <td>900万〜1,800万円</td>
+              <td><span style="color: #b45309; font-weight: 800;">900万〜1,800万円</span></td>
               <td>ケース面接対策・過去問カルテ完備</td>
-              <td><a href="#detail-myvision" style="color: var(--primary); font-weight: 700;">詳細・公式 ＞</a></td>
+              <td><a href="#detail-myvision" style="color: var(--primary-accent); font-weight: 700;">詳細・公式 ＞</a></td>
             </tr>
             <tr>
               <td><strong>NewMA</strong> <span class="badge-pr">PR</span></td>
               <td>M&A仲介コンサルタント</td>
-              <td>1,500万〜3,500万円超</td>
+              <td><span style="color: #b45309; font-weight: 800;">1,500万〜3,500万円超</span></td>
               <td>実務出身者によるインセンティブ比較</td>
-              <td><a href="#detail-newma" style="color: var(--primary); font-weight: 700;">詳細・公式 ＞</a></td>
+              <td><a href="#detail-newma" style="color: var(--primary-accent); font-weight: 700;">詳細・公式 ＞</a></td>
+            </tr>
+            <tr>
+              <td><strong>DYM就職</strong> <span class="badge-pr">PR</span></td>
+              <td>第二新卒・既卒・未経験からの爆速引き上げ</td>
+              <td><span style="color: #b45309; font-weight: 800;">350万〜550万円</span></td>
+              <td>書類選考なし面接・スピード正社員内定</td>
+              <td><a href="#detail-dym" style="color: var(--primary-accent); font-weight: 700;">詳細・公式 ＞</a></td>
             </tr>
           </tbody>
         </table>
@@ -836,25 +1407,25 @@
     <!-- Section: Detailed Reviews -->
     <div class="sec-header">
       <span class="sec-sub">DETAILED REVIEWS</span>
-      <h2 class="sec-title">厳選転職エージェント 詳細レビュー</h2>
+      <h2 class="sec-title">厳選エージェント 詳細レビュー</h2>
       <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px;">各サービスの注目ポイントと、公式サイトで公式確認した事業者情報を掲載しています。</p>
     </div>
 
     <div class="detail-cards-wrap">
 
-      <!-- 1. DYM就職 -->
-      <article class="agent-detail-card" id="detail-dym">
-        <span class="card-rank-badge">既卒・第二新卒・未経験の決定版</span>
-        <h3 class="detail-card-title">DYM就職 <span class="badge-pr">PR</span></h3>
-        <p class="detail-card-catch">未経験から正社員を目指す20代を徹底サポート。就職成功率96%の実績</p>
+      <!-- 1. ビズリーチ -->
+      <article class="agent-detail-card" id="detail-bizreach">
+        <span class="card-rank-badge">国内最高峰 ハイクラススカウト</span>
+        <h3 class="detail-card-title">ビズリーチ（BIZREACH） <span class="badge-pr">PR</span></h3>
+        <p class="detail-card-catch">優良企業や一流ヘッドハンターから直接スカウトが届くハイクラス転職のデファクトスタンダード</p>
 
         <div class="highlights-box">
           <div class="highlights-title">💡 注目ポイント</div>
           <ul class="highlights-list">
-            <li>書類選考をスキップして面接に進める優良求人を豊富に保有</li>
-            <li>アドバイザーが企業ごとの面接対策をマンツーマンで徹底指導</li>
-            <li>第二新卒・既卒・フリーターから東証プライムグループ企業への内定実績多数</li>
-            <li>相談から内定まで、費用は一切かからず完全無料</li>
+            <li>レジュメを登録しておくだけで、非公開求人の「プラチナスカウト」が届く</li>
+            <li>年収600万円〜1,500万円超のSaaS、営業リーダー、経営企画、管理職案件が充実</li>
+            <li>現在の自分の市場価値をリアルなオファーで定点観測できる</li>
+            <li>在職中でも周りに知られずに完全匿名でハイクラス転職活動を進められる</li>
           </ul>
         </div>
 
@@ -862,20 +1433,18 @@
           <div class="fact-check-title">📋 公式サイトで確かめた情報（2026年最新確認）</div>
           <dl class="spec-dl">
             <dt class="spec-dt">運営会社</dt>
-            <dd class="spec-dd">株式会社DYM（東京都品川区）</dd>
+            <dd class="spec-dd">株式会社ビズリーチ（東京都渋谷区）</dd>
             <dt class="spec-dt">許可番号</dt>
-            <dd class="spec-dd">有料職業紹介事業 13-ユ-304089</dd>
+            <dd class="spec-dd">有料職業紹介事業 13-ユ-304192</dd>
             <dt class="spec-dt">対象者</dt>
-            <dd class="spec-dd">既卒・第二新卒・フリーター・未経験から正社員を目指す20代</dd>
+            <dd class="spec-dd">年収アップ・ハイクラスを目指す20代後半〜30代のビジネスパーソン</dd>
             <dt class="spec-dt">利用料金</dt>
-            <dd class="spec-dd">無料（面談・求人紹介・書類添削すべて0円）</dd>
-            <dt class="spec-dt">拠点・面談</dt>
-            <dd class="spec-dd">全国対応・オンラインWeb面談対応</dd>
+            <dd class="spec-dd">基本無料（プラチナスカウトの閲覧・返信は完全無料）</dd>
           </dl>
         </div>
 
-        <a href="https://dshu.jp/" target="_blank" rel="noopener noreferrer" class="btn-action-cta">
-          DYM就職の公式サイトを見る（無料相談） →
+        <a href="https://www.bizreach.jp/" target="_blank" rel="noopener noreferrer" class="btn-action-cta">
+          ビズリーチの公式サイトを見る（無料登録） →
         </a>
         <p class="action-sub-note">※広告リンク先でサービス内容・利用条件をご確認ください</p>
       </article>
@@ -918,47 +1487,11 @@
         <p class="action-sub-note">※広告リンク先でサービス内容・利用条件をご確認ください</p>
       </article>
 
-      <!-- 3. ビズリーチ -->
-      <article class="agent-detail-card" id="detail-bizreach">
-        <span class="card-rank-badge">即戦力・ハイクラススカウト</span>
-        <h3 class="detail-card-title">ビズリーチ（BIZREACH） <span class="badge-pr">PR</span></h3>
-        <p class="detail-card-catch">優良企業や一流ヘッドハンターから直接スカウトが届く国内最大級プラットフォーム</p>
-
-        <div class="highlights-box">
-          <div class="highlights-title">💡 注目ポイント</div>
-          <ul class="highlights-list">
-            <li>レジュメを登録しておくだけで、非公開求人の「プラチナスカウト」が届く</li>
-            <li>年収600万円〜1,500万円超のハイクラス・SaaS・営業リーダー案件が充実</li>
-            <li>現在の自分の市場価値をリアルなオファーで定点観測できる</li>
-            <li>在職中でも周りに知られずに転職活動を完全匿名で進められる</li>
-          </ul>
-        </div>
-
-        <div class="fact-check-box">
-          <div class="fact-check-title">📋 公式サイトで確かめた情報（2026年最新確認）</div>
-          <dl class="spec-dl">
-            <dt class="spec-dt">運営会社</dt>
-            <dd class="spec-dd">株式会社ビズリーチ（東京都渋谷区）</dd>
-            <dt class="spec-dt">許可番号</dt>
-            <dd class="spec-dd">有料職業紹介事業 13-ユ-304192</dd>
-            <dt class="spec-dt">対象者</dt>
-            <dd class="spec-dd">年収アップを目指す20代後半〜30代のビジネスパーソン・専門職</dd>
-            <dt class="spec-dt">利用料金</dt>
-            <dd class="spec-dd">基本登録無料（プラチナスカウトの閲覧・返信は完全無料）</dd>
-          </dl>
-        </div>
-
-        <a href="https://www.bizreach.jp/" target="_blank" rel="noopener noreferrer" class="btn-action-cta">
-          ビズリーチの公式サイトを見る（無料登録） →
-        </a>
-        <p class="action-sub-note">※広告リンク先でサービス内容・利用条件をご確認ください</p>
-      </article>
-
-      <!-- 4. MyVision -->
+      <!-- 3. MyVision -->
       <article class="agent-detail-card" id="detail-myvision">
         <span class="card-rank-badge">コンサルタント転職 特化</span>
         <h3 class="detail-card-title">MyVision（マイビジョン） <span class="badge-pr">PR</span></h3>
-        <p class="detail-card-catch">戦略・総合・ITコンサル特化。元コンサルタントによる徹底面接対策</p>
+        <p class="detail-card-catch">戦略・総合・ITコンサル特化。元コンサルタントによる徹底ケース面接対策</p>
 
         <div class="highlights-box">
           <div class="highlights-title">💡 注目ポイント</div>
@@ -990,7 +1523,7 @@
         <p class="action-sub-note">※広告リンク先でサービス内容・利用条件をご確認ください</p>
       </article>
 
-      <!-- 5. NewMA -->
+      <!-- 4. NewMA -->
       <article class="agent-detail-card" id="detail-newma">
         <span class="card-rank-badge">M&A仲介業界 特化</span>
         <h3 class="detail-card-title">NewMA（ニューエムエー） <span class="badge-pr">PR</span></h3>
@@ -1026,58 +1559,94 @@
         <p class="action-sub-note">※広告リンク先でサービス内容・利用条件をご確認ください</p>
       </article>
 
+      <!-- 5. DYM就職 -->
+      <article class="agent-detail-card" id="detail-dym">
+        <span class="card-rank-badge">第二新卒・既卒・未経験の爆速正社員内定</span>
+        <h3 class="detail-card-title">DYM就職 <span class="badge-pr">PR</span></h3>
+        <p class="detail-card-catch">20代の若手・第二新卒から大手・優良グループ正社員を目指す決定版サービス</p>
+
+        <div class="highlights-box">
+          <div class="highlights-title">💡 注目ポイント</div>
+          <ul class="highlights-list">
+            <li>書類選考をスキップして面接に進める優良求人を豊富に保有</li>
+            <li>アドバイザーが企業ごとの面接対策をマンツーマンで徹底指導</li>
+            <li>第二新卒・既卒から東証プライムグループ企業への内定実績多数</li>
+            <li>相談から内定まで、費用は一切かからず完全無料</li>
+          </ul>
+        </div>
+
+        <div class="fact-check-box">
+          <div class="fact-check-title">📋 公式サイトで確かめた情報（2026年最新確認）</div>
+          <dl class="spec-dl">
+            <dt class="spec-dt">運営会社</dt>
+            <dd class="spec-dd">株式会社DYM（東京都品川区）</dd>
+            <dt class="spec-dt">許可番号</dt>
+            <dd class="spec-dd">有料職業紹介事業 13-ユ-304089</dd>
+            <dt class="spec-dt">対象者</dt>
+            <dd class="spec-dd">第二新卒・既卒・未経験からキャリアアップを目指す20代</dd>
+            <dt class="spec-dt">利用料金</dt>
+            <dd class="spec-dd">無料（面談・求人紹介・書類添削すべて0円）</dd>
+          </dl>
+        </div>
+
+        <a href="https://dshu.jp/" target="_blank" rel="noopener noreferrer" class="btn-action-cta">
+          DYM就職の公式サイトを見る（無料相談） →
+        </a>
+        <p class="action-sub-note">※広告リンク先でサービス内容・利用条件をご確認ください</p>
+      </article>
+
     </div>
 
     <!-- Section: How to Choose (3 Points) -->
     <div class="sec-header">
       <span class="sec-sub">SELECTION GUIDE</span>
-      <h2 class="sec-title">失敗しないエージェントの選び方</h2>
+      <h2 class="sec-title">失敗しないハイクラスエージェントの選び方</h2>
     </div>
 
     <div class="steps-grid">
       <div class="step-card">
         <span class="step-num">POINT 01</span>
-        <h4 class="step-name">自分の現状に強いか</h4>
-        <p class="step-desc">第二新卒・未経験ならDYM就職、ITならギークリー、ハイクラスならビズリーチなど、強みの一致が最重要です。</p>
+        <h4 class="step-name">非公開独占枠の比率</h4>
+        <p class="step-desc">年収800万円以上の好条件枠は全体の9割が非公開です。独自パイプを持つ特化エージェントを優先しましょう。</p>
       </div>
       <div class="step-card">
         <span class="step-num">POINT 02</span>
-        <h4 class="step-name">必ず2〜3社を比較する</h4>
-        <p class="step-desc">1社だけに依存すると求人の偏りや担当者との相性で失敗します。複数登録して非公開求人を天秤にかけましょう。</p>
+        <h4 class="step-name">必ず2〜3社で天秤にかける</h4>
+        <p class="step-desc">1社だけに依存するとオファー額の最大化ができません。複数社の提示条件を比較して最も好条件を勝ち取ります。</p>
       </div>
       <div class="step-card">
         <span class="step-num">POINT 03</span>
-        <h4 class="step-name">非公開求人を引き出す</h4>
-        <p class="step-desc">好条件の独占枠は一般公開されません。初回面談で「他社も比較中」と伝えることで最重要案件が出てきます。</p>
+        <h4 class="step-name">無形商材・高生産性領域への軸ズラし</h4>
+        <p class="step-desc">労働時間を増やさずに年収を跳ね上げる秘訣は、有形商材からSaaS・M&A・コンサルへ軸をズラすことです。</p>
       </div>
     </div>
 
     <!-- Section: Steps to Use -->
     <div class="sec-header">
       <span class="sec-sub">SERVICE FLOW</span>
-      <h2 class="sec-title">転職支援サービス利用の流れ</h2>
+      <h2 class="sec-title">ハイクラス転職支援 利用の流れ</h2>
     </div>
 
     <div class="steps-grid">
       <div class="step-card">
         <span class="step-num">STEP 1</span>
         <h4 class="step-name">サービスを選ぶ</h4>
-        <p class="step-desc">気になる分野や特徴を比較して、候補を2〜3社決定します。</p>
+        <p class="step-desc">志向や希望年収帯に合わせて2〜3社をピックアップします。</p>
       </div>
       <div class="step-card">
         <span class="step-num">STEP 2</span>
-        <h4 class="step-name">無料登録・申込み</h4>
-        <p class="step-desc">公式サイトの登録フォームから、経歴や希望条件を1分で入力します。</p>
+        <h4 class="step-name">無料登録・レジュメ入力</h4>
+        <p class="step-desc">各社公式サイトから職務経歴や希望年収を1分で入力します。</p>
       </div>
       <div class="step-card">
         <span class="step-num">STEP 3</span>
-        <h4 class="step-name">初回面談（オンライン）</h4>
-        <p class="step-desc">担当アドバイザーに現在の悩みや希望年収を率直に伝えます（30〜45分）。</p>
+        <h4 class="step-name">非公開求人の面談・査定</h4>
+        <p class="step-desc">オンラインで担当者と面談し、一般公開されない独占カルテを確認します。</p>
       </div>
       <div class="step-card">
         <span class="step-num">STEP 4</span>
-        <h4 class="step-name">非公開求人を比較</h4>
-        <p class="step-desc">提示された案件の中から、納得のいく条件の企業だけに応募を進めます。</p>
+        <h4 class="step-name">オファー面談・年収交渉</h4>
+        <p class="step-desc">内定獲得時に複数社を天秤にかけ、最高条件のオファーを確定させます。</p>
       </div>
     </div>
 
@@ -1089,28 +1658,71 @@
 
     <div class="faq-list">
       <div class="faq-item">
-        <div class="faq-q">転職するか決めていなくても相談できますか？</div>
-        <div class="faq-a">はい、問題ありません。「今の自分の市場価値を知りたい」「いい求人があれば検討したい」という段階でのキャリア面談も広く受け付けられています。</div>
+        <div class="faq-q">今すぐ転職する気がなくても登録・面談できますか？</div>
+        <div class="faq-a">はい、全く問題ありません。「現在の自分の市場価値を知りたい」「良いオファーがあれば検討したい」という定点観測の目的で利用しているハイクラス層が多数派です。</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">複数のサービスに同時に登録しても大丈夫ですか？</div>
-        <div class="faq-a">むしろ複数の併用が強く推奨されます。エージェントごとに独占保有している非公開求人が異なるため、2〜3社を比較することで最も好条件のオファーを勝ち取れます。</div>
+        <div class="faq-q">第二新卒や未経験から年収800万〜1,000万円以上を目指せますか？</div>
+        <div class="faq-a">十分に可能です。有形営業や一般事務から「無形SaaSセールス」「ITコンサル」「M&A仲介」へ軸をズラすことで、20代後半から年収1,000万円超を達成する事例が多数あります。</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">利用料金は本当にかかりませんか？</div>
-        <div class="faq-a">はい、求職者側は登録から面談、書類添削、面接対策、内定後の条件交渉まで完全無料です。採用企業側が紹介手数料を負担するビジネスモデルのため、求職者に請求されることは一切ありません。</div>
+        <div class="faq-q">なぜ求職者は完全無料で利用できるのですか？</div>
+        <div class="faq-a">転職支援サービスは、採用企業側が成果報酬（理論年収の30〜35%程度）をエージェントに支払うビジネスモデルです。求職者に費用が請求されることは法律上も一切ありません。</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q">在職中でも面談を受けられますか？</div>
-        <div class="faq-a">ほとんどのエージェントが完全オンライン（Google MeetやZoomなど）に対応しており、平日の夜間（20時以降）や土日の面談も柔軟に設定可能です。</div>
-      </div>
-      <div class="faq-item">
-        <div class="faq-q">紹介された求人には必ず応募しないといけませんか？</div>
-        <div class="faq-a">いいえ、応募するかどうかは100%あなた自身の自由です。条件や仕事内容に納得できない場合は、はっきりと見送って別の求人をリクエストできます。</div>
+        <div class="faq-q">在職中でも会社にバレずに進められますか？</div>
+        <div class="faq-a">はい、現職企業への非公開設定（ブロック機能）が完備されており、面談もオンライン（平日夜間や土日）で完結するため、身バレのリスクなく活動できます。</div>
       </div>
     </div>
 
   </main>
+
+  <!-- Interactive Tool Modal -->
+  <div class="tool-modal-overlay" id="toolModalOverlay">
+    <div class="tool-modal">
+      <button class="modal-close-btn" onclick="closeToolModal()">×</button>
+      <h3 class="modal-title" id="modalToolTitle">AIツール起動</h3>
+      <p class="modal-desc" id="modalToolDesc">必要事項を入力して「AI実戦分析を実行」を押してください。</p>
+
+      <label class="modal-input-label" id="modalInputLabel">入力内容：</label>
+      <textarea class="modal-textarea" id="modalInputText" placeholder="あなたの現在の職種、実績、気になる点などを入力してください..."></textarea>
+
+      <button class="btn-modal-execute" onclick="executeToolSimulation()">AI実戦分析を実行する →</button>
+
+      <div class="modal-result-box" id="modalResultBox">
+        <div style="font-weight: 800; color: #0284c7; margin-bottom: 6px;" id="modalResultHeader">✨ AI分析結果</div>
+        <div id="modalResultContent"></div>
+        <a href="https://qoo22.github.io/career-portal/guide.html" style="display: block; margin-top: 12px; color: #0284c7; font-weight: 800; text-align: right;">年収最大化マスターガイドを読む ＞</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom App Navigation (Mobile Only) -->
+  <div class="mobile-nav-spacer"></div>
+  <nav class="bottom-app-nav">
+    <a href="#agent-list" class="app-nav-item">
+      <span class="app-nav-icon">🔍</span>
+      <span>比較検索</span>
+    </a>
+    <a href="#articles-library" class="app-nav-item">
+      <span class="app-nav-icon">🎬</span>
+      <span>実践ノウハウ</span>
+    </a>
+    <div class="app-nav-center">
+      <a href="#ai-tools" class="app-nav-center-btn">
+        <span style="font-size: 20px;">🤖</span>
+        <span class="app-nav-center-text">AI先生</span>
+      </a>
+    </div>
+    <a href="#detail-bizreach" class="app-nav-item">
+      <span class="app-nav-icon">💎</span>
+      <span>ハイクラス</span>
+    </a>
+    <a href="#ai-tools" class="app-nav-item">
+      <span class="app-nav-icon">📝</span>
+      <span>AI添削</span>
+    </a>
+  </nav>
 
   <!-- Footer -->
   <footer class="site-footer">
@@ -1130,8 +1742,84 @@
     </div>
   </footer>
 
-  <!-- Tab Filtering JavaScript -->
+  <!-- Interactive JavaScript -->
   <script>
+    const toolConfigs = {
+      'salary-eval': {
+        title: '📊 市場価値・オファー年収査定AI',
+        desc: '現職の業種・職種・現在の年収・累計実績（売上や達成率）を入力してください。',
+        label: '現職スペック・達成実績：',
+        placeholder: '例：29歳、人材紹介営業リーダー、現年収1,000万円、累計粗利5億円・達成率396%',
+        header: '💰 想定オファー年収・OTE試算結果',
+        content: '<strong>【想定オファーレンジ】</strong>：年収 1,200万 〜 1,800万円（OTEベース）<br>・<strong>Enterprise SaaS AE</strong>：Base 800万〜1,000万 ＋ Incentive（OTE 1,400万〜1,800万）<br>・<strong>M&Aアドバイザリー</strong>：Base 600万〜800万 ＋ 成約フィー（期待値 1,800万〜3,000万円超）<br>・<strong>戦略・総合コンサル</strong>：年収 1,000万〜1,400万円（シニアアソシエイト〜MGRクラス）<br><br>💡<strong>市場評価</strong>：無形営業における高単価・高達成率トラックレコードは市場で最も希少価値が高いです。ビズリーチ等のプラチナスカウトで即座に上位オファーを獲得できる水準です。'
+      },
+      'cxo-questions': {
+        title: '🎯 CXO・役員面接 逆質問AIジェネレーター',
+        desc: '志望する企業名や事業フェーズ（上場、プレIPO、SaaS等）を入力してください。',
+        label: '志望企業・フェーズ：',
+        placeholder: '例：シリーズBの成長中SaaS企業、または外資系エンタープライズ',
+        header: '👔 経営陣が一目置く「経営目線」の逆質問3選',
+        content: '1.「直近のNRR（Net Retention Rate）が非常に堅調とお見受けしますが、今後の売上成長における『アップセル/クロスセル』と『純新規開拓』の目標比率をどう設計されていますか？」<br><br>2.「現在事業が急成長される中で、次のTAM（獲得可能最大市場）へ展開するにあたって、経営陣が最もクリティカルな組織・プロダクトのボトルネックと認識されている点はどこでしょうか？」<br><br>3.「私が今回参画させていただく場合、最初の90日間（クォーター）で経営陣が最も期待される定量的・定性的なインパクトの定義を教えてください。」<br><br>💡<strong>解説</strong>：現場作業の質問をせず、財務・成長戦略に直結する問いを投げることで「即戦力リーダー」として最高評価を勝ち取れます。'
+      },
+      'salary-negotiation': {
+        title: '📄 オファー年収交渉スクリプトAI',
+        desc: '内定提示額・希望額・他社の選考状況を入力してください。',
+        label: 'オファー提示額と希望条件：',
+        placeholder: '例：提示900万円、希望1,050万円、他社から1,100万円のオファーあり',
+        header: '📝 天秤年収交渉 実物メールテンプレート',
+        content: '「大変光栄なオファーをいただき、心より御礼申し上げます。貴社のビジョン、事業戦略、そしてチームの皆様の熱量に最も強く共感しており、第一志望としてぜひ貢献したいと考えております。<br><br>一点、大変恐縮ながら処遇面についてご相談の機会をいただけますでしょうか。現在、並行して選考を進めております他社様より年収1,100万円（Base 950万円＋賞与）でのオファーをいただいております。私としては貴社での挑戦を最優先に考えておりますため、もしBase給または年収総額において1,050万円への歩み寄りをいただくことが可能でしたら、即座に他社様を辞退し、貴社への入社を確約させていただきたく存じます。」<br><br>💡<strong>交渉の鉄則</strong>：第一志望であることを明言し「この条件が合えば即決する」というコミットをセットにすることで、人事に稟議を通す大義名分を与えます。'
+      },
+      'resume-polisher': {
+        title: '📝 Executive XYZレジュメ添削AI',
+        desc: '経歴書の箇条書き実績を入力すると、Google推奨XYZ形式（成果・指標・行動）にブラッシュアップします。',
+        label: '添削したい実績メモ：',
+        placeholder: '例：営業リーダーとしてチームの売上を達成させた。新規開拓も担当。',
+        header: '✨ Executive XYZフォーマット添削結果',
+        content: '<strong>【修正前】</strong>：営業リーダーとしてチームの売上を達成させた。新規開拓も担当。<br><br><strong>【添削後（Executive XYZ形式）】</strong>：<br>「徹底的なターゲットアカウント分析に基づくABMアプローチを主導し、メンバー8名のポッドを統括して<strong>四半期目標達成率396.6%（事業部歴代ギネス記録）</strong>を樹立。累計粗利5億円超を創出し、担当テリトリーにおけるエンタープライズ顧客のLTV最大化に貢献。」<br><br>💡<strong>ポイント</strong>：動詞で開始し、具体的な数字（396.6%・5億円）と組織貢献インパクト（LTV最大化・ギネス記録）を直結させることで、外資・メガベンチャーの書類通過率が跳ね上がります。'
+      },
+      'company-health': {
+        title: '🔍 企業カルテ＆ノルマ健全性診断AI',
+        desc: '検討中の企業名や求人票の特徴を入力すると、入社リスクと確認すべき裏指標を診断します。',
+        label: '検討中の企業・求人票の特徴：',
+        placeholder: '例：平均年収1,200万円と謳っているがインセンティブ比率が高い、未経験歓迎とある',
+        header: '⚠️ 入社前に必ず確認すべき「3大裏指標」診断',
+        content: '1. <strong>全営業メンバーのクォータ達成率（Quota Attainment Rate）</strong>：<br>「トップ数名だけが跳ねていて、全体の7割が未達」という構造になっていないか。健全な優良企業は全体の60〜70%がクォータを達成しています。<br><br>2. <strong>インセンティブの天井（Cap）と還元率の透明性</strong>：<br>売上が跳ねた際にインセンティブテーブルが一方的に改定されないか、成約フィーの計算式が明文化されているかを確認。<br><br>3. <strong>プロダクトのNet Churn（解約率）</strong>：<br>解約率が月次2%を超えるプロダクトは、どんなに優秀な営業が入っても「穴の空いたバケツ」を埋める疲弊戦になります。面談で解約率のトレンドを必ず逆質問してください。'
+      },
+      'portable-skills': {
+        title: '🚀 ポータブルスキル軸ズラしAI（第二新卒・若手）',
+        desc: '現職の業種と主な業務内容を入力してください。高年収無形商材への転身軸を判定します。',
+        label: '現職の業務内容：',
+        placeholder: '例：有形商材（メーカー・不動産・金融等）の営業、または一般職',
+        header: '🎯 年収1,000万ルートへの「軸ズラし」戦略',
+        content: '<strong>【抽出されたポータブルスキル】</strong>：顧客の経営課題ヒアリング力 × プロセス推進力<br><br><strong>【おすすめの跳ね上がり転身ルート】</strong>：<br>1. <strong>有形営業 ➔ 無形SaaSインサイドセールス/フィールドセールス</strong>（20代後半で年収700万〜1,000万到達の王道ルート）<br>2. <strong>金融・不動産 ➔ M&Aアドバイザリー</strong>（実力次第で20代年収1,500万〜2,000万超が狙える最高峰）<br>3. <strong>一般事務・業務 ➔ IT・クラウドプリセールス / CS</strong>（労働環境を改善しながら年収500万〜800万へステップアップ）'
+      }
+    };
+
+    function openToolModal(toolKey) {
+      const cfg = toolConfigs[toolKey] || toolConfigs['salary-eval'];
+      document.getElementById('modalToolTitle').innerText = cfg.title;
+      document.getElementById('modalToolDesc').innerText = cfg.desc;
+      document.getElementById('modalInputLabel').innerText = cfg.label;
+      document.getElementById('modalInputText').placeholder = cfg.placeholder;
+      document.getElementById('modalResultHeader').innerText = cfg.header;
+      document.getElementById('modalResultContent').innerHTML = cfg.content;
+      document.getElementById('modalResultBox').style.display = 'none';
+      document.getElementById('toolModalOverlay').classList.add('active');
+    }
+
+    function closeToolModal() {
+      document.getElementById('toolModalOverlay').classList.remove('active');
+    }
+
+    function executeToolSimulation() {
+      document.getElementById('modalResultBox').style.display = 'block';
+    }
+
+    document.getElementById('toolModalOverlay').addEventListener('click', function(e) {
+      if (e.target === this) closeToolModal();
+    });
+
+    // Category Tab Filtering
     document.addEventListener('DOMContentLoaded', function() {
       const tabBtns = document.querySelectorAll('.tab-btn');
       const cards = document.querySelectorAll('#quick-cards-container .quick-card');
@@ -1140,11 +1828,31 @@
         btn.addEventListener('click', function() {
           tabBtns.forEach(b => b.classList.remove('active'));
           this.classList.add('active');
-
           const cat = this.getAttribute('data-cat');
 
           cards.forEach(card => {
             const cardCat = card.getAttribute('data-category');
+            if (cat === 'all' || cardCat === cat) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // Library Tab Filtering
+      const libTabBtns = document.querySelectorAll('.lib-tab-btn');
+      const libCards = document.querySelectorAll('#lib-cards-grid .lib-card');
+
+      libTabBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          libTabBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          const cat = this.getAttribute('data-lib-cat');
+
+          libCards.forEach(card => {
+            const cardCat = card.getAttribute('data-lib-cat');
             if (cat === 'all' || cardCat === cat) {
               card.style.display = 'flex';
             } else {
