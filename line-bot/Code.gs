@@ -1137,31 +1137,42 @@ https://qoo22.github.io/career-portal/benefits/side-05-threads-funnel.html
 ・全特典ライブラリ一覧へ戻る 👉『 特典一覧 』`;
   }
 
-  // --- 海外アフィリエイト自販機・海外note完全セットアップキット ---
-  if (norm.includes('海外アフィ') || norm.includes('海外note') || norm.includes('海外ノート') || norm.includes('ドル建て') || norm === '海外' || norm === '海外アフィリエイト') {
-    return `🎁【海外アフィ自動販売機 Claude Code完全セットアップキット】解放！
+  // --- 海外版note完全設計図＆海外アフィリエイト自販機 ---
+  if (norm.includes('海外note') || norm.includes('海外版note') || norm.includes('設計図') || norm.includes('海外ノート') || norm === '海外' || norm.includes('海外アフィ') || norm.includes('海外アフィリエイト') || norm.includes('ドル建て')) {
+    return `🎁【海外版note完全設計図】をお届けします！
 
-英語が苦手でも、自分の商品がなくても、Claude Codeを活用して「法務・規約の注意点を100%クリアした海外SaaSドル建てアフィリエイト自販機」を構築する実務パッケージです。
+英語力ゼロ・商品ゼロから1年で500万円を目指す「海外デジタル商品量産プロトコル（全8大モジュール）」の完全版です。
 
 ━━━━━━━━━━━━
-▼ 配布セットアップキット内容
+▼ 今すぐ受け取る（2つの方法）
 ━━━━━━━━━━━━
-1. 【海外案件リサーチ規約一覧】Kit・systeme.io・beehiivの報酬率・最低出金額・受取手段
-2. 【英語記事・日本語確認対訳】架空体験ゼロ・客観データ比較の3,500単語記事
-3. 【FTC・法務コンプライアンス】rel="sponsored"／広告開示バナー完全テンプレート
-4. 【SNS・コミュニティ配信案】X・Pinterest・Reddit向け#ad表記投稿文
-5. 【実動公開サイト】GitHub Pages完全稼働サンプル
+📥【完全版PDFを直接ダウンロード】👇
+https://qoo22.github.io/career-portal/fire/assets/overseas_note_complete_blueprint.pdf
+（A4・3ページ／オフライン保存・印刷対応）
 
-▼ 実動公開サイト（英語メディア）はこちら👇
+📱【スマホで今すぐWEB閲覧】👇
+https://qoo22.github.io/career-portal/fire/overseas-note-blueprint.html
+
+━━━━━━━━━━━━
+🎁 収録されている8大モジュール
+━━━━━━━━━━━━
+1. 【需要テーマ30選】日本人が持つ知識を海外読者の悩み解決に変える30テーマ
+2. 【プラットフォーム比較】Gumroad vs Substack vs Payhip 手数料・決済比較表
+3. 【Claude完全プロンプト】4,000字で悩みが即解決する英文PDF生成構文
+4. 【英語X告知10本型】共感3・気づき3・体験2・逆説2の分散配信黄金比
+5. 【英文セールスレター】高CVR Gumroad販売ページテンプレート
+6. 【水平展開メソッド】売れた商品のDNAを周辺ジャンルへ量産する手順
+7. 【バンドル販売設計】客単価を$7から$19（約2.7倍）へ跳ね上げるセット戦略
+8. 【12ヶ月販売計画】月25部×20本で年500万円を達成するマイルストーン
+
+━━━━━━━━━━━━
+💡【海外SaaS継続アフィリ自販機】
+━━━━━━━━━━━━
+さらにドル建て継続報酬（月30%〜60%）を自動化する英語メディアも同時公開中！
+▼ 英語実動メディア（Creator Stack Lab）👇
 https://qoo22.github.io/career-portal/en/
 
-▼ 完全比較ガイド（Kit vs systeme.io vs beehiiv）👇
-https://qoo22.github.io/career-portal/en/newsletter-tools-guide.html
-
-▼ 完全セットアップキットPDF直接ダウンロード👇
-https://qoo22.github.io/career-portal/en/assets/overseas_affiliate_setup_kit.pdf
-
-💡「副業で稼ぐ」だけでなく、この仕組み自体を自販機として稼働させていきましょう！`;
+何か気になる点や質問があれば、いつでもこのトークにメッセージを送ってくださいね！`;
   }
 
   // ====================================================================
