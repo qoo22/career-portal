@@ -316,6 +316,44 @@ p {
 }
 
 /* ==========================================================================
+   Article Eyecatch & Diagram Images (Brain売れ筋特化サムネイル・図解)
+   ========================================================================== */
+.article-eyecatch-wrap,
+.hero-banner-wrap {
+  margin: 20px 0 28px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  border: 1px solid #cbd5e1;
+  background: #080e1a;
+}
+
+.article-eyecatch-img,
+.hero-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+}
+
+.article-diagram-wrap {
+  margin: 28px 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border: 1px solid #cbd5e1;
+  background: #080e1a;
+}
+
+.article-diagram-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ==========================================================================
    Ranking Comparison Table & Responsive Tables (マトリクス比較表・テーブル)
    スマホで1文字ずつ縦改行に崩れるのを100%防止し、滑らかな横スクロールを実現
    ========================================================================== */
