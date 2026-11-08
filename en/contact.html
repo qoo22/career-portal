@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Editorial Desk | Creator Stack Lab</title>
+  <meta name="description" content="Contact the editorial desk at Creator Stack Lab for feedback, corrections, or software review inquiries.">
+  <link rel="stylesheet" href="css/en.css">
+  <style>
+    .contact-form {
+      display: grid;
+      gap: 18px;
+      margin-top: 24px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .form-group label {
+      font-weight: 700;
+      font-size: 14.5px;
+      color: var(--primary);
+    }
+    .form-group input, .form-group textarea, .form-group select {
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-size: 15px;
+      font-family: inherit;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: var(--border-focus);
+    }
+    .btn-submit {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 14px;
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      transition: background 0.15s ease;
+    }
+    .btn-submit:hover {
+      background: var(--accent-hover);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        ⚡ <span>CreatorStack</span>Lab
+      </a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="newsletter-tools-guide.html">Newsletter Tools</a>
+        <a href="about.html">About</a>
+        <a href="disclosure.html">Disclosure</a>
+        <a href="contact.html" class="active">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="article-content">
+      <h1>Contact the Editorial Desk</h1>
+      <p class="tag-badge">Reader Feedback & Inquiries</p>
+      <p>Have a question about our reviews, an updated pricing tier to report, or a tool you would like our team to evaluate? We welcome feedback from readers and creators worldwide.</p>
+
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you for reaching out! Your message has been received by our editorial desk.'); this.reset();">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" required placeholder="e.g. Alex Morgan">
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" required placeholder="alex@example.com">
+        </div>
+        <div class="form-group">
+          <label for="subject">Inquiry Type</label>
+          <select id="subject" required>
+            <option value="editorial">Factual Correction / Pricing Update</option>
+            <option value="review-request">Tool Review Suggestion</option>
+            <option value="partnership">Advertising & Partnership Inquiry</option>
+            <option value="general">General Reader Feedback</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" required placeholder="How can our editorial desk assist you?"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">Send Message to Editorial Desk →</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h4>⚡ Creator Stack Lab</h4>
+        <p>Objective software reviews and practical growth playbooks for digital creators and solopreneurs.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="newsletter-tools-guide.html">Newsletter Comparison</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="contact.html">Contact & Editorial Desk</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Compliance & Standards</h4>
+        <ul>
+          <li><a href="disclosure.html">FTC Affiliate Disclosure</a></li>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Creator Stack Lab. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
