@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ｜AI先生キャリア</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .form-group { margin-bottom: 20px; }
+    .form-group label { display: block; font-size: 14px; font-weight: bold; margin-bottom: 6px; color: #1e293b; }
+    .form-group label .req { color: #dc2626; font-size: 12px; margin-left: 4px; }
+    .form-control { width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 14px; box-sizing: border-box; }
+    textarea.form-control { min-height: 120px; resize: vertical; }
+    .btn-submit { background: #2563eb; color: #fff; border: none; padding: 12px 30px; font-size: 15px; font-weight: bold; border-radius: 6px; cursor: pointer; width: 100%; }
+    .btn-submit:hover { background: #1d4ed8; }
+  </style>
+</head>
+<body>
+  <div class="pr-badge">【PR】本サイトはアフィリエイト広告およびプロモーションを含みます</div>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">🎯 <span>AI先生キャリア</span></a>
+      <nav>
+        <a href="index.html">ポータルTOP</a>
+        <a href="guide.html">転職ガイド</a>
+        <a href="fire/index.html">資産形成・FIRE</a>
+      </nav>
+    </div>
+  </header>
+  <div class="container" style="max-width: 700px; margin: 40px auto; padding: 0 20px;">
+    <div class="article-content" style="background: #fff; padding: 32px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+      <h1 style="font-size: 22px; margin-bottom: 16px; border-bottom: 2px solid #2563eb; padding-bottom: 10px;">お問い合わせ窓口</h1>
+      <p style="font-size: 14px; color: #475569; margin-bottom: 20px;">
+        当サイトへのご質問、掲載内容の訂正・削除依頼、提携広告主様・ASP様からのご連絡は下記フォームよりお願いいたします。
+      </p>
+      <form id="cForm" onsubmit="event.preventDefault(); document.getElementById('cForm').style.display='none'; document.getElementById('doneMsg').style.display='block';">
+        <div class="form-group">
+          <label>お名前・貴社名 <span class="req">必須</span></label>
+          <input type="text" class="form-control" required placeholder="例：山田 太郎">
+        </div>
+        <div class="form-group">
+          <label>メールアドレス <span class="req">必須</span></label>
+          <input type="email" class="form-control" required placeholder="name@example.com">
+        </div>
+        <div class="form-group">
+          <label>件名 <span class="req">必須</span></label>
+          <input type="text" class="form-control" required placeholder="お問い合わせ件名">
+        </div>
+        <div class="form-group">
+          <label>お問い合わせ内容 <span class="req">必須</span></label>
+          <textarea class="form-control" required placeholder="具体的にご入力ください"></textarea>
+        </div>
+        <button type="submit" class="btn-submit">送信する</button>
+      </form>
+      <div id="doneMsg" style="display:none; background:#f0fdf4; border:1px solid #86efac; border-radius:6px; padding:20px; text-align:center; margin-top:20px; color:#166534;">
+        お問い合わせを受け付けました。順次確認の上ご連絡いたします。
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div style="text-align: center; font-size: 12px; padding: 20px 0; color: #64748b;">
+      <a href="about.html" style="color: #64748b; margin: 0 10px;">当サイトについて</a>
+      <a href="privacy.html" style="color: #64748b; margin: 0 10px;">プライバシーポリシー</a>
+      <a href="contact.html" style="color: #64748b; margin: 0 10px;">お問い合わせ</a><br><br>
+      © 2026 AI先生キャリア All Rights Reserved.
+    </div>
+  </footer>
+</body>
+</html>

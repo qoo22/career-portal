@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>お問い合わせ｜AI先生 財テク＆サイドFIRE攻略ポータル</title>
+  <meta name="description" content="AI先生 財テク＆サイドFIRE攻略ポータルのお問い合わせ窓口です。読者様からのご質問、広告主様・ASP担当者様からの提携ご相談等を受け付けています。">
+  <link rel="stylesheet" href="css/fire.css">
+  <style>
+    .form-group {
+      margin-bottom: 22px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: #334155;
+      margin-bottom: 8px;
+    }
+    .form-group label .required {
+      color: #dc2626;
+      font-size: 12px;
+      margin-left: 6px;
+      background: #fee2e2;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      font-size: 14px;
+      color: #0f172a;
+      background: #f8fafc;
+      transition: border-color 0.2s, background-color 0.2s;
+    }
+    .form-control:focus {
+      outline: none;
+      border-color: var(--primary-light);
+      background: #ffffff;
+      box-shadow: 0 0 0 3px rgba(4, 120, 87, 0.15);
+    }
+    textarea.form-control {
+      min-height: 140px;
+      resize: vertical;
+    }
+    .submit-btn {
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      padding: 14px 36px;
+      font-size: 16px;
+      font-weight: 700;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+      transition: background 0.2s;
+    }
+    .submit-btn:hover {
+      background: var(--primary-light);
+    }
+    .notice-box {
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin-bottom: 28px;
+      font-size: 13px;
+      color: #166534;
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+  <div class="pr-badge">【PR】本サイトはアフィリエイト広告およびプロモーションを含みます</div>
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">💰 <span>AI先生 財テク＆サイドFIRE</span></a>
+      <nav>
+        <a href="index.html">ホーム</a>
+        <a href="nisa.html">新NISA</a>
+        <a href="furusato.html">ふるさと納税</a>
+        <a href="saving.html">固定費削減</a>
+        <a href="roadmap.html">サイドFIRE</a>
+        <a href="side-business.html">副業攻略</a>
+        <a href="simulator.html">計算機</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container" style="max-width: 800px; margin: 40px auto; padding: 0 20px;">
+    <div style="background: #fff; border-radius: 12px; padding: 40px 32px; box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
+      <h1 style="font-size: 26px; color: var(--primary-dark); margin-bottom: 16px; border-bottom: 2px solid var(--primary); padding-bottom: 12px;">お問い合わせ窓口</h1>
+      
+      <p style="margin-bottom: 24px; color: #334155; line-height: 1.85; font-size: 14px;">
+        当サイト（AI先生 財テク＆サイドFIRE完全攻略ポータル）に関するご質問、掲載内容に関するお問い合わせ、提携広告主様・ASPご担当者様からのご連絡は、以下のフォームより受け付けております。
+      </p>
+
+      <div class="notice-box">
+        <strong>【お問い合わせいただく前の注意事項】</strong><br>
+        ・当サイトは情報提供を目的としており、個別具体的な銘柄の推奨や投資助言、税務相談等にはお答えできません。<br>
+        ・掲載内容の修正・削除依頼、広告掲載・提携のご相談につきましては、通常1〜3営業日以内に確認・ご返信いたします。
+      </div>
+
+      <form id="contactForm" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="contactType">お問い合わせ種別 <span class="required">必須</span></label>
+          <select id="contactType" class="form-control" required>
+            <option value="">選択してください</option>
+            <option value="asp_ad">広告主様・ASP様からの提携・掲載に関するご連絡</option>
+            <option value="correction">掲載内容の訂正・情報更新のご依頼</option>
+            <option value="reader">読者様からのサイト運営に関するご意見・ご質問</option>
+            <option value="other">その他のお問い合わせ</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="senderName">お名前・貴社名 <span class="required">必須</span></label>
+          <input type="text" id="senderName" class="form-control" placeholder="例：山田 太郎 / 株式会社◯◯" required>
+        </div>
+
+        <div class="form-group">
+          <label for="senderEmail">メールアドレス <span class="required">必須</span></label>
+          <input type="email" id="senderEmail" class="form-control" placeholder="例：name@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="messageSubject">件名 <span class="required">必須</span></label>
+          <input type="text" id="messageSubject" class="form-control" placeholder="例：提携プログラムに関するご連絡について" required>
+        </div>
+
+        <div class="form-group">
+          <label for="messageBody">お問い合わせ内容 <span class="required">必須</span></label>
+          <textarea id="messageBody" class="form-control" placeholder="お問い合わせ内容を具体的にご入力ください。" required></textarea>
+        </div>
+
+        <div style="margin-bottom: 24px; font-size: 13px; color: #64748b; line-height: 1.7;">
+          ご入力いただいた個人情報は、<a href="privacy.html" style="color: var(--primary-light); text-decoration: underline;" target="_blank">プライバシーポリシー</a>に基づき厳重に管理し、お問い合わせ対応の目的にのみ使用いたします。
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">送信する</button>
+      </form>
+
+      <div id="completeMsg" style="display: none; background: #f0fdf4; border: 1px solid #86efac; border-radius: 8px; padding: 24px; text-align: center; margin-top: 20px;">
+        <h3 style="color: #166534; font-size: 18px; margin-bottom: 8px;">✓ お問い合わせを受け付けました</h3>
+        <p style="color: #15803d; font-size: 14px; line-height: 1.8;">
+          お問い合わせいただき誠にありがとうございます。<br>
+          内容を確認の上、担当者より折り返しご連絡申し上げます。
+        </p>
+      </div>
+
+      <div style="margin-top: 40px; text-align: center; border-top: 1px solid #e2e8f0; padding-top: 24px;">
+        <a href="index.html" class="btn" style="display: inline-block; background: var(--primary); color: #fff; padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: bold;">ポータルTOPへ戻る</a>
+      </div>
+    </div>
+  </div>
+
+  <footer style="background: var(--primary-dark); color: #94a3b8; padding: 40px 20px; margin-top: 60px;">
+    <div style="max-width: 1080px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+      <div>
+        <strong style="color: #fff; font-size: 16px;">💰 AI先生 財テク＆サイドFIRE完全攻略ポータル</strong>
+        <p style="margin-top: 8px; max-width: 480px; font-size: 13px;">働く世代の可処分所得最大化とサイドFIRE達成を支援する金融・ライフプラン攻略メディア。</p>
+      </div>
+      <div style="display: flex; gap: 16px; flex-wrap: wrap; font-size: 13px;">
+        <a href="index.html" style="color: #cbd5e1; text-decoration: none;">ホーム</a>
+        <a href="securities-guide.html" style="color: #cbd5e1; text-decoration: none;">新NISA証券ガイド</a>
+        <a href="nisa.html" style="color: #cbd5e1; text-decoration: none;">SBI vs 楽天証券</a>
+        <a href="about.html" style="color: #cbd5e1; text-decoration: none;">当サイトについて</a>
+        <a href="privacy.html" style="color: #cbd5e1; text-decoration: none;">プライバシー・免責事項</a>
+        <a href="contact.html" style="color: #fbbf24; text-decoration: none; font-weight: bold;">お問い合わせ</a>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 30px; font-size: 12px; border-top: 1px solid #1e293b; padding-top: 20px;">
+      &copy; 2026 AI先生 財テク＆サイドFIRE All Rights Reserved.
+    </div>
+  </footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('completeMsg').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
