@@ -94,6 +94,7 @@
       <nav>
         <a href="index.html" class="active">Home</a>
         <a href="newsletter-tools-guide.html">Newsletter Tools</a>
+        <a href="all-in-one-marketing-platforms.html">All-in-One Suites</a>
         <a href="about.html">About</a>
         <a href="disclosure.html">Disclosure</a>
         <a href="contact.html">Contact</a>
@@ -108,6 +109,158 @@
       <p>Data-backed software evaluations, transparent pricing audits, and operational workflows without the corporate bloat.</p>
     </div>
 
+    <!-- Interactive Calculator Widget -->
+    <div class="calc-card">
+      <div class="calc-header">
+        <span class="badge-pill" style="background:#eff6ff; color:#2563eb; border-color:#bfdbfe;">Interactive Pricing Tool</span>
+        <h3>⚡ 2026 Creator Software Cost Calculator</h3>
+        <p style="color:#64748b; font-size:14.5px;">Slide to your audience size to calculate and compare monthly software bills side-by-side:</p>
+      </div>
+
+      <div class="calc-slider-box">
+        <div class="calc-slider-label">
+          <span>Audience / Email List Size:</span>
+          <span class="calc-count-val" id="subscriber-display">2,500</span>
+        </div>
+        <input type="range" min="500" max="25000" step="500" value="2500" class="calc-slider" id="subscriber-slider">
+      </div>
+
+      <div class="calc-results-grid">
+        <!-- systeme.io -->
+        <div class="calc-result-item" id="card-systeme">
+          <div class="calc-badge-best" id="badge-systeme">🏆 Best Value</div>
+          <div class="calc-tool-title">systeme.io</div>
+          <div class="calc-tool-price" id="price-systeme">$27</div>
+          <div style="font-size:12px; color:#64748b; margin-bottom:8px;" id="desc-systeme">Startup Tier (Includes Courses & Funnels)</div>
+          <a href="https://systeme.io/" target="_blank" rel="sponsored noopener" class="calc-tool-btn">Free Plan / Try ($0) →</a>
+        </div>
+
+        <!-- beehiiv -->
+        <div class="calc-result-item" id="card-beehiiv">
+          <div class="calc-badge-best" id="badge-beehiiv" style="display:none;">🏆 Best for Media</div>
+          <div class="calc-tool-title">beehiiv</div>
+          <div class="calc-tool-price" id="price-beehiiv">$0</div>
+          <div style="font-size:12px; color:#64748b; margin-bottom:8px;" id="desc-beehiiv">Launch Plan (Free up to 2.5k)</div>
+          <a href="https://www.beehiiv.com/" target="_blank" rel="sponsored noopener" class="calc-tool-btn">Explore beehiiv →</a>
+        </div>
+
+        <!-- Kit (ConvertKit) -->
+        <div class="calc-result-item" id="card-kit">
+          <div class="calc-badge-best" id="badge-kit" style="display:none;">🏆 Deliverability</div>
+          <div class="calc-tool-title">Kit (ConvertKit)</div>
+          <div class="calc-tool-price" id="price-kit">$49</div>
+          <div style="font-size:12px; color:#64748b; margin-bottom:8px;" id="desc-kit">Creator Plan (Automations)</div>
+          <a href="https://kit.com/" target="_blank" rel="sponsored noopener" class="calc-tool-btn">Explore Kit →</a>
+        </div>
+
+        <!-- Kajabi -->
+        <div class="calc-result-item" id="card-kajabi">
+          <div class="calc-tool-title">Kajabi</div>
+          <div class="calc-tool-price" id="price-kajabi">$149</div>
+          <div style="font-size:12px; color:#64748b; margin-bottom:8px;" id="desc-kajabi">Basic Plan (Courses + Video)</div>
+          <a href="https://kajabi.com/" target="_blank" rel="sponsored noopener" class="calc-tool-btn">Explore Kajabi →</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const slider = document.getElementById('subscriber-slider');
+      const display = document.getElementById('subscriber-display');
+      
+      const priceSysteme = document.getElementById('price-systeme');
+      const descSysteme = document.getElementById('desc-systeme');
+      const cardSysteme = document.getElementById('card-systeme');
+      const badgeSysteme = document.getElementById('badge-systeme');
+
+      const priceBeehiiv = document.getElementById('price-beehiiv');
+      const descBeehiiv = document.getElementById('desc-beehiiv');
+      const cardBeehiiv = document.getElementById('card-beehiiv');
+      const badgeBeehiiv = document.getElementById('badge-beehiiv');
+
+      const priceKit = document.getElementById('price-kit');
+      const descKit = document.getElementById('desc-kit');
+
+      const priceKajabi = document.getElementById('price-kajabi');
+
+      function updateCalculator() {
+        const subs = parseInt(slider.value, 10);
+        display.textContent = subs.toLocaleString();
+
+        // systeme.io calculation
+        if (subs <= 2000) {
+          priceSysteme.textContent = "$0";
+          descSysteme.textContent = "Free Forever Tier (Unlimited Sends)";
+        } else if (subs <= 5000) {
+          priceSysteme.textContent = "$27";
+          descSysteme.textContent = "Startup Plan (5k Contacts)";
+        } else if (subs <= 10000) {
+          priceSysteme.textContent = "$47";
+          descSysteme.textContent = "Webinar Plan (10k Contacts)";
+        } else {
+          priceSysteme.textContent = "$97";
+          descSysteme.textContent = "Unlimited Plan (Flat Cap)";
+        }
+
+        // beehiiv calculation
+        if (subs <= 2500) {
+          priceBeehiiv.textContent = "$0";
+          descBeehiiv.textContent = "Launch Tier (Free up to 2.5k)";
+        } else if (subs <= 10000) {
+          priceBeehiiv.textContent = "$39";
+          descBeehiiv.textContent = "Scale Plan (Annual Billed)";
+        } else {
+          priceBeehiiv.textContent = "$84";
+          descBeehiiv.textContent = "Scale Plan (Scaling list)";
+        }
+
+        // Kit calculation
+        if (subs <= 1000) {
+          priceKit.textContent = "$29";
+          descKit.textContent = "Creator Tier (1k contacts)";
+        } else if (subs <= 3000) {
+          priceKit.textContent = "$49";
+          descKit.textContent = "Creator Tier (3k contacts)";
+        } else if (subs <= 5000) {
+          priceKit.textContent = "$79";
+          descKit.textContent = "Creator Tier (5k contacts)";
+        } else if (subs <= 10000) {
+          priceKit.textContent = "$119";
+          descKit.textContent = "Creator Tier (10k contacts)";
+        } else {
+          priceKit.textContent = "$199+";
+          descKit.textContent = "Creator Tier (Scaling list)";
+        }
+
+        // Kajabi
+        if (subs <= 10000) {
+          priceKajabi.textContent = "$149";
+        } else {
+          priceKajabi.textContent = "$199";
+        }
+
+        // Best highlight
+        if (subs <= 2000) {
+          cardSysteme.classList.add('highlight');
+          badgeSysteme.style.display = 'block';
+          cardBeehiiv.classList.remove('highlight');
+          badgeBeehiiv.style.display = 'none';
+        } else if (subs <= 2500) {
+          cardSysteme.classList.remove('highlight');
+          badgeSysteme.style.display = 'none';
+          cardBeehiiv.classList.add('highlight');
+          badgeBeehiiv.style.display = 'block';
+        } else {
+          cardSysteme.classList.add('highlight');
+          badgeSysteme.style.display = 'block';
+          cardBeehiiv.classList.remove('highlight');
+          badgeBeehiiv.style.display = 'none';
+        }
+      }
+
+      slider.addEventListener('input', updateCalculator);
+      updateCalculator();
+    </script>
+
     <h2 style="margin-bottom: 20px;">Featured Deep Dives & Guides</h2>
 
     <div class="featured-grid">
@@ -117,6 +270,14 @@
         <h3>Best Email Newsletter Platforms for Beginners (2026): Kit vs. systeme.io vs. beehiiv</h3>
         <p>A comprehensive, side-by-side comparison of pricing curves, inbox deliverability rates, and growth loops. Discover which tool fits your monetization model.</p>
         <div class="read-more-link">Read the Complete 2026 Comparison Guide →</div>
+      </a>
+
+      <!-- Article 2: All-in-One High-Ticket Guide -->
+      <a href="all-in-one-marketing-platforms.html" class="featured-card">
+        <span class="tag-badge" style="background:#fef2f2; color:#b91c1c;">High-Ticket SaaS Guide</span>
+        <h3>Best All-in-One Creator Platforms in 2026: systeme.io vs. Kajabi vs. Skool</h3>
+        <p>Tired of paying $300+/month for fragmented tools? Compare course hosting, sales funnels, and community retention features to pick your unified stack.</p>
+        <div class="read-more-link">Read the All-in-One Platform Comparison →</div>
       </a>
     </div>
 
