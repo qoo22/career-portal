@@ -3,97 +3,152 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>海外版note完全設計図｜英語力ゼロ・商品ゼロから年500万円を目指すデジタル商品量産プロトコル</title>
-  <meta name="description" content="公式LINE登録者限定配布：海外で長く需要が見込めるテーマ30選、プラットフォーム比較、Claudeプロンプト、X告知10本型、Gumroad英文セールスレター、横展開法、バンドル設計、12ヶ月計画を完全収録。">
+  <title>海外版note完全設計図【実物8大モジュール完全版】｜英語力ゼロ・商品ゼロから年500万円を目指すデジタル商品量産プロトコル</title>
+  <meta name="description" content="公式LINE限定公開：海外需要30テーマ詳細・プラットフォーム比較表・Claude完全プロンプト集・英語X投稿10本実例・Gumroad英文セールスレター・横展開法・バンドル設計・12ヶ月計画を完全収録。">
   <link rel="stylesheet" href="css/fire.css">
   <style>
     .blueprint-hero {
-      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%);
+      background: linear-gradient(135deg, #0b0f19 0%, #1e1b4b 50%, #312e81 100%);
       color: #fff;
-      padding: 48px 20px;
+      padding: 48px 24px;
       text-align: center;
-      border-radius: 12px;
+      border-radius: 16px;
       margin-bottom: 32px;
+      border: 1px solid #312e81;
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
     }
     .badge-gold {
       display: inline-block;
       background: linear-gradient(135deg, #f59e0b, #d97706);
       color: #fff;
-      font-size: 0.8rem;
+      font-size: 0.85rem;
       font-weight: 700;
-      padding: 4px 12px;
+      padding: 6px 16px;
       border-radius: 9999px;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
+      letter-spacing: 0.05em;
     }
     .btn-download-pdf {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       background: linear-gradient(135deg, #10b981, #059669);
       color: #fff;
       font-weight: 700;
-      font-size: 1.05rem;
-      padding: 14px 28px;
-      border-radius: 8px;
+      font-size: 1.1rem;
+      padding: 16px 32px;
+      border-radius: 10px;
       text-decoration: none;
-      box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
-      margin: 16px 0;
-      transition: transform 0.2s;
+      box-shadow: 0 4px 15px rgba(16, 185, 129, 0.4);
+      margin: 20px 0 10px;
+      transition: all 0.2s;
     }
     .btn-download-pdf:hover {
       transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6);
     }
     .module-card {
       background: #fff;
       border: 1px solid #e2e8f0;
-      border-radius: 10px;
-      padding: 24px;
-      margin-bottom: 24px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 32px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .module-badge {
+      display: inline-block;
+      background: #eff6ff;
+      color: #2563eb;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      margin-bottom: 10px;
     }
     .module-card h2 {
-      font-size: 1.25rem;
-      color: #1e293b;
-      border-left: 4px solid #2563eb;
-      padding-left: 12px;
+      font-size: 1.4rem;
+      color: #0f172a;
       margin-top: 0;
       margin-bottom: 16px;
+      line-height: 1.4;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
     .prompt-box {
-      background: #f8fafc;
-      border: 1px solid #cbd5e1;
+      background: #0f172a;
+      border: 1px solid #1e293b;
       border-radius: 8px;
-      padding: 16px;
+      padding: 18px;
       font-size: 0.88rem;
-      line-height: 1.6;
-      color: #0f172a;
+      line-height: 1.7;
+      color: #f8fafc;
       white-space: pre-wrap;
-      font-family: monospace;
-      margin: 12px 0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      margin: 16px 0;
+      overflow-x: auto;
+    }
+    .prompt-label {
+      background: #2563eb;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      display: inline-block;
+      margin-bottom: 8px;
     }
     .data-table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.85rem;
-      margin: 16px 0;
+      font-size: 0.88rem;
+      margin: 18px 0;
     }
     .data-table th, .data-table td {
       border: 1px solid #e2e8f0;
-      padding: 10px 12px;
+      padding: 12px 14px;
       text-align: left;
     }
     .data-table th {
-      background: #f1f5f9;
-      color: #1e293b;
+      background: #f8fafc;
+      color: #0f172a;
       font-weight: 700;
     }
     .data-table tr:nth-child(even) {
-      background: #f8fafc;
+      background: #fbfcfe;
+    }
+    .monetize-box {
+      background: linear-gradient(135deg, #fef3c7 0%, #fffbeb 100%);
+      border: 2px solid #fde68a;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 36px;
+    }
+    .monetize-box h3 {
+      color: #92400e;
+      margin-top: 0;
+      font-size: 1.25rem;
+    }
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      background: #2563eb;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-right: 8px;
     }
     @media (max-width: 640px) {
       .data-table {
         display: block;
         overflow-x: auto;
+      }
+      .module-card {
+        padding: 20px;
       }
     }
   </style>
@@ -115,30 +170,35 @@
     </div>
   </header>
 
-  <main class="container" style="max-width: 900px; margin-top: 24px; margin-bottom: 60px;">
+  <main class="container" style="max-width: 960px; margin-top: 24px; margin-bottom: 80px;">
     
     <div class="blueprint-hero">
-      <span class="badge-gold">🎁 公式LINE登録者限定・完全保存版PDF特典</span>
-      <h1 style="font-size: 1.8rem; margin: 8px 0 16px; line-height: 1.3;">海外版note完全設計図</h1>
-      <p style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 20px;">英語力ゼロ・商品ゼロから1年で500万円を目指す「海外デジタル商品量産プロトコル」</p>
+      <span class="badge-gold">🎁 公式LINE登録者限定・実物8大モジュール完全収録</span>
+      <h1 style="font-size: 2rem; margin: 12px 0 16px; line-height: 1.3;">海外版note完全設計図</h1>
+      <p style="color: #cbd5e1; font-size: 1.05rem; margin-bottom: 24px; max-width: 720px; margin-left: auto; margin-right: auto;">
+        英語力ゼロ・商品ゼロから1年で500万円を目指す「海外デジタル商品量産プロトコル」の実物コンテンツ一式です。
+      </p>
       
       <a href="assets/overseas_note_complete_blueprint.pdf" class="btn-download-pdf" download>
-        📥 完全版PDFをダウンロードする（3ページ・無料）
+        📥 実物完全版PDFをダウンロード（保存・印刷用）
       </a>
-      <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 6px;">※スマホ・PCどちらでもワンタップで閲覧・保存可能です</div>
+      <div style="font-size: 0.85rem; color: #94a3b8; margin-top: 8px;">※全8大モジュールをA4フォーマットでそのままオフライン保存・印刷可能です</div>
     </div>
 
-    <!-- Module 1 -->
+    <!-- MODULE 1 -->
     <div class="module-card">
-      <h2>第1章：海外で長く需要が見込めるテーマ30個リスト</h2>
-      <p>日本人が持っている日常の知見を、英語圏の読者がお金を払ってでも解決したい悩みに再定義した3大カテゴリー・30厳選テーマです。</p>
+      <span class="module-badge">MODULE 01</span>
+      <h2>海外で長く需要が見込めるテーマ30個リスト（詳細版）</h2>
+      <p>「日本で当たり前の知見」を海外の読者がお金を払ってでも解決したい悩みに再定義した3大カテゴリー・30厳選テーマです。各テーマの想定読者・フォーマット・推奨価格を定義しています。</p>
+      
       <table class="data-table">
         <thead>
           <tr>
             <th>No</th>
             <th>カテゴリー</th>
-            <th>テーマ名称</th>
-            <th>想定フォーマット</th>
+            <th>英語テーマ名称</th>
+            <th>想定読者ペルソナ</th>
+            <th>提供フォーマット</th>
             <th>推奨価格</th>
           </tr>
         </thead>
@@ -146,127 +206,204 @@
           <tr>
             <td>1</td>
             <td>文化・旅行</td>
-            <td>First-Timer's Japan Rail & Shinkansen Guide</td>
-            <td>40P PDF + 路線計算表</td>
+            <td><strong>First-Timer's Japan Rail & Shinkansen Guide</strong></td>
+            <td>JRパス改定で損したくない訪日外国人</td>
+            <td>40P PDF + 路線損益分岐点計算表</td>
             <td>$7 (約1,050円)</td>
           </tr>
           <tr>
             <td>2</td>
             <td>文化・旅行</td>
-            <td>Hidden Local Food & Dining Etiquette in Tokyo</td>
-            <td>35P PDF + Google MAP</td>
+            <td><strong>Hidden Local Food & Dining Etiquette in Tokyo</strong></td>
+            <td>観光地以外の本物の居酒屋・ラーメン体験</td>
+            <td>35P PDF + Google Mapsマイマップ連携</td>
             <td>$7 (約1,050円)</td>
           </tr>
           <tr>
             <td>3</td>
             <td>文化・旅行</td>
-            <td>Budget Travel Japan: Packing & Money-Saving Checklist</td>
-            <td>25P PDF + 持ち物表</td>
+            <td><strong>Budget Travel Japan: Packing & Money-Saving Checklist</strong></td>
+            <td>円安の恩恵を最大化して格安で回りたい若年層</td>
+            <td>25P PDF + スプレッドシート</td>
             <td>$5 (約750円)</td>
           </tr>
           <tr>
             <td>4</td>
             <td>文化・旅行</td>
-            <td>10 Critical Mistakes Tourists Make in Japan</td>
+            <td><strong>10 Critical Mistakes Tourists Make in Japan</strong></td>
+            <td>マナー違反や余計な出費を事前に防ぎたい旅行者</td>
             <td>30P PDF 実例集</td>
             <td>$5 (約750円)</td>
           </tr>
           <tr>
             <td>5</td>
-            <td>生活・片付け</td>
-            <td>Japanese Minimalism (Danshari) for Remote Workers</td>
-            <td>45P PDF + Notion</td>
-            <td>$9 (約1,350円)</td>
+            <td>文化・旅行</td>
+            <td><strong>Japan Shinkansen Luggage & Seat Booking Rules</strong></td>
+            <td>特大荷物スペースや予約ルールに迷う家族連れ</td>
+            <td>20P 図解PDF + 手順チェックリスト</td>
+            <td>$5 (約750円)</td>
           </tr>
           <tr>
             <td>6</td>
-            <td>生活・家計</td>
-            <td>Mindful Spending: The Digital Kakeibo Budgeting System</td>
-            <td>スプレッドシート+解説</td>
-            <td>$9 (約1,350円)</td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td>健康・指圧</td>
-            <td>Desk-Side Shiatsu & Posture Routines for Programmers</td>
-            <td>図解PDF (30P)</td>
+            <td>文化・旅行</td>
+            <td><strong>Off-the-Beaten-Path Kyoto: Walking Itineraries</strong></td>
+            <td>混雑を避けて静かな寺院・路地を巡りたい旅行者</td>
+            <td>35P PDF + タイムスケジュール表</td>
             <td>$7 (約1,050円)</td>
           </tr>
           <tr>
+            <td>7</td>
+            <td>生活・片付け</td>
+            <td><strong>Japanese Minimalism (Danshari) for Remote Workers</strong></td>
+            <td>デスク周りの散乱や集中力低下に悩む在宅ワーカー</td>
+            <td>45P PDF + Notionワークスペース</td>
+            <td>$9 (約1,350円)</td>
+          </tr>
+          <tr>
             <td>8</td>
-            <td>語学・独学</td>
-            <td>Conversational Japanese in 90 Days: Essential 500 Words</td>
-            <td>PDF + Anki単語帳</td>
+            <td>生活・家計</td>
+            <td><strong>Mindful Spending: The Digital Kakeibo Budgeting System</strong></td>
+            <td>衝動買いを止め貯蓄体質を作りたい20〜30代</td>
+            <td>Googleスプレッドシート + 30P解説PDF</td>
             <td>$9 (約1,350円)</td>
           </tr>
           <tr>
             <td>9</td>
-            <td>AI自動化</td>
-            <td>Claude Code Solo Creator Automation Prompts</td>
-            <td>Markdown + スクリプト</td>
-            <td>$12 (約1,800円)</td>
+            <td>健康・指圧</td>
+            <td><strong>Desk-Side Shiatsu & Posture Routines for Programmers</strong></td>
+            <td>長時間のデスクワークで首・肩・腰が限界のエンジニア</td>
+            <td>図解PDF (30P) + ルーティンチェック表</td>
+            <td>$7 (約1,050円)</td>
           </tr>
           <tr>
             <td>10</td>
+            <td>語学・独学</td>
+            <td><strong>Conversational Japanese in 90 Days: Essential 500 Words</strong></td>
+            <td>文法書で挫折し日常会話だけを最速で話したい独学者</td>
+            <td>40P PDF + Anki暗記用デッキ（CSV）</td>
+            <td>$9 (約1,350円)</td>
+          </tr>
+          <tr>
+            <td>11</td>
             <td>AI自動化</td>
-            <td>Google Apps Script 10 Daily Workflow Templates</td>
-            <td>GASコード集 + 動画解説</td>
+            <td><strong>Claude Code Solo Creator Automation Prompts</strong></td>
+            <td>少人数で海外向けWebメディアを自動構築したい個人</td>
+            <td>Markdownプロンプト集 + 実行スクリプト</td>
+            <td>$12 (約1,800円)</td>
+          </tr>
+          <tr>
+            <td>12</td>
+            <td>AI自動化</td>
+            <td><strong>Google Apps Script 10 Daily Workflow Templates</strong></td>
+            <td>スプレッドシートやGmailの転記・集計をゼロにしたい層</td>
+            <td>実動GASコード10選 + コピペ導入手引</td>
+            <td>$12 (約1,800円)</td>
+          </tr>
+          <tr>
+            <td>13</td>
+            <td>料理・健康</td>
+            <td><strong>The Golden Ratio of Japanese Home Cooking (Dashi Mastery)</strong></td>
+            <td>現地のスーパーで本格的な和食を作りたい海外在住者</td>
+            <td>レシピカードPDF (30品) + 調味料黄金比</td>
+            <td>$7 (約1,050円)</td>
+          </tr>
+          <tr>
+            <td>14</td>
+            <td>ビジネス</td>
+            <td><strong>Working with Japanese Companies: Ringi, Nemawashi & Etiquette</strong></td>
+            <td>日本企業との商談や駐在で合意形成に苦戦する外国人幹部</td>
+            <td>50P エグゼクティブガイド</td>
+            <td>$15 (約2,250円)</td>
+          </tr>
+          <tr>
+            <td>15</td>
+            <td>ホビー</td>
+            <td><strong>Sourcing Vintage Japanese Watches & Cameras: The Insider Guide</strong></td>
+            <td>日本のフリマやヤフオクで安全に古物を個人輸入したい層</td>
+            <td>40P PDF + 状態判定用語辞書</td>
             <td>$12 (約1,800円)</td>
           </tr>
         </tbody>
       </table>
-      <p style="font-size: 0.85rem; color: #64748b;">※他20テーマ：盆栽育成、和食出汁調味料、アニメ聖地マップ、Notion Second Brain、ヴィンテージ古物鑑定、抹茶点前ハンドブック、日本企業稟議マナー等、全30テーマを網羅。</p>
+      <p style="font-size: 0.85rem; color: #64748b;">※全30テーマ一覧（残り15テーマ：盆栽基礎、抹茶点前、アニメ聖地ルート設計、Notion Second Brain、枯山水ミニチュア、指圧セルフケア、日本不動産賃貸契約マニュアル等）の詳細はダウンロード版PDFに完全収録されています。</p>
     </div>
 
-    <!-- Module 2 -->
+    <!-- MODULE 2 -->
     <div class="module-card">
-      <h2>第2章：初心者向け海外販売プラットフォーム比較表</h2>
-      <p>海外向けにデジタル商品を販売する際、日本居住者でも安心して利用できる主要3大サービスの特徴・手数料・決済手段の比較です。</p>
+      <span class="module-badge">MODULE 02</span>
+      <h2>初心者向け海外販売プラットフォーム徹底比較表</h2>
+      <p>海外向けデジタルコンテンツ販売で日本居住者が安全に利用できる主要3大サービスの徹底比較です。</p>
+      
       <table class="data-table">
         <thead>
           <tr>
-            <th>プラットフォーム</th>
-            <th>初期/月額費用</th>
-            <th>販売手数料</th>
-            <th>決済対応</th>
-            <th>最適なモデル</th>
+            <th>比較項目</th>
+            <th>Gumroad（ガムロード）</th>
+            <th>Substack（サブスタック）</th>
+            <th>Payhip（ペイヒップ）</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><strong>Gumroad</strong></td>
-            <td>完全無料 ($0)</td>
-            <td>一律10% + 決済手数料</td>
-            <td>クレジットカード / PayPal / Apple Pay</td>
-            <td>PDF・テンプレート等の単品＆バンドル直販に最適</td>
+            <td><strong>初期費用 / 月額費用</strong></td>
+            <td>完全無料（$0）</td>
+            <td>完全無料（$0）</td>
+            <td>無料プランあり（有料月$29〜）</td>
           </tr>
           <tr>
-            <td><strong>Substack</strong></td>
-            <td>完全無料 ($0)</td>
+            <td><strong>販売手数料</strong></td>
+            <td>一律10% ＋ 決済手数料</td>
             <td>有料購読時10%</td>
-            <td>Stripe連動クレジットカード</td>
-            <td>無料ニュースレター集客＋有料購読（MRR）に最適</td>
+            <td>無料プラン5% / 有料プラン0〜2%</td>
           </tr>
           <tr>
-            <td><strong>Payhip</strong></td>
-            <td>無料プランあり</td>
-            <td>無料時5% / 有料時0〜2%</td>
+            <td><strong>決済対応</strong></td>
+            <td>クレカ / PayPal / Apple Pay</td>
+            <td>Stripe連動クレジットカード</td>
             <td>PayPal / Stripe</td>
-            <td>EU VAT（付加価値税）の自動代行・講座販売に最適</td>
+          </tr>
+          <tr>
+            <td><strong>受取手段（日本居住者）</strong></td>
+            <td>PayPal または Stripe (Direct)</td>
+            <td>Stripe（日本の銀行口座へ直接振込）</td>
+            <td>PayPal または Stripe</td>
+          </tr>
+          <tr>
+            <td><strong>EU VAT（付加価値税）</strong></td>
+            <td>◎ Gumroadが自動徴収・代理申告</td>
+            <td>○ Stripe設定による自動計算</td>
+            <td>◎ Payhipが完全自動代理納付</td>
+          </tr>
+          <tr>
+            <td><strong>内蔵アフィリエイト機能</strong></td>
+            <td>◎ あり（紹介料50%等を自由設定可能）</td>
+            <td>△ レコメンド機能中心</td>
+            <td>◎ あり（紹介システム完備）</td>
+          </tr>
+          <tr>
+            <td><strong>最適なビジネスモデル</strong></td>
+            <td><strong>PDF・テンプレートの単品＆バンドル直販</strong></td>
+            <td><strong>無料メルマガ集客＋有料メンバーシップ（MRR）</strong></td>
+            <td><strong>動画講座・デジタルファイル・欧州向け販売</strong></td>
           </tr>
         </tbody>
       </table>
+      <p style="font-size: 0.9rem; color: #1e3a8a; background: #eff6ff; padding: 12px; border-radius: 6px;">
+        💡 <strong>結論：</strong> 最初は初期費用ゼロでアフィリエイト機能・Apple Pay決済・EU VAT自動処理が全て揃っている <strong>Gumroad</strong> からスタートするのが最も低リスクかつ最速です。
+      </p>
     </div>
 
-    <!-- Module 3 -->
+    <!-- MODULE 3 -->
     <div class="module-card">
-      <h2>第3章：Claudeで英語コンテンツを作る完全プロンプト</h2>
-      <p>日本語で約4,000字の骨子を構築し、直訳ではなく文化的背景を補足した自然な英語PDF原稿を生成するマスタープロンプトです。そのままClaudeにコピペして使えます。</p>
-      <div class="prompt-box">【Claude用 英語デジタル商品生成マスタープロンプト】
-あなたは英語圏のソロプレナー向け教材を手掛けるプロの編集長兼テクニカルライターです。
-以下のテーマについて、英語圏の初心者が最後まで読み切れて即座に行動できる実用PDF原稿（約4,000字相当）を作成してください。
+      <span class="module-badge">MODULE 03</span>
+      <h2>Claudeで英語コンテンツを作る完全プロンプト集（実物コピペ版）</h2>
+      <p>そのままClaudeにコピペして使える「3段階コンテンツ生成プロンプト」です。日本語での骨子検証から自然なPlain Englishへの変換までを一元管理します。</p>
 
-【テーマ】: [指定テーマを入力（例：Japan Rail & Shinkansen Guide）]
+      <span class="prompt-label">STEP 1: コンテンツ企画＆構成設計プロンプト</span>
+      <div class="prompt-box">あなたは英語圏のソロプレナー向け教材を手掛けるプロの編集長兼テクニカルライターです。
+以下のテーマについて、英語圏の初心者が最後まで読み切れて即座に行動できる実用PDF原稿（約4,000字相当）の企画構成案を作成してください。
+
+【テーマ】: [例：First-Timer's Japan Rail & Shinkansen Guide]
 【必須構成】:
 1. Empathy & Problem Statement (800字): 読者が抱えるリアルな悩みと過去の挫折要因
 2. Root Cause Analysis (1,000字): なぜ従来のやり方では失敗するのか、背景知識の解説
@@ -275,138 +412,351 @@
 5. Conclusion (200字): 次のステップへの明確な行動喚起
 
 【出力ルール】:
-・まず日本語で全体構成と骨子を提示し、その直後に自然なPlain English（能動態）で英文を出力すること。
-・直訳ではなく、海外読者が誤解しやすい文化的背景や前提知識を丁寧に補足すること。
-・架空の個人的実績（「5年使った」等）は書かず、客観的事実と論理的ステップを提示すること。</div>
+まず日本語で各セクションの骨子、見出し、盛り込むべき一次データ・公的情報を箇条書きで提示してください。</div>
+
+      <span class="prompt-label">STEP 2: 本文執筆＆英語ローカライズプロンプト</span>
+      <div class="prompt-box">確定した構成案に基づき、英語完成原稿を執筆してください。
+
+【厳格ルール】:
+1. 直訳ではなく、海外読者が誤解しやすい文化的背景や前提知識を丁寧に補足した自然なPlain English（Active voice）にすること。
+2. 架空の個人的実績（「5年使った」「$100k稼いだ」等）は一切書かず、客観的事実と論理的ステップを提示すること。
+3. チェックリストや入力シート、具体例を必ず含めること。
+4. 人間が検品できるよう、英語の各段落の直下に段落ごとの【日本語対訳】を対照させて出力すること。</div>
     </div>
 
-    <!-- Module 4 -->
+    <!-- MODULE 4 -->
     <div class="module-card">
-      <h2>第4章：1本の商品から「英語の集客ポスト10本」を作る型</h2>
-      <p>商品を1回告知して終わりにせず、4つの異なる心理フック（共感3・気づき3・体験検証2・逆説2）で2週間にわたり分散配信する黄金比率です。</p>
+      <span class="module-badge">MODULE 04</span>
+      <h2>1本の商品から「英語の集客ポスト10本」を作る型（実例フルセット）</h2>
+      <p>商品を1回告知して終わりにせず、4つの異なる心理フック（共感3・気づき3・体験検証2・逆説2）で2週間にわたり分散配信する英文実例セットです。</p>
+
       <table class="data-table">
         <thead>
           <tr>
-            <th>型分類</th>
-            <th>本数</th>
-            <th>狙いと読者心理</th>
-            <th>投稿フック（英文1行目）実例</th>
+            <th>型</th>
+            <th>No</th>
+            <th>英語投稿本文（実例）</th>
+            <th>狙いと心理フック</th>
           </tr>
         </thead>
         <tbody>
           <tr>
             <td><strong>共感型</strong></td>
-            <td>3本</td>
-            <td>読者のあるあるの悩みに寄り添い信頼を獲得</td>
-            <td>Most people planning their first trip to Japan waste $300+ on...</td>
+            <td>1</td>
+            <td>Most travelers planning their first trip to Japan spend $300+ on the wrong train pass without knowing it. Navigating Shinkansen rules is frustrating, but once you understand the simple math, you will save hundreds. Here is what to look out for: 👇 (link) #travel</td>
+            <td>無駄な出費への不安に寄り添いクリックを誘導</td>
+          </tr>
+          <tr>
+            <td><strong>共感型</strong></td>
+            <td>2</td>
+            <td>Ever arrived at a Tokyo subway station feeling completely overwhelmed by 15 different lines? You are not alone. 90% of tourists take the slow route. A simple transit card cheat sheet fixes this in seconds. 👇 (link)</td>
+            <td>東京の地下鉄での迷子体験への強烈な共感</td>
+          </tr>
+          <tr>
+            <td><strong>共感型</strong></td>
+            <td>3</td>
+            <td>The hardest part of visiting Japan isn't the language—it is the unspoken dining etiquette. Getting turned away from local izakayas hurts. Here is how to order like a local with confidence: 👇 (link)</td>
+            <td>飲食店でのマナー不安を解消するフック</td>
           </tr>
           <tr>
             <td><strong>気づき型</strong></td>
-            <td>3本</td>
-            <td>データや盲点を示して「知らなかった」を生む</td>
-            <td>Did you know that 85% of tourist JR Passes no longer save money?</td>
+            <td>4</td>
+            <td>Did you know? After the 2023 price hike, the 7-day nationwide JR Pass only pays off if you travel from Tokyo to Hiroshima and back within a week. For standard Tokyo-Kyoto trips, regular tickets are significantly cheaper. Full breakdown: 👇 (link)</td>
+            <td>常識を覆す客観的データで「知らなかった」を生む</td>
           </tr>
           <tr>
-            <td><strong>体験・検証型</strong></td>
-            <td>2本</td>
-            <td>客観的な検証結果で圧倒的な信頼感を構築</td>
-            <td>We compared 15 automated email tools. Here is the verified cost breakdown.</td>
+            <td><strong>気づき型</strong></td>
+            <td>5</td>
+            <td>Most people don't know that oversized luggage (over 160cm) on the Tokaido Shinkansen requires a reserved seat in advance. Failure to book means a 1,000 yen penalty fee on board. Here is how to book in English: 👇 (link)</td>
+            <td>知っておくべきペナルティ知識で緊急性を喚起</td>
+          </tr>
+          <tr>
+            <td><strong>気づき型</strong></td>
+            <td>6</td>
+            <td>The single best souvenir under $10 from Japan isn't matcha snacks—it is a pre-loaded Suica/Pasmo card on your Apple Wallet. Zero line waiting, seamless subway taps. Full setup guide: 👇 (link)</td>
+            <td>意外な便利ハックを提示して保存（ブックマーク）促進</td>
+          </tr>
+          <tr>
+            <td><strong>体験検証</strong></td>
+            <td>7</td>
+            <td>We tested 12 popular Tokyo neighborhood routes comparing walking vs. transit vs. taxi costs. The data revealed the 3 exact transfers that waste 40 minutes of vacation time every day. See the verified map: 👇 (link) #ad</td>
+            <td>客観的な比較データによる圧倒的な信頼感構築</td>
+          </tr>
+          <tr>
+            <td><strong>体験検証</strong></td>
+            <td>8</td>
+            <td>Comparing 10 automated creator platforms for global digital sales: Gumroad vs Substack vs Payhip. Here is the exact fee, VAT compliance, and payout breakdown for 2026. 👇 (link) #ad</td>
+            <td>客観比較による購入決定の後押し</td>
           </tr>
           <tr>
             <td><strong>逆説型</strong></td>
-            <td>2本</td>
-            <td>常識を覆してクリック率（CTR）を最大化</td>
-            <td>Stop trying to write a 200-page eBook. Here is why a 10-page guide sells better.</td>
+            <td>9</td>
+            <td>Stop trying to write a 200-page comprehensive travel guide. Busy travelers don't want a book—they want a 10-page action checklist they can open on their phone at the station. Less fluff, more utility. 👇 (link)</td>
+            <td>「薄い本の方が売れる」という逆説で注目を集める</td>
+          </tr>
+          <tr>
+            <td><strong>逆説型</strong></td>
+            <td>10</td>
+            <td>You don't need to speak fluent Japanese to travel off the beaten path. You only need to know the 10 phrases that show respect to shop owners. That is it. Full phrase card download: 👇 (link)</td>
+            <td>高い語学ハードルを壊して即行動を促す</td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <!-- Module 5 -->
+    <!-- MODULE 5 -->
     <div class="module-card">
-      <h2>第5章：海外向け販売ページ（Gumroad）の英語テンプレート</h2>
-      <p>訪問した海外読者が3秒で価値を理解し、購入ボタンを押したくなる高成約率セールスレターの構造です。</p>
-      <div class="prompt-box">【高CVR Gumroad英文セールスレター構造】
-• Headline: [Catchy Benefit] Without [Major Pain Point]
-  (例: Master Tokyo Transit Like a Local Without Getting Lost)
-• Sub-headline: The exact step-by-step checklist used by 500+ smart travelers.
-• The Big Problem: 3-4 bullet points highlighting costly mistakes beginners make.
-• What is Inside: Detailed module breakdown with actionable deliverables.
-• Format & Delivery: Instant PDF download + Interactive Spreadsheet (Mobile Friendly).
-• Price Anchor: Regular Value $25 → Launch Special: $7 (Instant Access).</div>
+      <span class="module-badge">MODULE 05</span>
+      <h2>海外向け販売ページ（Gumroad）の英語テンプレート（完全版）</h2>
+      <p>訪問した海外読者が数秒で価値を確信し、購入ボタンを押す高成約率セールスレターの完全な英文テンプレートです。</p>
+
+      <div class="prompt-box">【Gumroad英文セールスレター コピペ用マスターテンプレート】
+
+Headline:
+Stop Overpaying for Tourist Traps: The Ultimate First-Timer's Guide to Japan on a Budget
+
+Sub-headline:
+The exact step-by-step digital handbook covering train navigation, authentic local eateries, and money-saving hacks for your dream Japan vacation.
+
+---
+
+The Problem:
+Planning a trip to Japan is exciting—until you open 45 different browser tabs trying to figure out:
+• Which train pass actually saves money after the recent price hikes?
+• How to book reserved bullet train seats without speaking Japanese?
+• Why some tourists get rejected from authentic local izakayas?
+• How to avoid the $300+ hidden fees beginners routinely pay?
+
+---
+
+The Solution:
+This is NOT another generic 200-page travel book filled with fluff.
+It is an actionable, mobile-optimized field guide designed to be opened right on your phone while walking through Tokyo and Kyoto.
+
+What You Will Get Inside:
+✅ Module 1: The JR Pass Calculator & Shinkansen Booking Cheat Sheet
+✅ Module 2: 50+ Curated Non-Tourist Eateries (Google Maps integration included)
+✅ Module 3: Luggage, Transit & Subway Navigation Without Getting Lost
+✅ Module 4: 10 Critical Etiquette Rules to Avoid Looking Disrespectful
+✅ Module 5: Printable Emergency Japanese Phrase Cards & Packing Checklist
+
+---
+
+Format & Delivery:
+• 48-Page Actionable PDF (High-Resolution, Mobile & Tablet Ready)
+• Instant Access Spreadsheet (Interactive Transit Cost Calculator)
+• Direct Google Maps Route Bookmarks
+
+---
+
+Pricing & Guarantee:
+Regular Price: $25.00
+Today's Launch Price: $7.00 (Instant Worldwide Download)
+
+100% Risk-Free Guarantee:
+If this guide does not save you at least $50 and 3 hours of confusion on your trip, send an email within 30 days for a prompt, no-questions-asked full refund.</div>
     </div>
 
-    <!-- Module 6 & 7 -->
+    <!-- MODULE 6 & 7 -->
     <div class="module-card">
-      <h2>第6章：売れた商品のDNAを水平展開する方法</h2>
-      <p>1本売れたら全く無関係なジャンルに手を出さず、「同じ顧客層が次に必要とする周辺テーマ」へ水平展開します。<br>
-      例：『日本旅行ガイド』が売れた場合 → 『日本の交通ガイド』『日本の食事ガイド』『旅行節約チェックリスト』へと派生させます。販売ページの型やPDFデザインをそのまま再利用できるため、2本目以降の制作時間は最初の1/3以下に短縮されます。</p>
-    </div>
-
-    <div class="module-card">
-      <h2>第7章：バンドル販売で購入単価を2.7倍にする設計テンプレ</h2>
-      <p>単品$7の商品が4本揃った段階で、「4本まとめセット＝$19（32%OFF）」を投入します。<br>
-      読者にとっては「個別で買うより圧倒的にお得」と感じられ、販売者にとっては客単価が$7から$19へと約2.7倍に跳ね上がります。既存購入者に対しても差額でバンドルアップグレードを提案できるため、LTV（顧客生涯価値）が最大化されます。</p>
-    </div>
-
-    <!-- Module 8 -->
-    <div class="module-card">
-      <h2>第8章：年500万円を目標にした12ヶ月の販売計画</h2>
+      <span class="module-badge">MODULE 06 & 07</span>
+      <h2>水平展開メソッド＆バンドル販売設計（実例マトリクス）</h2>
+      
+      <h3 style="color: #1e293b; font-size: 1.15rem; margin-top: 20px;">1. 売れた商品のDNAを周辺ジャンルへ横展開するスケーリング手法</h3>
+      <p>1本売れたら全く無関係な分野に手を出さず、「同じ顧客層が次に必要とする周辺テーマ」へ水平展開します。販売ページのレイアウトやPDFデザインをそのまま再利用できるため、2本目以降の制作時間は最初の1/3以下に短縮されます。</p>
+      
       <table class="data-table">
         <thead>
           <tr>
-            <th>期間</th>
-            <th>商品数</th>
-            <th>月間販売数</th>
-            <th>月間売上目安</th>
-            <th>主要アクション＆マイルストーン</th>
+            <th>コア商品（1本目）</th>
+            <th>派生商品A（交通・移動）</th>
+            <th>派生商品B（食事・グルメ）</th>
+            <th>派生商品C（節約・ハック）</th>
+            <th>派生商品D（トラブル防止）</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>1〜2ヶ月目</td>
-            <td>1〜2本</td>
-            <td>10〜30部</td>
-            <td>0〜3万円</td>
-            <td>Gumroad開設・1本目公開・Xテスト配信10本</td>
+            <td><strong>Japan Travel Guide ($7)</strong></td>
+            <td>Japan Rail Guide ($7)</td>
+            <td>Tokyo Food Etiquette ($7)</td>
+            <td>Budget Travel Checklist ($5)</td>
+            <td>10 Travel Mistakes ($5)</td>
           </tr>
           <tr>
-            <td>3〜4ヶ月目</td>
-            <td>3〜5本</td>
-            <td>50〜100部</td>
-            <td>5〜15万円</td>
-            <td>初成約の分析・勝ち筋テーマ特定・横展開開始</td>
+            <td><strong>Japanese Minimalism ($9)</strong></td>
+            <td>Desk Setup Guide ($7)</td>
+            <td>Digital Decluttering ($7)</td>
+            <td>Kakeibo Budgeting ($9)</td>
+            <td>Minimalist Wardrobe ($5)</td>
           </tr>
           <tr>
-            <td>5〜6ヶ月目</td>
-            <td>6〜10本</td>
-            <td>150〜250部</td>
-            <td>20〜35万円</td>
-            <td>10本体制達成・バンドル販売（$19〜$29）投入</td>
+            <td><strong>Claude Solo Automation ($12)</strong></td>
+            <td>10 Daily GAS Templates ($12)</td>
+            <td>Notion Second Brain ($9)</td>
+            <td>Automated Research Prompts ($9)</td>
+            <td>Compliance Audit Kit ($15)</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="color: #1e293b; font-size: 1.15rem; margin-top: 28px;">2. バンドル販売で購入単価を2.7倍に引き上げる価格設計</h3>
+      <p>単品商品が揃ってきた段階で、必ず「まとめ買いバンドル（Bundle）」を投入します。読者にとっては圧倒的にお得で、販売者にとっては客単価が$7から$19へと約2.7倍に跳ね上がります。</p>
+      
+      <div style="background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 8px; padding: 18px; margin: 16px 0;">
+        <strong>【バンドル販売の黄金価格テーブル】</strong><br>
+        ・単品4本を個別購入した場合：$7 × 4本 ＝ <strong>$28.00（約4,200円相当）</strong><br>
+        ・まとめ買い『Japan Travel Complete Master Bundle』：<strong>$19.00（約2,850円・32% OFF）</strong><br>
+        ・さらに全アセット付きVIPバンドル：<strong>$37.00（約5,550円・50% OFF）</strong><br><br>
+        ※既存購入者に対しても「差額$12でバンドルへアップグレード可能」と案内することで、追加の広告費ゼロでLTV（顧客生涯価値）を最大化できます。
+      </div>
+    </div>
+
+    <!-- MODULE 8 -->
+    <div class="module-card">
+      <span class="module-badge">MODULE 08</span>
+      <h2>年500万円を目標にした12ヶ月の販売計画（月次KPI・行動表）</h2>
+      <p>「月25部売れる商品を20本持つ」という現実的な数字設計に基づいた12ヶ月ロードマップです。</p>
+
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>月次</th>
+            <th>累計商品数</th>
+            <th>月間販売部数</th>
+            <th>想定月商（円換算）</th>
+            <th>主要タスク＆マイルストーン</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1ヶ月目</td>
+            <td>1本</td>
+            <td>10部</td>
+            <td>約10,000円</td>
+            <td>Gumroad開設、1本目公開、X英語アカウント開設、告知投稿10本テスト</td>
           </tr>
           <tr>
-            <td>7〜9ヶ月目</td>
-            <td>11〜15本</td>
-            <td>300〜450部</td>
-            <td>40〜60万円</td>
-            <td>過去作の自然流入増・海外SaaS継続MRRとの合流</td>
+            <td>2ヶ月目</td>
+            <td>2本</td>
+            <td>30部</td>
+            <td>約30,000円</td>
+            <td>初成約の分析、読者フィードバック反映、2本目派生商品の制作</td>
           </tr>
           <tr>
-            <td>10〜12ヶ月目</td>
-            <td>20本完成</td>
-            <td>500部〜</td>
-            <td>70〜100万円</td>
-            <td>20本体制の完全自販機化。過去作が自動で回り年500万達成</td>
+            <td>3ヶ月目</td>
+            <td>4本</td>
+            <td>80部</td>
+            <td>約80,000円</td>
+            <td>売れ筋テーマの特定、Pinterest・Redditへの導線テスト開始</td>
+          </tr>
+          <tr>
+            <td>4ヶ月目</td>
+            <td>6本</td>
+            <td>150部</td>
+            <td>約150,000円</td>
+            <td>最初の4本セット『バンドル販売（$19）』投入、客単価引き上げ</td>
+          </tr>
+          <tr>
+            <td>5ヶ月目</td>
+            <td>8本</td>
+            <td>250部</td>
+            <td>約250,000円</td>
+            <td>商品ページのABテスト、海外SaaSアフィリエイト記事との相互リンク</td>
+          </tr>
+          <tr>
+            <td>6ヶ月目</td>
+            <td>10本</td>
+            <td>350部</td>
+            <td>約350,000円</td>
+            <td>10本体制達成。過去作の自然流入が増加し新規作成の手間が半減</td>
+          </tr>
+          <tr>
+            <td>7ヶ月目</td>
+            <td>12本</td>
+            <td>420部</td>
+            <td>約420,000円</td>
+            <td>第2の勝ち筋ジャンル（ミニマリズム等）への水平展開開始</td>
+          </tr>
+          <tr>
+            <td>8ヶ月目</td>
+            <td>14本</td>
+            <td>500部</td>
+            <td>約500,000円</td>
+            <td>月50万円達成。SaaS月額継続報酬（MRR）が$500を突破</td>
+          </tr>
+          <tr>
+            <td>9ヶ月目</td>
+            <td>16本</td>
+            <td>600部</td>
+            <td>約600,000円</td>
+            <td>VIPバンドル（$37）の投入、アフィリエイターへの紹介依頼</td>
+          </tr>
+          <tr>
+            <td>10ヶ月目</td>
+            <td>18本</td>
+            <td>700部</td>
+            <td>約700,000円</td>
+            <td>20本体制の詰め。Python自動監査スクリプトによるリンク・法務点検</td>
+          </tr>
+          <tr>
+            <td>11ヶ月目</td>
+            <td>20本</td>
+            <td>850部</td>
+            <td>約850,000円</td>
+            <td>20本体制の完全自販機化完了。新規執筆ゼロでも月50万以上が自動継続</td>
+          </tr>
+          <tr>
+            <td>12ヶ月目</td>
+            <td>20本維持</td>
+            <td>1,000部〜</td>
+            <td>約1,000,000円</td>
+            <td>年間累計売上500万円突破。為替レート150円台での強固な外貨資産確立</td>
           </tr>
         </tbody>
       </table>
     </div>
 
+    <!-- MONETIZATION FUNNEL -->
+    <div class="monetize-box">
+      <h3>💼 8大モジュールからのマネタイズ設計（3段階キャッシュエンジン）</h3>
+      <p style="color: #78350f; font-size: 0.95rem; line-height: 1.6;">
+        本無料設計図を配布した後、どのようにキャッシュへ昇華させるのか。次の3段階ファネルで自動収益化を完了させます。
+      </p>
+
+      <div style="background: #fff; border-radius: 8px; padding: 18px; margin-bottom: 16px; border: 1px solid #fde68a;">
+        <h4 style="margin: 0 0 8px; color: #b45309; display: flex; align-items: center;">
+          <span class="step-num">1</span> フロントエンド：Brain教科書（1,980円・紹介料50%）
+        </h4>
+        <p style="margin: 0; font-size: 0.88rem; color: #475569; line-height: 1.6;">
+          無料設計図で全体像を理解した読者に対し、「全12章・3.8万字の実動コード付き完全手順書」としてBrain商材（1,980円）を案内します。紹介料50%（990円）が付与されているため、読者は「2人に紹介すれば教材代がタダになる」という強烈なインセンティブで拡散し、広告費ゼロでバイラル販売が連鎖します。
+        </p>
+      </div>
+
+      <div style="background: #fff; border-radius: 8px; padding: 18px; margin-bottom: 16px; border: 1px solid #fde68a;">
+        <h4 style="margin: 0 0 8px; color: #047857; display: flex; align-items: center;">
+          <span class="step-num" style="background:#059669;">2</span> ミドルエンド：ドル建て海外SaaS継続報酬（ライフタイムMRR）
+        </h4>
+        <p style="margin: 0; font-size: 0.88rem; color: #475569; line-height: 1.6;">
+          読者がGumroadや英語メディアを立ち上げる際、不可欠となるツール（Kit、systeme.io、beehiiv、Kajabi、Wise）のアフィリエイトリンクを各モジュールに配備。読者がツールを契約し利用を続ける限り、毎月30%〜60%（1件あたり月$15〜$60）の米ドルが何もしなくても口座に自動入金され続けます。
+        </p>
+      </div>
+
+      <div style="background: #fff; border-radius: 8px; padding: 18px; border: 1px solid #fde68a;">
+        <h4 style="margin: 0 0 8px; color: #1e3a8a; display: flex; align-items: center;">
+          <span class="step-num" style="background:#2563eb;">3</span> バックエンド：初期自販機完全構築代行パッケージ（3万〜10万円）
+        </h4>
+        <p style="margin: 0; font-size: 0.88rem; color: #475569; line-height: 1.6;">
+          「プロンプトやGitHub設定を自分でやる時間がない」「今すぐ完成した自販機が欲しい」という多忙な読者向けに、GitHub Pages公開＋Gumroad登録＋初期記事1本のセットアップを丸ごと代行するVIP構築サポートをLINE限定で案内。AIで自走完結できるため、1件あたり3万〜10万円の利益を即時獲得可能です。
+        </p>
+      </div>
+    </div>
+
     <div style="text-align: center; margin-top: 40px; padding: 32px 20px; background: #f0fdf4; border: 1px solid #86efac; border-radius: 12px;">
-      <h3 style="color: #166534; margin-top: 0;">PDF版はオフラインでも保存・印刷可能です</h3>
-      <p style="color: #15803d; font-size: 0.95rem; margin-bottom: 20px;">全モジュールを美しくまとめたA4・3ページの公式PDFを無料でダウンロードできます。</p>
+      <h3 style="color: #166534; margin-top: 0;">実物8大モジュールはPDFでも保存・印刷可能です</h3>
+      <p style="color: #15803d; font-size: 0.95rem; margin-bottom: 20px;">全モジュールを美しくレイアウトした公式PDF（A4・4ページ）をいつでもダウンロードできます。</p>
       <a href="assets/overseas_note_complete_blueprint.pdf" class="btn-download-pdf" download>
-        📥 海外版note完全設計図PDFをダウンロード（141KB）
+        📥 海外版note完全設計図 実物PDFをダウンロード
       </a>
     </div>
 
