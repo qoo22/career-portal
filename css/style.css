@@ -316,43 +316,77 @@ p {
 }
 
 /* ==========================================================================
-   Ranking Comparison Table (マトリクス比較表)
+   Ranking Comparison Table & Responsive Tables (マトリクス比較表・テーブル)
+   スマホで1文字ずつ縦改行に崩れるのを100%防止し、滑らかな横スクロールを実現
    ========================================================================== */
-.table-wrapper {
-  overflow-x: auto;
-  margin: 32px 0;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
+.table-wrapper,
+.comparison-table-wrapper,
+.table-scroll-wrapper,
+div:has(> table) {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  max-width: 100% !important;
+  margin: 24px 0 !important;
+  border-radius: var(--radius-md) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow-sm) !important;
+  background: #fff !important;
 }
 
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  background: #fff;
-  font-size: 14px;
-  min-width: 680px;
+/* 全テーブル共通ルール：680px未満への強制圧縮を禁止 */
+table,
+.comparison-table,
+.ranking-table,
+.ranking-matrix {
+  width: 100% !important;
+  min-width: 680px !important;
+  border-collapse: collapse !important;
+  background: #fff !important;
+  font-size: 13.5px !important;
+  margin: 0 !important;
 }
 
-.comparison-table th {
-  background: var(--primary);
-  color: #fff;
-  padding: 14px 12px;
-  text-align: center;
-  font-weight: 700;
-  border-right: 1px solid #1e3a5f;
+table th,
+.comparison-table th,
+.ranking-table th,
+.ranking-matrix th {
+  background: var(--primary) !important;
+  color: #fff !important;
+  padding: 14px 12px !important;
+  text-align: center !important;
+  font-weight: 700 !important;
+  white-space: nowrap !important; /* スマホで1文字ずつ縦改行になるのを絶対防止 */
+  border-right: 1px solid #1e3a5f !important;
+  border-bottom: 2px solid #0f172a !important;
+  letter-spacing: 0.2px;
 }
 
-.comparison-table td {
-  padding: 16px 14px;
-  border-bottom: 1px solid var(--border);
-  border-right: 1px solid var(--border);
-  vertical-align: middle;
-  text-align: center;
+table td,
+.comparison-table td,
+.ranking-table td,
+.ranking-matrix td {
+  padding: 14px 12px !important;
+  border-bottom: 1px solid var(--border) !important;
+  border-right: 1px solid var(--border) !important;
+  vertical-align: middle !important;
+  text-align: center !important;
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  min-width: 110px !important; /* 各カラムに十分な幅を確保 */
+  white-space: normal !important;
+  word-break: normal !important;
 }
 
-.comparison-table tr:hover {
-  background: #fafafa;
+table tr:nth-child(even) td,
+.comparison-table tr:nth-child(even) td,
+.ranking-table tr:nth-child(even) td {
+  background: #fbfcfe;
+}
+
+table tr:hover td,
+.comparison-table tr:hover td,
+.ranking-table tr:hover td {
+  background: #f1f5f9;
 }
 
 .rank-crown {
@@ -478,20 +512,24 @@ p {
   color: #b45309;
 }
 
-/* 3行要約 */
+/* 3行要約（スマホで横並び圧縮崩れを起こさないブロック配置） */
 .agent-summary {
   background: #f8fafc;
   border-radius: var(--radius-sm);
-  padding: 14px 18px;
+  padding: 16px 18px;
   margin-bottom: 20px;
   font-size: 14.5px;
+  border: 1px solid #e2e8f0;
 }
 
 .agent-summary-item {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 6px;
-  align-items: baseline;
+  display: block; /* flexによる子要素の横並び圧縮・1文字縦改行を解消 */
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 12px;
+  line-height: 1.75;
+  color: var(--text-main);
+  word-break: break-word;
 }
 
 .agent-summary-item:last-child {
@@ -501,7 +539,21 @@ p {
 .summary-check {
   color: var(--success);
   font-weight: 800;
-  font-size: 15px;
+  font-size: 16px;
+  position: absolute;
+  left: 0;
+  top: 1px;
+}
+
+.agent-summary-item strong {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.agent-summary-item a {
+  display: inline-block;
+  margin-top: 4px;
+  word-break: break-all;
 }
 
 /* メリット・デメリット対比グリッド */
@@ -786,3 +838,117 @@ footer {
 .footer-links a:hover {
   color: #fff;
 }
+
+/* ==========================================================================
+   Mobile Optimization & Responsive Layout
+   スマホで文字が崩れない・読みやすいフォント＆レイアウト徹底最適化
+   ========================================================================== */
+@media (max-width: 640px) {
+  body {
+    padding-bottom: 84px !important; /* 追従フッターバーで文末が隠れるのを完全防止 */
+    font-size: 15px !important;
+    line-height: 1.8 !important;
+    word-break: break-word !important;
+    -webkit-text-size-adjust: 100% !important;
+  }
+
+  .container {
+    padding: 0 12px !important;
+    margin: 16px auto !important;
+  }
+
+  .article-container {
+    padding: 20px 14px !important;
+    border-radius: var(--radius-md) !important;
+    overflow-x: hidden !important;
+  }
+
+  h1 {
+    font-size: 21px !important;
+    line-height: 1.45 !important;
+    margin-bottom: 14px !important;
+    letter-spacing: -0.3px !important;
+  }
+
+  h2 {
+    font-size: 18px !important;
+    line-height: 1.4 !important;
+    padding: 10px 12px !important;
+    margin: 32px 0 16px !important;
+    border-left-width: 5px !important;
+  }
+
+  h3 {
+    font-size: 16px !important;
+    line-height: 1.45 !important;
+    margin: 24px 0 12px !important;
+  }
+
+  p {
+    margin-bottom: 1.25em !important;
+    line-height: 1.8 !important;
+  }
+
+  /* テーブルのモバイル横スクロール最適化 */
+  .table-wrapper,
+  .comparison-table-wrapper,
+  .table-scroll-wrapper,
+  div:has(> table) {
+    margin: 16px -4px !important;
+    border-radius: 8px !important;
+    border: 1px solid #cbd5e1 !important;
+  }
+
+  /* テーブル上部のスクロール誘導ラベル（CSS擬似要素で自動挿入） */
+  .table-wrapper::before,
+  .comparison-table-wrapper::before,
+  .table-scroll-wrapper::before,
+  div:has(> table)::before {
+    content: "👈 横スクロールで全体を表示できます 👉" !important;
+    display: block !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    color: #475569 !important;
+    text-align: right !important;
+    padding: 6px 12px !important;
+    background: #f1f5f9 !important;
+    border-bottom: 1px solid #cbd5e1 !important;
+    letter-spacing: 0.3px !important;
+  }
+
+  /* カード・ボックスのモバイル最適化 */
+  .agent-card-pro {
+    padding: 20px 14px !important;
+    margin: 24px 0 !important;
+    border-radius: var(--radius-md) !important;
+  }
+
+  .agent-top-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 8px !important;
+  }
+
+  .agent-name-wrap {
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+  }
+
+  .agent-score-box {
+    align-self: flex-start !important;
+  }
+
+  .btn-pro-cta {
+    padding: 14px 18px !important;
+    font-size: 15px !important;
+    width: 100% !important;
+  }
+
+  /* 引用・コード・プレビュー */
+  pre, code {
+    font-size: 12.5px !important;
+    white-space: pre-wrap !important;
+    word-break: break-all !important;
+  }
+}
+

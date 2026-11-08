@@ -284,8 +284,10 @@ nav a.nav-highlight:hover {
 }
 
 /* Comparison Table */
-.comparison-table-wrapper {
-  overflow-x: auto;
+.comparison-table-wrapper,
+div:has(> table) {
+  overflow-x: auto !important;
+  -webkit-overflow-scrolling: touch !important;
   background: #fff;
   border-radius: 12px;
   border: 1px solid var(--border);
@@ -293,27 +295,36 @@ nav a.nav-highlight:hover {
   margin: 24px 0 36px;
 }
 
-.comparison-table {
-  width: 100%;
+table,
+.comparison-table,
+.ranking-table {
+  width: 100% !important;
   border-collapse: collapse;
   font-size: 14px;
-  min-width: 640px;
+  min-width: 650px !important; /* スマホで縮まないよう保護 */
 }
 
-.comparison-table th {
+table th,
+.comparison-table th,
+.ranking-table th {
   background: var(--primary);
   color: #fff;
   padding: 14px 16px;
   text-align: left;
   font-weight: 700;
+  white-space: nowrap !important; /* 縦改行崩れを防止 */
   border-right: 1px solid rgba(255,255,255,0.1);
 }
 
-.comparison-table td {
+table td,
+.comparison-table td,
+.ranking-table td {
   padding: 14px 16px;
   border-bottom: 1px solid var(--border);
   border-right: 1px solid var(--border);
   vertical-align: middle;
+  white-space: normal;
+  word-break: normal;
 }
 
 .comparison-table tr:hover {
