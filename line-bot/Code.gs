@@ -17,6 +17,12 @@ const URLS = {
   IT: 'https://qoo22.github.io/career-portal/it-reskilling.html',
   SECURITIES: 'https://qoo22.github.io/career-portal/securities-guide.html',
   FIRE: 'https://qoo22.github.io/career-portal/fire/',
+  SIDE_BUSINESS: 'https://qoo22.github.io/career-portal/fire/side-business.html',
+  BLUEPRINT_WEB: 'https://qoo22.github.io/career-portal/fire/overseas-note-blueprint.html',
+  BLUEPRINT_PDF: 'https://qoo22.github.io/career-portal/fire/assets/overseas_note_complete_blueprint.pdf',
+  OVERSEAS_LAB: 'https://qoo22.github.io/career-portal/en/',
+  BRAIN_TAKAKUN: 'https://brain-market.com/u/takakun',
+  BRAIN_OVERSEAS: 'https://brain-market.com/u/takakun/a/b3UjM0cjMgoTZsNWa0JXY',
   BENEFITS: 'https://qoo22.github.io/career-portal/benefits/',
   MA_AGENT: 'https://qoo22.github.io/career-portal/articles/01-ma-agents.html',
   CONSULT_AGENT: 'https://qoo22.github.io/career-portal/articles/02-consulting-agents.html',
@@ -472,6 +478,72 @@ function doPost(e) {
 }
 
 function getFixedMenuResponse(norm) {
+  // ====================================================================
+  // 【カテゴリ切り替えメニュー：副業・海外マネタイズ】
+  // ====================================================================
+  if (norm.includes('副業メニュー') || norm === '副業' || norm === '副業情報' || norm === '副業タブ' || norm === '副業一覧') {
+    return `💰【副業・海外マネタイズ メニュー】
+
+ドル建て継続報酬、海外note、Brainアフィリエイト、新NISA配当設計の厳選コンテンツ一覧です。
+
+━━━━━━━━━━━━
+▼ 目的の番号または合言葉を返信してください👇
+
+【1】海外版note完全設計図（A4・7P豪華PDF）
+👉『 海外note 』
+
+【2】海外SaaSアフィリエイト自販機（ドル建てMRR）
+👉『 海外アフィ 』
+
+【3】AI先生Brain厳選11商材一覧（紹介料50%還元）
+👉『 副業1 』
+
+【4】新NISA 月15万円配当ポートフォリオ
+👉『 NISA1 』
+
+【5】副業＆市場価値30秒AI適性診断
+👉『 ai適性診断 』
+
+【6】全25大特典ライブラリ一覧
+👉『 特典一覧 』
+
+【7】本業・転職メニューへ切り替え
+👉『 転職メニュー 』`;
+  }
+
+  // ====================================================================
+  // 【カテゴリ切り替えメニュー：本業・年収UP転職】
+  // ====================================================================
+  if (norm.includes('転職メニュー') || norm.includes('仕事メニュー') || norm.includes('キャリアメニュー') || norm === '本業' || norm === '仕事' || norm === 'キャリア' || norm === '転職') {
+    return `💼【本業・年収UP転職 メニュー】
+
+年収査定、完全非公開求人、職務経歴書添削、年収交渉術の厳選コンテンツ一覧です。
+
+━━━━━━━━━━━━
+▼ 目的の番号または合言葉を返信してください👇
+
+【1】30秒AI適性＆市場価値年収診断
+👉『 ai適性診断 』
+
+【2】完全非公開求人一覧（M&A/コンサル/IT）
+👉『 非公開求人一覧 』
+
+【3】職務経歴書AI添削プロンプト（XYZレジュメ）
+👉『 職務経歴書プロンプト 』
+
+【4】キャリア年収最大化ポータル（無料）
+👉『 転職ポータル 』
+
+【5】英語コーチング＆外資系年収交渉術
+👉『 英語1 』
+
+【6】全25大特典ライブラリ一覧
+👉『 特典一覧 』
+
+【7】副業メニューへ切り替え
+👉『 副業メニュー 』`;
+  }
+
 
   // ====================================================================
   // 【超重要：合言葉連動ドリップ式特典システム（第1弾〜第5弾 順次解放）】
@@ -1148,7 +1220,7 @@ https://qoo22.github.io/career-portal/benefits/side-05-threads-funnel.html
 ━━━━━━━━━━━━
 📥【完全版PDFを直接ダウンロード】👇
 https://qoo22.github.io/career-portal/fire/assets/overseas_note_complete_blueprint.pdf
-（A4・3ページ／オフライン保存・印刷対応）
+（全7ページ・超豪華保存版／オフライン保存・印刷対応）
 
 📱【スマホで今すぐWEB閲覧】👇
 https://qoo22.github.io/career-portal/fire/overseas-note-blueprint.html
