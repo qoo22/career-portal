@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>【無料ツール】サイドFIRE到達シミュレーター＆可処分所得最大化計算機</title>
+  <meta name="description" content="年収・現在の貯蓄・毎月の投資額から、何歳でサイドFIRE（資産3,000万円）を達成できるかを精密に計算する無料Webシミュレーター。新NISA非課税効果や固定費削減による加速期間も試算。">
+  <link rel="stylesheet" href="css/fire.css">
+</head>
+<body>
+  <div class="pr-badge">【PR】本サイトはアフィリエイト広告およびプロモーションを含みます。</div>
+
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">💰 <span>AI先生 財テク＆サイドFIRE</span></a>
+      <nav>
+        <a href="index.html">ホーム</a>
+        <a href="nisa.html">新NISA・証券比較</a>
+        <a href="furusato.html">ふるさと納税</a>
+        <a href="saving.html">固定費削減</a>
+        <a href="roadmap.html">サイドFIRE</a>
+        <a href="https://line.me/R/ti/p/@227lwvnm" target="_blank" class="nav-highlight">💬 LINE無料相談</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="article-header">
+      <span class="card-badge" style="position: static; margin-bottom: 8px;">完全無料ツール</span>
+      <h1>📊 サイドFIRE到達シミュレーター＆可処分所得最大化計算機</h1>
+      <p style="font-size: 15px; color: var(--text-muted); margin-top: 10px;">あなたの現在の年齢、金融資産、月々の積立額から、サイドFIRE達成（4%ルール適用）までの年数と、新NISAによる非課税メリットを瞬時に試算します。</p>
+    </div>
+
+    <div class="simulator-box" style="background: #fff; padding: 32px 28px; box-shadow: var(--shadow-md);">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+        <div class="sim-input-group">
+          <label for="user-age">現在の年齢（歳）</label>
+          <input type="number" id="user-age" value="30" min="18" max="70" oninput="runFullSim()">
+        </div>
+        <div class="sim-input-group">
+          <label for="current-networth">現在の金融資産（万円）</label>
+          <input type="number" id="current-networth" value="300" step="50" min="0" oninput="runFullSim()">
+        </div>
+        <div class="sim-input-group">
+          <label for="monthly-expenses">サイドFIRE後の想定月間生活費（万円）</label>
+          <input type="number" id="monthly-expenses" value="22" step="1" min="10" oninput="runFullSim()">
+        </div>
+        <div class="sim-input-group">
+          <label for="side-income">サイドFIRE後に副業・スローワークで稼ぐ月収（万円）</label>
+          <input type="number" id="side-income" value="12" step="1" min="0" oninput="runFullSim()">
+        </div>
+        <div class="sim-input-group">
+          <label for="monthly-invest">毎月の投資積立額（万円）</label>
+          <input type="number" id="monthly-invest" value="7" step="1" min="1" oninput="runFullSim()">
+        </div>
+        <div class="sim-input-group">
+          <label for="annual-return">想定年間運用利回り（%）</label>
+          <input type="number" id="annual-return" value="5.0" step="0.5" min="1.0" max="10.0" oninput="runFullSim()">
+        </div>
+      </div>
+
+      <div class="sim-result-box" style="margin-top: 30px; text-align: left; padding: 26px;">
+        <h3 style="font-size: 18px; color: var(--primary); margin-bottom: 16px; text-align: center;">🎯 診断結果サマリー</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+          <div style="background: #fff; padding: 16px; border-radius: 8px; border: 1px solid #a7f3d0; text-align: center;">
+            <div style="font-size: 12px; color: #059669; font-weight: 700;">必要目標資産額（4%ルール）</div>
+            <div style="font-size: 24px; font-weight: 900; color: var(--primary); margin: 6px 0;" id="res-target-asset">3,000 万円</div>
+            <div style="font-size: 11px; color: #64748b;">（年間不足生活費120万 ÷ 4%）</div>
+          </div>
+          <div style="background: #fff; padding: 16px; border-radius: 8px; border: 1px solid #a7f3d0; text-align: center;">
+            <div style="font-size: 12px; color: #059669; font-weight: 700;">サイドFIRE到達年齢</div>
+            <div style="font-size: 24px; font-weight: 900; color: #d97706; margin: 6px 0;" id="res-fire-age">45 歳</div>
+            <div style="font-size: 11px; color: #64748b;" id="res-fire-years">（あと約 15 年）</div>
+          </div>
+          <div style="background: #fff; padding: 16px; border-radius: 8px; border: 1px solid #a7f3d0; text-align: center;">
+            <div style="font-size: 12px; color: #059669; font-weight: 700;">新NISAによる非課税節税額</div>
+            <div style="font-size: 24px; font-weight: 900; color: #2563eb; margin: 6px 0;" id="res-tax-saving">約 292 万円</div>
+            <div style="font-size: 11px; color: #64748b;">（20.315%の税金を完全回避）</div>
+          </div>
+        </div>
+
+        <div style="margin-top: 20px; font-size: 14px; color: #334155; line-height: 1.8; background: #fff; padding: 16px; border-radius: 8px;">
+          💡 <strong>AI先生からのアドバイス：</strong><br>
+          <span id="res-advice">現在の積立ペース（月7万円）を継続すれば、45歳で労働の義務から解放されます。さらに固定費削減（格安SIM・保険解約）で浮く月3万円を追加投資に回せば、到達年齢を「41歳（4年前倒し）」まで短縮可能です。</span>
+        </div>
+      </div>
+
+      <div style="margin-top: 32px; text-align: center;">
+        <a href="nisa.html" class="cta-button" style="max-width: 480px; margin: 0 auto 12px;">👉 最速で積立を始める：おすすめ証券会社比較へ</a>
+        <span class="cta-subtext">※SBI証券・楽天証券ともに口座開設・管理手数料は完全無料です</span>
+      </div>
+    </div>
+
+    <!-- LINE CTA -->
+    <div class="line-banner">
+      <div class="line-banner-content">
+        <h3>💬 より詳細な「資産推移グラフ付きカルテ」をLINEで発行</h3>
+        <p>公式LINEでは、あなたの家族構成や年収・退職金見込みまで考慮したパーソナル資産シミュレーションシートを無料でお送りしています。</p>
+      </div>
+      <div>
+        <a href="https://line.me/R/ti/p/@227lwvnm" target="_blank" class="line-btn">
+          <span>📲 公式LINEで詳細レポートを受け取る</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div>
+        <strong style="color: #fff; font-size: 16px;">💰 AI先生 財テク＆サイドFIRE完全攻略ポータル</strong>
+        <p style="margin-top: 8px; max-width: 480px; font-size: 13px;">本シミュレーターの計算結果は複利運用に基づく試算であり、将来の運用成果を保証するものではありません。</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">ホーム</a>
+        <a href="nisa.html">新NISA・証券比較</a>
+        <a href="furusato.html">ふるさと納税</a>
+        <a href="saving.html">固定費削減</a>
+        <a href="roadmap.html">サイドFIRE</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function runFullSim() {
+      const age = parseInt(document.getElementById('user-age').value) || 30;
+      const currentAsset = parseFloat(document.getElementById('current-networth').value) || 300;
+      const monthlyExp = parseFloat(document.getElementById('monthly-expenses').value) || 22;
+      const sideInc = parseFloat(document.getElementById('side-income').value) || 12;
+      const monthlyInv = parseFloat(document.getElementById('monthly-invest').value) || 7;
+      const rate = (parseFloat(document.getElementById('annual-return').value) || 5.0) / 100;
+
+      // 4%ルールに基づく必要目標資産額 = (年間生活費 - 年間副業収入) * 25
+      const annualGap = Math.max(0, (monthlyExp - sideInc) * 12);
+      const targetAsset = Math.max(500, annualGap * 25);
+      document.getElementById('res-target-asset').innerText = Math.round(targetAsset).toLocaleString() + ' 万円';
+
+      // 複利到達年数試算
+      const r = rate / 12;
+      let cur = currentAsset;
+      let months = 0;
+      let totalInvested = currentAsset;
+      const maxMonths = 600;
+
+      while (cur < targetAsset && months < maxMonths) {
+        cur = cur * (1 + r) + monthlyInv;
+        totalInvested += monthlyInv;
+        months++;
+      }
+
+      const years = Math.ceil(months / 12);
+      const fireAge = age + years;
+      document.getElementById('res-fire-age').innerText = fireAge + ' 歳';
+      document.getElementById('res-fire-years').innerText = '（あと約 ' + years + ' 年）';
+
+      // 運用益に対する非課税節税額 (通常税率20.315%)
+      const totalGain = Math.max(0, cur - totalInvested);
+      const taxSaving = Math.round(totalGain * 0.20315);
+      document.getElementById('res-tax-saving').innerText = '約 ' + taxSaving.toLocaleString() + ' 万円';
+
+      // 加速アドバイス試算 (月3万追加積立)
+      let curAcc = currentAsset;
+      let mAcc = 0;
+      const boostedMonthly = monthlyInv + 3;
+      while (curAcc < targetAsset && mAcc < maxMonths) {
+        curAcc = curAcc * (1 + r) + boostedMonthly;
+        mAcc++;
+      }
+      const accYears = Math.ceil(mAcc / 12);
+      const accAge = age + accYears;
+      const diffYears = years - accYears;
+
+      document.getElementById('res-advice').innerHTML = 
+        '現在の積立ペース（月' + monthlyInv + '万円）を継続すれば、<strong>' + fireAge + '歳</strong>でサイドFIREに到達します。さらに固定費削減（格安SIM・保険解約など）で浮く月3万円を追加投資に回せば、到達年齢を「<strong>' + accAge + '歳（' + diffYears + '年前倒し）</strong>」まで劇的に短縮可能です！';
+    }
+
+    // 初回実行
+    runFullSim();
+  </script>
+</body>
+</html>

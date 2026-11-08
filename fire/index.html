@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>働く世代の可処分所得最大化＆サイドFIRE完全攻略ポータル｜新NISA・証券会社・ふるさと納税・財テク大全</title>
+  <meta name="description" content="働く20代〜40代が可処分所得を最大化し、最速で資産3,000万〜5,000万円のサイドFIREを達成するための総合メディア。新NISA口座開設（SBI証券 vs 楽天証券）、ふるさと納税、固定費削減、高配当株投資、節税テクニックを徹底解説。">
+  <link rel="stylesheet" href="css/fire.css">
+</head>
+<body>
+  <div class="pr-badge">【PR】本サイトはアフィリエイト広告およびプロモーションを含みます。客観的な実務データ・公的制度に基づき中立に検証しています。</div>
+  
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">💰 <span>AI先生 財テク＆サイドFIRE</span></a>
+      <nav>
+        <a href="nisa.html">新NISA・証券比較</a>
+        <a href="furusato.html">ふるさと納税</a>
+        <a href="saving.html">固定費削減・財テク</a>
+        <a href="roadmap.html">サイドFIREロードマップ</a>
+        <a href="https://line.me/R/ti/p/@227lwvnm" target="_blank" class="nav-highlight">💬 LINE無料相談・診断</a>
+        <a href="../index.html" style="font-size: 12px; color: #cbd5e1; border: 1px solid #475569; padding: 4px 10px; border-radius: 6px;">🎯 転職攻略ポータル</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <span class="hero-tag">働く世代の可処分所得を最大化する完全体系</span>
+      <h1>給与を増やすだけでは届かない。<br>「手取り最大化 × 新NISA × 財テク」で<br>最速でサイドFIREを達成する。</h1>
+      <p>「額面年収は上がっても手取りが増えない」「物価高と社会保険料の引き上げで生活が苦しい」「会社に縛られず週3日労働や早期リタイアを目指したい」。そんな働く20代〜40代へ。新NISAの最適証券会社選びから、ふるさと納税による日用品ゼロ円化、年間50万円浮かす固定費削減、そして高配当株による月15万円の不労所得構築まで、実践的な財テクの全てを完全網羅。</p>
+      
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">年50万円〜</div>
+          <div class="stat-label">固定費＆税制優遇による手取り増加額</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">3,000万円</div>
+          <div class="stat-label">サイドFIRE達成の現実的ミニマム資産水準</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">月10万〜15万円</div>
+          <div class="stat-label">高配当株×副業で目指す不労・自走キャッシュ</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Simulator -->
+    <section class="simulator-box" id="simulator">
+      <h2 style="font-size: 22px; color: var(--primary); margin-bottom: 8px;">📊 【30秒簡易診断】あなたの可処分所得伸び代＆サイドFIRE到達年数シミュレーター</h2>
+      <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 18px;">現在の年収と毎月の投資可能額を入力すると、新NISAと財テク活用による「可処分所得の増加予測」と「資産3,000万円（サイドFIRE）到達までの年数」を試算します。</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+        <div class="sim-input-group">
+          <label for="annual-income">額面年収（万円）</label>
+          <input type="number" id="annual-income" value="500" step="50" min="200" max="2000" oninput="calculateFire()">
+        </div>
+        <div class="sim-input-group">
+          <label for="current-savings">現在の金融資産（万円）</label>
+          <input type="number" id="current-savings" value="200" step="50" min="0" max="5000" oninput="calculateFire()">
+        </div>
+        <div class="sim-input-group">
+          <label for="monthly-investment">新NISA・積立投資額（月額・万円）</label>
+          <input type="number" id="monthly-investment" value="5" step="1" min="1" max="30" oninput="calculateFire()">
+        </div>
+      </div>
+
+      <div class="sim-result-box">
+        <div style="font-size: 13px; color: #047857; font-weight: 700;">財テク（固定費削減＋ふるさと納税＋新NISA非課税）で増える年間可処分所得</div>
+        <div class="sim-result-value" id="disposable-boost">＋約 52.4 万円 / 年</div>
+        <div style="font-size: 14px; color: #334155; margin-top: 10px;">
+          資産3,000万円（年利5%運用想定）サイドFIRE到達まで：<strong id="fire-years" style="color: #d97706; font-size: 20px;">約 18 年</strong>
+          <span id="fire-accelerated" style="font-size: 12px; display: block; color: #059669; font-weight: 600; margin-top: 4px;">※財テクで浮いた可処分所得（月4.3万）を追加積立すると「約12年」に短縮可能！</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 Main Categories -->
+    <h2 style="font-size: 24px; color: var(--primary); margin: 36px 0 20px;">🎯 働く世代の可処分所得最大化：4大実践テーマ</h2>
+    
+    <div class="category-grid">
+      <!-- 1. 新NISA・証券会社 -->
+      <div class="category-card">
+        <span class="card-badge">最重要</span>
+        <div class="card-icon">📈</div>
+        <h3>新NISA＆証券会社 口座開設徹底比較</h3>
+        <p>生涯非課税枠1,800万円を最短で埋める戦略。SBI証券（三井住友カード積立）と楽天証券（楽天カード積立）のスペック・還元率・おすすめインデックスファンド（オルカン/S&P500）を徹底比較。</p>
+        <div class="card-meta">
+          <strong>おすすめ口座：</strong>SBI証券・楽天証券<br>
+          <strong>期待効果：</strong>運用益の非課税（税率20.315%カット）
+        </div>
+        <a href="nisa.html" class="card-link">👉 新NISA徹底攻略ガイドを読む</a>
+      </div>
+
+      <!-- 2. ふるさと納税 -->
+      <div class="category-card">
+        <span class="card-badge">還元率30%超</span>
+        <div class="card-icon">🥩</div>
+        <h3>ふるさと納税 日用品ゼロ円化マニュアル</h3>
+        <p>自己負担2,000円で年間数万〜十数万円の食費・日用品（米・トイレットペーパー・肉）をゼロにする実務。楽天ふるさと納税のポイント多重取り、さとふる・ふるなびの独自還元を徹底解説。</p>
+        <div class="card-meta">
+          <strong>主要サイト：</strong>楽天ふるさと納税・さとふる・ふるなび<br>
+          <strong>期待効果：</strong>年間実質手取り＋3万〜15万円
+        </div>
+        <a href="furusato.html" class="card-link">👉 ふるさと納税完全攻略ガイドを読む</a>
+      </div>
+
+      <!-- 3. 固定費削減・財テク -->
+      <div class="category-card">
+        <span class="card-badge">即日実行可能</span>
+        <div class="card-icon">💡</div>
+        <h3>固定費削減＆年間50万円浮かす財テク大全</h3>
+        <p>生活水準を落とさずに支出だけを削る無敵のメソッド。スマホ格安SIM乗り換え（月1,000円台）、民間不要保険の解約、電気・ガス見直し、クレカ・ポイ活多重取り、iDeCoの節税メリット。</p>
+        <div class="card-meta">
+          <strong>削減対象：</strong>通信費・保険・住宅・決済手数料<br>
+          <strong>期待効果：</strong>月3万〜5万円の即時キャッシュ創出
+        </div>
+        <a href="saving.html" class="card-link">👉 固定費削減・財テク大全を読む</a>
+      </div>
+
+      <!-- 4. サイドFIREロードマップ -->
+      <div class="category-card">
+        <span class="card-badge">自由への設計図</span>
+        <div class="card-icon">🏝️</div>
+        <h3>資産3,000万サイドFIRE達成ロードマップ</h3>
+        <p>「完全FIRE」は資産1億円以上が必要でも、「サイドFIRE」なら資産3,000万円＋月15万円の副業/配当で20代〜30代でも現実的に到達可能。高配当株ETF（VYM/SPYD）の組み方を解説。</p>
+        <div class="card-meta">
+          <strong>目標資産：</strong>3,000万〜5,000万円<br>
+          <strong>不労所得：</strong>年間配当120万円（4%ルール）
+        </div>
+        <a href="roadmap.html" class="card-link">👉 サイドFIREロードマップを読む</a>
+      </div>
+    </div>
+
+    <!-- LINE Official Account CTA Banner -->
+    <div class="line-banner">
+      <div class="line-banner-content">
+        <h3>💬 LINE公式で「無料サイドFIRE診断＆10大財テク特典」配布中</h3>
+        <p>友だち追加で「サイドFIRE到達シミュレーターGASシート」「新NISA厳選ファンド比較シート」「ふるさと納税還元率ランキング早見表」など限定10大特典を無料プレゼント。AI先生が24時間いつでも資産形成の個別相談にお答えします。</p>
+      </div>
+      <div>
+        <a href="https://line.me/R/ti/p/@227lwvnm" target="_blank" class="line-btn">
+          <span>📲 公式LINEで無料診断を受ける</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Comparison Table: Recommended Securities & Services -->
+    <h2 style="font-size: 24px; color: var(--primary); margin: 36px 0 16px;">🏆 厳選おすすめ証券会社・財テクサービス比較</h2>
+    <p style="font-size: 15px; color: var(--text-muted); margin-bottom: 18px;">働く世代の資産形成において口座開設が必須の厳選サービス。複数口座を使い分けることでポイント還元と情報量を最大化できます。</p>
+
+    <div class="comparison-table-wrapper">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th style="width: 22%;">サービス名</th>
+            <th style="width: 28%;">特徴・強み</th>
+            <th style="width: 25%;">還元率・メリット</th>
+            <th style="width: 25%;">おすすめの対象者・公式リンク</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <span class="badge-rec">総合1位</span><br>
+              <strong>SBI証券</strong>
+            </td>
+            <td>国内株式個人取引シェアNo.1。新NISA口座開設数圧倒的トップ。オルカン・S&P500の信託報酬最安ファンド完全網羅。</td>
+            <td>三井住友カード（NL/Olive）積立でVポイント最大5.0%還元。住信SBIネット銀行連動で金利UP。</td>
+            <td>
+              <strong>全ビジネスパーソン必須</strong><br>
+              <a href="https://www.sbisec.co.jp/" target="_blank" rel="noopener sponsored" class="cta-button" style="font-size: 13px; padding: 8px 14px; margin: 6px 0;">公式サイトで無料口座開設</a>
+              <span class="cta-subtext">最短5分でスマホ完結（手数料0円）</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="badge-rec" style="background: #2563eb;">UI満足度1位</span><br>
+              <strong>楽天証券</strong>
+            </td>
+            <td>圧倒的に見やすく使いやすいアプリ・Web画面。楽天ポイントで新NISA積立投資可能。日経テレコン無料閲覧。</td>
+            <td>楽天カード積立で楽天ポイント最大1.0%還元。楽天銀行マネーブリッジで普通預金金利0.10%。</td>
+            <td>
+              <strong>楽天経済圏・ポイ活ユーザー</strong><br>
+              <a href="https://www.rakuten-sec.co.jp/" target="_blank" rel="noopener sponsored" class="cta-button" style="font-size: 13px; padding: 8px 14px; margin: 6px 0;">公式サイトで無料口座開設</a>
+              <span class="cta-subtext">スマホで本人確認・最短即日</span>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>マネックス証券</strong>
+            </td>
+            <td>dカード積立で主要ネット証券最大のポイント還元率（最大1.1%）。米国株の銘柄分析ツール「銘柄スカウター」が最強。</td>
+            <td>dポイントが毎月自動で貯まる。ドコモユーザーとの親和性が極めて高い。</td>
+            <td>
+              <strong>dポイント派・米国高配当株投資家</strong><br>
+              <a href="https://www.monex.co.jp/" target="_blank" rel="noopener sponsored" class="cta-button" style="font-size: 13px; padding: 8px 14px; margin: 6px 0;">公式サイトで無料口座開設</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="badge-rec" style="background: #059669;">日用品節約</span><br>
+              <strong>さとふる / 楽天ふるさと</strong>
+            </td>
+            <td>実質負担2,000円で年間数万円の米・肉・トイレットペーパーを返礼品で調達。控除限度額シミュレーション即時完結。</td>
+            <td>お買い物マラソン連動で数千〜数万ポイント還元。実質負担2,000円を大幅に超える黒字還元。</td>
+            <td>
+              <strong>働く全給与所得者</strong><br>
+              <a href="https://event.rakuten.co.jp/furusato/" target="_blank" rel="noopener sponsored" class="cta-button" style="font-size: 13px; padding: 8px 14px; margin: 6px 0;">ふるさと納税限度額をチェック</a>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <span class="badge-rec" style="background: #7c3aed;">固定費ゼロ化</span><br>
+              <strong>無料オンラインFP相談</strong>
+            </td>
+            <td>プロのファイナンシャルプランナーが家計診断・民間不要保険の洗い出し・ライフプラン表作成を完全無料で代行。</td>
+            <td>平均で年間20万〜40万円の固定費削減効果。強引な勧誘なし・オンライン面談対応。</td>
+            <td>
+              <strong>手取りを最速で増やしたい方</strong><br>
+              <a href="saving.html" class="cta-button" style="font-size: 13px; padding: 8px 14px; margin: 6px 0;">固定費削減の具体策を見る</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div>
+        <strong style="color: #fff; font-size: 16px;">💰 AI先生 財テク＆サイドFIRE完全攻略ポータル</strong>
+        <p style="margin-top: 8px; max-width: 480px; font-size: 13px;">働く世代の可処分所得最大化とサイドFIRE達成を支援する金融・ライフプラン攻略メディア。客観的公的統計および各社公式開示データに基づき情報を発信しています。</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">ホーム</a>
+        <a href="nisa.html">新NISA・証券比較</a>
+        <a href="furusato.html">ふるさと納税</a>
+        <a href="saving.html">固定費削減</a>
+        <a href="roadmap.html">サイドFIRE</a>
+        <a href="../privacy.html">プライバシーポリシー</a>
+        <a href="../about.html">運営者情報</a>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 30px; font-size: 12px; border-top: 1px solid #1e293b; padding-top: 20px;">
+      &copy; 2026 AI先生 財テク＆サイドFIRE All Rights Reserved.
+    </div>
+  </footer>
+
+  <script>
+    function calculateFire() {
+      const income = parseFloat(document.getElementById('annual-income').value) || 500;
+      const savings = parseFloat(document.getElementById('current-savings').value) || 200;
+      const monthly = parseFloat(document.getElementById('monthly-investment').value) || 5;
+
+      // 財テク可処分所得増加概算：年収に応じたふるさと納税(約年収の1.5%控除)+固定費削減(平均月3万=年36万)+新NISA非課税メリット(年間投資額の約1.5%)
+      const furusatoSaving = Math.round(income * 0.015);
+      const costSaving = 36;
+      const taxSaving = Math.round((monthly * 12) * 0.05 * 0.20315 * 10) / 10;
+      const totalBoost = (furusatoSaving + costSaving + taxSaving).toFixed(1);
+
+      document.getElementById('disposable-boost').innerText = '＋約 ' + totalBoost + ' 万円 / 年';
+
+      // 資産3,000万到達シミュレーション (年利5%複利運用)
+      const target = 3000;
+      const r = 0.05 / 12; // 月利
+      let current = savings;
+      let months = 0;
+      const maxMonths = 600; // 50年
+
+      while (current < target && months < maxMonths) {
+        current = current * (1 + r) + monthly;
+        months++;
+      }
+
+      const years = Math.ceil(months / 12);
+      document.getElementById('fire-years').innerText = '約 ' + years + ' 年';
+
+      // 加速シミュレーション（浮いた可処分所得の半分を追加積立）
+      const extraMonthly = (parseFloat(totalBoost) / 12);
+      const totalMonthly = monthly + extraMonthly;
+      let curAcc = savings;
+      let mAcc = 0;
+      while (curAcc < target && mAcc < maxMonths) {
+        curAcc = curAcc * (1 + r) + totalMonthly;
+        mAcc++;
+      }
+      const accYears = Math.ceil(mAcc / 12);
+      document.getElementById('fire-accelerated').innerText = '※財テクで浮いた可処分所得（月' + extraMonthly.toFixed(1) + '万）を追加積立すると「約' + accYears + '年」に短縮可能！';
+    }
+  </script>
+</body>
+</html>
