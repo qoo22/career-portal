@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>自社開発・メガベンチャー「技術面接 頻出質問30選と合格回答ロジック」｜AI先生キャリア 読者限定特別特典</title>
+  <meta name="description" content="Web系自社開発企業の二次面接・最終技術面接を完全突破するための質問集。N+1問題の解消、トランザクション分離レベル、RESTful API設計思想、カルチャーフィットの模範解答。">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .benefit-hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #fff;
+      padding: 32px 24px;
+      border-radius: var(--radius-md);
+      margin-bottom: 28px;
+      border: 2px solid var(--accent-gold);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+    .benefit-badge {
+      display: inline-block;
+      background: #dc2626;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+      letter-spacing: 0.5px;
+    }
+    .benefit-nav-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      margin: 32px 0;
+    }
+    .benefit-nav-card {
+      background: #f8fafc;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px;
+      text-decoration: none;
+      color: var(--text-main);
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .benefit-nav-card:hover {
+      border-color: var(--accent-gold);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transform: translateY(-2px);
+    }
+    .benefit-nav-title {
+      font-weight: 800;
+      font-size: 15px;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .benefit-nav-sub {
+      font-size: 12.5px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .cta-box-gold {
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      border: 2px solid #f59e0b;
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      margin: 32px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="pr-badge">【PR】本記事は公式LINE読者限定の特別特典です。客観的公的統計・実務検証データに基づき制作されています。</div>
+
+  <header>
+    <div class="header-container">
+      <a href="../index.html" class="logo">🎯 <span>AI先生キャリア</span> <span class="badge-pro">PRO</span></a>
+      <nav>
+        <a href="../index.html">トップ</a>
+        <a href="../guide.html">エージェント攻略</a>
+        <a href="../english-coaching.html">英語コーチング</a>
+        <a href="../it-reskilling.html">ITリスキリング</a>
+        <a href="../securities-guide.html">新NISA・証券</a>
+        <a href="../fire/side-business.html">副業・Brain</a>
+        <a href="https://line.me/R/ti/p/@227lwvnm" target="_blank" class="nav-highlight">💬 LINE相談・特典</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="article-container">
+      <div class="benefit-hero">
+        <span class="benefit-badge">🎁 LINE読者限定 特別特典 【ITリスキリング Vol.5】</span>
+        <h1 style="color: #fff; margin-bottom: 12px; font-size: 24px;">自社開発・メガベンチャー「技術面接 頻出質問30選と合格回答ロジック」</h1>
+        <p style="color: #cbd5e1; margin-bottom: 0; font-size: 14px; line-height: 1.6;">DB設計、APIパフォーマンス、障害対応、Gitコンフリクト。現役CTOが唸る実戦問答集</p>
+      </div>
+
+      <div class="article-content">
+        
+<h2>1. 技術面接官は「知識の丸暗記」ではなく「意思決定の根拠」を見ている</h2>
+<p>「フレームワークの公式ドキュメントに書いてあるような知識問題」に正解できても、自社開発企業の技術面接は通過できません。現役CTOやリードエンジニアが見ているのは、<strong>「なぜ他の選択肢ではなくその技術を選んだのか？」「どのようなトレードオフを検討したのか？」</strong>という意思決定の論理構造です。</p>
+
+<h2>2. 頻出技術質問と合格回答例（抜粋）</h2>
+<div class="callout">
+  <h4>❓ 質問：データベースのパフォーマンス改善で最も意識したことは何ですか？</h4>
+  <p><strong>模範回答：</strong>「ORMの利用に伴うN+1問題の発生を防止するため、Eager Loading（include / select_related）の適用と、スロークエリログの定期監視を徹底しました。また、頻出検索キーに対して複合インデックスを適切に配置し、実行計画（EXPLAIN）を確認してフルテーブルスキャンが発生していないことを検証した上で本番反映を行いました。」</p>
+</div>
+
+
+        <!-- アフィリエイト訴求・公式直結CTA -->
+        <div class="cta-box-gold">
+          <div style="font-size: 18px; font-weight: 800; color: #92400e; margin-bottom: 8px;">🎯 自社開発・ITエンジニア専門エージェント</div>
+          <p style="font-size: 13.5px; color: #78350f; margin-bottom: 16px;">ギークリー、TechClipsなど、技術面接の過去問と企業ごとの評価基準を熟知した専門窓口。</p>
+          <a href="https://qoo22.github.io/career-portal/articles/03-it-engineer-agents.html" target="_blank" rel="noopener sponsored" class="btn-pro-cta" style="display: inline-block; max-width: 480px; margin: 0 auto;">
+            <span>ITエンジニア特化求人記事へ</span>
+            <span class="arrow">→</span>
+          </a>
+          <div class="cta-micro-sub">※完全無料・オンライン完結（平日夜間・土日相談可能）</div>
+        </div>
+
+        <!-- ストーリー分岐・循環ナビゲーション -->
+        <h2 style="margin-top: 48px;">🧭 次のストーリーへ進む（関連記事・別ジャンルへの分岐）</h2>
+        <p>あなたの目指すキャリアと資産形成のステージに合わせて、以下の特別特典へ自由に分岐して学習を進めることができます。</p>
+
+        <div class="benefit-nav-grid">
+          
+        <a href="it-02-ai-architect.html" class="benefit-nav-card">
+          <div class="benefit-nav-title">👉 コーダー作業員を脱却しAIアーキテクトへ飛躍</div>
+          <div class="benefit-nav-sub">Next.js 14×FastAPI×AI開発で年収1,000万超を狙う</div>
+        </a>
+        
+        <a href="career-03-salary-negotiation.html" class="benefit-nav-card">
+          <div class="benefit-nav-title">👉 内定オファー年収＋150万円交渉術</div>
+          <div class="benefit-nav-sub">提示された初任給をスマートに引き上げる技術</div>
+        </a>
+        
+        <a href="career-01-xyz-resume.html" class="benefit-nav-card">
+          <div class="benefit-nav-title">👉 Google推奨XYZレジュメ完全攻略</div>
+          <div class="benefit-nav-sub">書類選考通過率を4倍に引き上げる実戦構文</div>
+        </a>
+        
+        </div>
+
+        <div style="text-align: center; margin-top: 36px; padding: 20px; background: #f1f5f9; border-radius: var(--radius-md);">
+          <div style="font-weight: 700; margin-bottom: 8px;">📱 LINEに戻って別の合言葉を送信する</div>
+          <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 12px;">LINEのトーク画面で以下の合言葉を送信すると、該当ジャンルの特典メッセージが即座に届きます。</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; font-size: 12px; font-weight: 700;">
+            <span style="background: #e2e8f0; padding: 4px 10px; border-radius: 4px;">『 転職1 』</span>
+            <span style="background: #e2e8f0; padding: 4px 10px; border-radius: 4px;">『 英語1 』</span>
+            <span style="background: #e2e8f0; padding: 4px 10px; border-radius: 4px;">『 IT1 』</span>
+            <span style="background: #e2e8f0; padding: 4px 10px; border-radius: 4px;">『 NISA1 』</span>
+            <span style="background: #e2e8f0; padding: 4px 10px; border-radius: 4px;">『 副業1 』</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-container">
+      <div>
+        <strong style="color: #fff; font-size: 16px;">🎯 AI先生キャリア 読者限定特典ライブラリ</strong>
+        <p style="margin-top: 8px; max-width: 480px; font-size: 13px;">客観的公的統計および実務検証データに基づき、働く世代の市場価値と可処分所得最大化を支援します。</p>
+      </div>
+      <div class="footer-links">
+        <a href="../index.html">ホーム</a>
+        <a href="../guide.html">エージェント攻略</a>
+        <a href="../english-coaching.html">英語コーチング</a>
+        <a href="../it-reskilling.html">ITリスキリング</a>
+        <a href="../securities-guide.html">新NISA・証券</a>
+        <a href="../fire/side-business.html">副業・Brain</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
