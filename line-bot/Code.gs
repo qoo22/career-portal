@@ -1137,8 +1137,8 @@ https://qoo22.github.io/career-portal/benefits/side-05-threads-funnel.html
 ・全特典ライブラリ一覧へ戻る 👉『 特典一覧 』`;
   }
 
-  // --- 海外アフィリエイト自販機・完全セットアップキット ---
-  if (norm.includes('海外アフィ') || norm.includes('ドル建て') || norm === '海外' || norm === '海外アフィリエイト') {
+  // --- 海外アフィリエイト自販機・海外note完全セットアップキット ---
+  if (norm.includes('海外アフィ') || norm.includes('海外note') || norm.includes('海外ノート') || norm.includes('ドル建て') || norm === '海外' || norm === '海外アフィリエイト') {
     return `🎁【海外アフィ自動販売機 Claude Code完全セットアップキット】解放！
 
 英語が苦手でも、自分の商品がなくても、Claude Codeを活用して「法務・規約の注意点を100%クリアした海外SaaSドル建てアフィリエイト自販機」を構築する実務パッケージです。
