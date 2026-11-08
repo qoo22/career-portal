@@ -1158,6 +1158,9 @@ https://qoo22.github.io/career-portal/en/
 ▼ 完全比較ガイド（Kit vs systeme.io vs beehiiv）👇
 https://qoo22.github.io/career-portal/en/newsletter-tools-guide.html
 
+▼ 完全セットアップキットPDF直接ダウンロード👇
+https://qoo22.github.io/career-portal/en/assets/overseas_affiliate_setup_kit.pdf
+
 💡「副業で稼ぐ」だけでなく、この仕組み自体を自販機として稼働させていきましょう！`;
   }
 
