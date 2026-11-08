@@ -26,7 +26,8 @@ const AFFILIATE_LINKS = {
   RAKUTEN_FURUSATO: 'https://event.rakuten.co.jp/furusato/', // 楽天ふるさと納税 (楽天アフィリ対応)
   SATOFULL: 'https://www.satofull.jp/',          // さとふる (A8.net対応)
   FP_CONSULT: PORTAL_URL + 'saving.html',        // 無料FP相談・固定費診断
-  FIRE_SIM: PORTAL_URL + 'simulator.html'        // サイドFIREシミュレーター
+  FIRE_SIM: PORTAL_URL + 'simulator.html',       // サイドFIREシミュレーター
+  SIDE_BIZ: PORTAL_URL + 'side-business.html'    // 副業・Brain攻略＆紹介料50%プログラム
 };
 
 /**
@@ -110,6 +111,11 @@ function handleQuickCommands(text) {
   // 固定費削減
   if (text.includes('固定費') || text.includes('保険') || text.includes('節約')) {
     return `💡【年間50万円浮かす固定費削減の鉄則】\n\n食費を我慢するのではなく「契約」を変えるのがプロの財テクです。\n\n1. スマホを格安SIM（ahamo/LINEMO/楽天）へ（年約6.6万円削減）\n2. 不要な民間医療・貯蓄型保険の解約（年約12〜20万円削減）\n3. 賃貸火災保険をネット損保へ自己手配（年約1.5万円削減）\n\n「自分に本当に必要な保険が分からない」という方は、中立なFPによる無料オンライン診断が確実です：\n👉 ${AFFILIATE_LINKS.FP_CONSULT}\n\n▼ 固定費削減10大テクニック完全版：\n${PORTAL_URL}saving.html`;
+  }
+
+  // 副業・Brain教材・アフィリエイト
+  if (text.includes('副業') || text.includes('Brain') || text.includes('brain') || text.includes('ブレイン') || text.includes('アフィリエイト') || text.includes('紹介料')) {
+    return `💼【副業・Brain教材＆紹介料50%還元プログラム】\n\nサイドFIREの到達を10年前倒しにする「月10万円の副業入金力」！\n\nAI先生のBrain厳選商材（全編3.5万字超・公的根拠・実動GAS付き）は、実践して稼ぐだけでなく、あなたの専用リンクで紹介すると【販売額の50%（1件990円〜）】が即座に還元されます！\n\n▼ 厳選Brain商材＆50%アフィリ攻略はこちら：\n${AFFILIATE_LINKS.SIDE_BIZ}`;
   }
 
   return null;
