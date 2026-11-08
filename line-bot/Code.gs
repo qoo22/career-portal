@@ -80,6 +80,18 @@ function makeQuickReply(items) {
 function getQuickReplyForNorm(norm) {
   if (!norm) return null;
 
+  // 海外note・海外アフィ・Brain完全版
+  if (norm.includes('海外note') || norm.includes('海外アフィ') || norm.includes('設計図') || norm.includes('ドル建て') || norm.includes('brain完全版') || norm.includes('教科書')) {
+    return [
+      { label: '📘 Brain完全版(4980円)', text: 'brain完全版' },
+      { label: '📱 WEB版設計図を見る', text: '海外note' },
+      { label: '⚡ 海外アフィ自販機', text: '海外アフィ' },
+      { label: '📘 Brain厳選11商材', text: '副業1' },
+      { label: '💰 副業メニューへ', text: '副業メニュー' }
+    ];
+  }
+
+
   // 特典1
   if (norm.includes('特典1') || norm === '特典' || norm.includes('10大特典')) {
     return [
@@ -478,6 +490,32 @@ function doPost(e) {
 }
 
 function getFixedMenuResponse(norm) {
+  // ====================================================================
+  // 【Brain上位完全版（4,980円）直結案内】
+  // ====================================================================
+  if (norm.includes('brain完全版') || norm === '完全版' || norm === '教材' || norm === '教科書' || norm === 'ブレイン') {
+    return `👑【Brain上位完全版】Claude Code×ドル建て海外アフィリエイト＆海外版note自動販売機バイブル
+
+無料設計図（8大モジュール）を実践し、確実に月30万〜50万円の継続報酬を自動化するための【全12章・50,457文字】の最高峰マニュアルです。
+
+━━━━━━━━━━━━
+👑 完全版で手に入るプレミアムアセット
+━━━━━━━━━━━━
+1. 【30需要テーマ完全解体】ペルソナ・アセット・推奨価格の完全マトリクス
+2. 【Claude Code実戦プロンプト10選】課題発掘・目次設計・本文執筆・セールスレター
+3. 【英語X日次配信カレンダー】14日間配信表＆メガ・スレッド実例2本（訪日・SaaS）
+4. 【海外LP完全実動コード】コピペで即稼働する高CVRレスポンシブHTML/CSS
+5. 【ドル建て確定申告完全ガイド】freee/MF仕訳・為替差損益計算・輸出免税処理
+6. 【実践Q&A全35問＆月商100万後の法人化】消費税還付とデジタル資産M&A
+7. 【紹介料50%全員還元】1件成約で2,490円！2本紹介で教材代全額回収
+
+━━━━━━━━━━━━
+▼ 今すぐBrainで読む（特別定価4,980円）👇
+https://brain-market.com/u/takakun/a/b3UjM0cjMgoTZsNWa0JXY
+
+※売れ行きに応じて段階的に値上げします。現在が最安値です！`;
+  }
+
   // ====================================================================
   // 【カテゴリ切り替えメニュー：副業・海外マネタイズ】
   // ====================================================================
@@ -1210,25 +1248,35 @@ https://qoo22.github.io/career-portal/benefits/side-05-threads-funnel.html
   }
 
   // --- 海外版note完全設計図＆海外アフィリエイト自販機 ---
-  if (norm.includes('海外note') || norm.includes('海外版note') || norm.includes('設計図') || norm.includes('海外ノート') || norm === '海外' || norm.includes('海外アフィ') || norm.includes('海外アフィリエイト') || norm.includes('ドル建て')) {
+  if (norm.includes('海外note') || norm.includes('海外版note') || norm.includes('設計図') || norm.includes('海外ノート') || norm === '海外' || norm.includes('海外アフィ') || norm.includes('海外アフィリエイト') || norm.includes('ドル建て') || norm.includes('brain完全版') || norm.includes('教科書')) {
     return `🎁【海外版note完全設計図】をお届けします！
 
 英語力ゼロ・商品ゼロから1年で500万円を目指す「海外デジタル商品量産プロトコル（全8大モジュール）」の完全版です。
 
 ━━━━━━━━━━━━
-▼ 今すぐ受け取る（2つの方法）
+▼ 無料で今すぐ受け取る（2つの方法）
 ━━━━━━━━━━━━
-📥【完全版PDFを直接ダウンロード】👇
-https://qoo22.github.io/career-portal/fire/assets/overseas_note_complete_blueprint.pdf
-（全7ページ・超豪華保存版／オフライン保存・印刷対応）
-
-📱【スマホで今すぐWEB閲覧】👇
+📱【スマホWEB版ポータル】👇
 https://qoo22.github.io/career-portal/fire/overseas-note-blueprint.html
 
+📥【A4・7P超豪華版PDFを直ダウンロード】👇
+https://qoo22.github.io/career-portal/fire/assets/overseas_note_complete_blueprint.pdf
+
 ━━━━━━━━━━━━
-🎁 収録されている8大モジュール
+👑【さらに上の実動コード・自動化を求める方へ】
 ━━━━━━━━━━━━
-1. 【需要テーマ30選】日本人が持つ知識を海外読者の悩み解決に変える30テーマ
+全12章・50,457文字の圧倒的ボリュームで、Claude Codeによる海外SaaS自動化・LP実動コード・外貨確定申告freee仕訳まで完全網羅した【Brain上位完全版】を公開しました！
+
+▼ Brain完全版（定価4,980円・紹介料50%＝2,490円還元）👇
+https://brain-market.com/u/takakun/a/b3UjM0cjMgoTZsNWa0JXY
+
+★売れ行きに応じて段階的に値上げします。
+★紹介料50%付きのため、2本紹介すれば教材代は全額回収（実質無料）できます！
+
+━━━━━━━━━━━━
+🎁 収録されている8大モジュール概要
+━━━━━━━━━━━━
+1. 【需要テーマ30選】日本人の知識を海外読者の悩み解決に変える30テーマ
 2. 【プラットフォーム比較】Gumroad vs Substack vs Payhip 手数料・決済比較表
 3. 【Claude完全プロンプト】4,000字で悩みが即解決する英文PDF生成構文
 4. 【英語X告知10本型】共感3・気づき3・体験2・逆説2の分散配信黄金比
@@ -1238,9 +1286,8 @@ https://qoo22.github.io/career-portal/fire/overseas-note-blueprint.html
 8. 【12ヶ月販売計画】月25部×20本で年500万円を達成するマイルストーン
 
 ━━━━━━━━━━━━
-💡【海外SaaS継続アフィリ自販機】
+💡【海外SaaS継続アフィリ実動自販機】
 ━━━━━━━━━━━━
-さらにドル建て継続報酬（月30%〜60%）を自動化する英語メディアも同時公開中！
 ▼ 英語実動メディア（Creator Stack Lab）👇
 https://qoo22.github.io/career-portal/en/
 
