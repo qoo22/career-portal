@@ -89,6 +89,7 @@ nav {
 nav a {
   color: #e2e8f0;
   text-decoration: none;
+  white-space: nowrap;
   font-size: 14px;
   font-weight: 600;
   transition: color 0.2s;
