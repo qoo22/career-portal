@@ -111,10 +111,16 @@ header {
 
 nav {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: nowrap;
   overflow-x: auto;
   min-width: 0;
+  scrollbar-width: none;
+}
+
+nav::-webkit-scrollbar {
+  height: 0;
+  display: none;
 }
 
 nav a {
@@ -125,7 +131,7 @@ nav a {
   font-size: 13.5px;
   font-weight: 600;
   transition: color 0.2s;
-  padding: 4px 8px;
+  padding: 3px 6px;
   border-radius: 4px;
 }
 

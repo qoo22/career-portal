@@ -81,9 +81,16 @@ header {
 
 nav {
   display: flex;
-  gap: 14px;
+  gap: 12px;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+nav::-webkit-scrollbar {
+  height: 0;
+  display: none;
 }
 
 nav a {
